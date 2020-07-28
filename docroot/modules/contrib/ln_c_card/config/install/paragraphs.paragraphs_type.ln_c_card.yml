@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_card
+label: Card
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

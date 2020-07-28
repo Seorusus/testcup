@@ -1,0 +1,28 @@
+name: Core
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - contact
+  - datetime
+  - entity_reference_revisions
+  - features
+  - field
+  - file
+  - inline_entity_form
+  - lightning_core
+  - lightning_media
+  - lightning_media_document
+  - lightning_media_image
+  - media
+  - menu_link_content
+  - metatag
+  - node
+  - path
+  - shortcut
+  - taxonomy
+  - text
+  - user
+package: DSU
+version: 8.x-1.1.3

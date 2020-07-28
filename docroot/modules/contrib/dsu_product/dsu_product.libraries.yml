@@ -1,0 +1,6 @@
+dsu-product:
+  header: true
+  version: 1.x
+  css:
+    theme:
+      assets/css/dsu-product-ui.css: {}

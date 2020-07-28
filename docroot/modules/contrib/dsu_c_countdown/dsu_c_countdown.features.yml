@@ -1,0 +1,4 @@
+bundle: dsu_c
+excluded:
+  - block_content.type.countdown
+required: true

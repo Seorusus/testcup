@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tips.field_description_speechoutput
+    - field.field.paragraph.tips.field_tips_description
+    - field.field.paragraph.tips.field_tips_id
+    - field.field.paragraph.tips.field_tips_media
+    - field.field.paragraph.tips.field_tips_order
+    - field.field.paragraph.tips.field_tips_title
+    - field.field.paragraph.tips.field_title_speech_output
+    - paragraphs.paragraphs_type.tips
+  module:
+    - image
+id: paragraph.tips.default
+targetEntityType: paragraph
+bundle: tips
+mode: default
+content:
+  field_description_speechoutput:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tips_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tips_id:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tips_media:
+    weight: 6
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tips_order:
+    weight: 5
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_tips_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_speech_output:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

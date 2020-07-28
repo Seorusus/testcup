@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_socialbuttons
+label: 'Social Buttons'
+icon_uuid: null
+description: 'Create social buttons.'
+behavior_plugins: {  }

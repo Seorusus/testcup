@@ -1,0 +1,7 @@
+dsu_ghostery.settings_form:
+  path: '/admin/config/system/dsu_ghostery'
+  defaults:
+    _title: 'DSU Ghostery: Settings Form'
+    _form: '\Drupal\dsu_ghostery\Form\GhosterySettingsForm'
+  requirements:
+    _permission: 'administer dsu ghostery'

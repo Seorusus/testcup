@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_al_pictures_p
+    - node.type.dsu_product
+    - paragraphs.paragraphs_type.al_picture
+  module:
+    - entity_reference_revisions
+id: node.dsu_product.field_al_pictures_p
+field_name: field_al_pictures_p
+entity_type: node
+bundle: dsu_product
+label: Pictures
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      al_picture: al_picture
+    target_bundles_drag_drop:
+      al_ingredient:
+        weight: 4
+        enabled: false
+      al_number_of_servings:
+        weight: 5
+        enabled: false
+      al_picture:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

@@ -1,0 +1,15 @@
+--- settings/blt.settings.php	(revision ed8f36d40a92868f9cb3e54af0035236180e93fa)
++++ settings/blt.settings.php	(date 1582553584963)
+@@ -139,12 +139,9 @@
+
+ // Default global settings.
+ $blt_settings_files = [
+-  'cache',
+-  'config',
+   'logging',
+   'filesystem',
+   'simplesamlphp',
+-  'misc',
+   'drush-request-trace',
+ ];
+ foreach ($blt_settings_files as $blt_settings_file) {

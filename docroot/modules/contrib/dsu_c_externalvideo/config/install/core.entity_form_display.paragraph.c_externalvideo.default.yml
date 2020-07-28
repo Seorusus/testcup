@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_externalvideo.field_c_video_url
+    - paragraphs.paragraphs_type.c_externalvideo
+  module:
+    - video_embed_field
+id: paragraph.c_externalvideo.default
+targetEntityType: paragraph
+bundle: c_externalvideo
+mode: default
+content:
+  field_c_video_url:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

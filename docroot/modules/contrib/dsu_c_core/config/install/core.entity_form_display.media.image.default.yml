@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - image_widget_crop
+    - lightning_media
+    - path
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  image:
+    type: image_widget_crop
+    weight: 6
+    region: content
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - dsu_c_gallery_image_medium
+        - dsu_c_gallery_image_small
+        - dsu_c_gallery_large_large
+        - dsu_c_gallery_thumb_large
+        - dsu_c_gallery_thumb_medium
+        - dsu_c_gallery_thumb_small
+        - dsu_c_slider_large
+        - dsu_c_slider_medium
+        - dsu_c_slider_small
+      progress_indicator: throbber
+      crop_types_required: {  }
+      show_crop_area: false
+    third_party_settings:
+      lightning_media:
+        file_links: true
+        remove_button: true
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_media_in_library: true

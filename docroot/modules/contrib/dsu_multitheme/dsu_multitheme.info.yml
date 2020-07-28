@@ -1,0 +1,7 @@
+name: "DSU Multitheme"
+type: module
+description: 'Applied a theme bases on the URL or URL pattern of the request'
+core: 8.x
+package: "DSU"
+version: '8.x-1.6.2'
+configure: dsu_multitheme.settings_form

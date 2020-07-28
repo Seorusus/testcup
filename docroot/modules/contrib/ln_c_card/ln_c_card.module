@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_c_card.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Implements hook_theme().
+ */
+function ln_c_card_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ln_c_card' => [
+      'template' => 'paragraph--ln-c-card',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ln_c_card_item' => [
+      'template' => 'paragraph--ln-c-card-item',
+      'base hook' => 'paragraph',
+    ],
+    'node__teaser__card_full_color_box' => [
+      'template' => 'node--teaser--card-full-color-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_rollover' => [
+      'template' => 'node--teaser--card-rollover',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_bottom_text_box' => [
+      'template' => 'node--teaser--card-bottom-text-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_extended_card' => [
+      'template' => 'node--teaser--card-extended-card',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_extended_card_title_on_image' => [
+      'template' => 'node--teaser--card-extended-card-title-on-image',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_box' => [
+      'template' => 'node--teaser--card-hover-card-box',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_micro' => [
+      'template' => 'node--teaser--card-hover-card-micro',
+      'base hook' => 'node',
+    ],
+    'node__teaser__card_hover_card_profile' => [
+      'template' => 'node--teaser--card-hover-card-profile',
+      'base hook' => 'node',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_card_preprocess_paragraph__ln_c_card(&$variables) {
+  $variables['#attached']['library'][] = 'ln_c_card/general';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ln_c_card_preprocess_paragraph__ln_c_card_item(&$variables) {
+  $parent = $variables['elements']['#paragraph']->getParentEntity();
+  if ($parent->hasField('field_card_item')) {
+    $card_style = $parent->get('field_classy_paragraph_style')->getValue();
+   
+    if (isset($variables['content']['field_card_entity_selector'][0]['#view_mode']) && !empty($card_style)) {
+      $variables['content']['field_card_entity_selector'][0]['#view_mode'] = $card_style[0]['target_id'];
+      unset($variables['content']['field_card_entity_selector'][0]['#cache']['keys']);
+      $variables['content']['card_type'] = $card_style[0]['target_id'];
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function ln_c_card_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'paragraph' && $entity->getType() == 'ln_c_card') {
+    $tags = ['paragraph:' . $entity->id()];
+    Cache::invalidateTags($tags);
+  }
+}

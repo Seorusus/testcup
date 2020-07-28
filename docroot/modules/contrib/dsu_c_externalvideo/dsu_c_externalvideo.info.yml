@@ -1,0 +1,12 @@
+name: 'Lightnest components: External Video'
+description: 'Allows to embed a video into a component.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - video_embed_field
+package: 'DSU Components'
+version: 8.x-1.0.1

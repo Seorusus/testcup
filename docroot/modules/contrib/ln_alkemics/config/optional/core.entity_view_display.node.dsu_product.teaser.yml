@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dsu_product.field_al_allergens
+    - field.field.node.dsu_product.field_al_coffee_format
+    - field.field.node.dsu_product.field_al_coffee_range
+    - field.field.node.dsu_product.field_al_coffee_variety
+    - field.field.node.dsu_product.field_al_consumer_age
+    - field.field.node.dsu_product.field_al_consumer_gender
+    - field.field.node.dsu_product.field_al_good_question
+    - field.field.node.dsu_product.field_al_good_to_know
+    - field.field.node.dsu_product.field_al_good_to_remember
+    - field.field.node.dsu_product.field_al_gtin
+    - field.field.node.dsu_product.field_al_health_allegations
+    - field.field.node.dsu_product.field_al_ingredients
+    - field.field.node.dsu_product.field_al_keywords
+    - field.field.node.dsu_product.field_al_name_public_long
+    - field.field.node.dsu_product.field_al_name_public_short
+    - field.field.node.dsu_product.field_al_number_of_servings
+    - field.field.node.dsu_product.field_al_number_of_servings_labe
+    - field.field.node.dsu_product.field_al_nutrients
+    - field.field.node.dsu_product.field_al_pictures_p
+    - field.field.node.dsu_product.field_al_product_benefits
+    - field.field.node.dsu_product.field_al_sub_brand_text
+    - field.field.node.dsu_product.field_al_supplier_code
+    - node.type.dsu_product
+  module:
+    - user
+id: node.dsu_product.teaser
+targetEntityType: node
+bundle: dsu_product
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_al_allergens: true
+  field_al_coffee_format: true
+  field_al_coffee_range: true
+  field_al_coffee_variety: true
+  field_al_consumer_age: true
+  field_al_consumer_gender: true
+  field_al_good_question: true
+  field_al_good_to_know: true
+  field_al_good_to_remember: true
+  field_al_gtin: true
+  field_al_health_allegations: true
+  field_al_ingredients: true
+  field_al_keywords: true
+  field_al_name_public_long: true
+  field_al_name_public_short: true
+  field_al_number_of_servings: true
+  field_al_number_of_servings_labe: true
+  field_al_nutrients: true
+  field_al_pictures_p: true
+  field_al_product_benefits: true
+  field_al_sub_brand_text: true
+  field_al_supplier_code: true

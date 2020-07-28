@@ -1,0 +1,24 @@
+name: DSU Alkemics
+description: Connect with Alkemics for import and syncronize Products
+package: DSU
+type: module
+version: 8.x-1.0.0
+core: 8.x
+
+configure: ln_alkemics.config
+
+dependencies:
+  - drupal:path
+  - dsu_product
+  - drupal:entity_browser
+  - drupal:paragraphs
+  - drupal:entity_reference_revisions
+  - drupal:options
+  - drupal:user
+  - drupal:video_embed_field
+enforced:
+  module:
+    - ln_alkemics
+
+
+

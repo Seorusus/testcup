@@ -1,0 +1,23 @@
+ln_alkemics.admin_index:
+  path: '/admin/config/ln-alkemics'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Lightnest Alkemics Settings Form'
+  requirements:
+    _permission: 'access administration pages'
+
+ln_alkemics.config:
+  path: '/admin/config/ln_alkemics/config'
+  defaults:
+    _form: '\Drupal\ln_alkemics\Form\ConnectForm'
+    _title: 'Alkemics connector configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+ln_alkemics.action:
+  path: '/admin/config/ln_alkemics/importer'
+  defaults:
+    _title: 'Import Products from Alkemics'
+    _form: '\Drupal\ln_alkemics\Form\ImporterForm'
+  requirements:
+    _permission: 'access administration pages'

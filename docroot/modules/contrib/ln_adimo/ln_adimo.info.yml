@@ -1,0 +1,6 @@
+name: Ligtnest Adimo Integration Module
+description: Lightnest Drupal module for Adimo services.
+package: Adimo
+type: module
+version: 1.2.1
+core: 8.x

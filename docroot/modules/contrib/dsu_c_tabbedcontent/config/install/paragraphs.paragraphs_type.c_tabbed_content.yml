@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_tabbed_content
+label: 'Layout: Tabs'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

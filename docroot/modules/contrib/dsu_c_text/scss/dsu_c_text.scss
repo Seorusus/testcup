@@ -1,0 +1,162 @@
+.paragraph--type--c-text {
+    .field--name-field-c-title {
+      margin-bottom: 8px;
+    }
+    .field--name-field-sub-heading {
+      margin-bottom: 26px;
+    }
+    .field--name-field-c-title, .field--name-field-sub-heading {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .field--name-field-summary-text {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      p {
+        line-height: 34px;
+        margin-bottom: 0;
+      }
+    }
+    .text-large-bold-underline {
+      margin: 0 0 8px;
+    }
+    .text-large-plain {
+      margin: 0 0 26px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+      padding: 50px 0;
+    }
+    .paragraph--type--c-text {
+      .field--name-field-c-title, .field--name-field-sub-heading, .field--name-field-summary-text {
+        max-width: 1170px;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+      padding: 25px 0;
+    }
+    .paragraph--type--c-text {
+      .field--name-field-c-title, .field--name-field-sub-heading {
+        max-width: 940px;
+      }
+      .field--name-field-summary-text {
+        max-width: 940px;
+        padding: 0 15px 37px;
+      }
+    }
+    .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+      padding: 0 15px 25px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .paragraph--type--c-text, .dark-bg.paragraph--type--c-text {
+      padding: 15px 0;
+    }
+    .paragraph--type--c-text {
+      .field--name-field-c-title, .field--name-field-sub-heading {
+        max-width: 748px;
+      }
+      .field--name-field-summary-text {
+        max-width: 748px;
+        padding: 0 15px 52px;
+      }
+    }
+    .dark-bg.paragraph--type--c-text .field--name-field-summary-text {
+      padding: 0 15px 25px;
+    }
+  }
+  
+  .dark-bg {
+    background: url('../img/content-tail.gif') center top repeat #1d1d1d;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .white-text, .light-text, .white-text a, .light-text a, .white-text a:hover, .light-text a:hover {
+    color: #fff;
+  }
+  
+  .light-bg {
+    background: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  .dark-text {
+    color: #333;
+    p {
+      color: #777;
+    }
+    strong {
+      font-weight: 600;
+      color: #333;
+    }
+    a {
+      color: #333;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+  
+  .image-bg {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .light-bg, .dark-bg {
+    overflow: hidden;
+  }
+  
+  .light-bg {
+    .background-image-overlay, .field--name-field-background-image {
+      display: none;
+    }
+  }
+  
+  .dark-bg {
+    .background-image-overlay, .field--name-field-background-image {
+      display: none;
+    }
+  }
+  
+  .image-bg {
+    .background-image-overlay, .field--name-field-background-image {
+      display: none;
+    }
+    .background-image-overlay img, .field--name-field-background-image img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  
+  .dark-bg a, .image-bg a {
+    color: #fff;
+  }
+
+  .dsu_btn{
+    width: 100%;
+    display: block;
+    text-align: center;
+    &.horizontal-right{
+      text-align: right;
+    }
+    &.horizontal-left{
+      text-align: left;
+    }
+  }

@@ -1,0 +1,13 @@
+{
+	"name": "lightnest/dsu_ratings_reviews",
+	"description": "Creates a comment type that can be added to any entity to allow for ratings and reviews.",
+	"type": "drupal-module",
+	"minimum-stability": "dev",
+	"keywords": [
+		"content",
+		"fivestart"
+	],
+	"require": {
+		"drupal/fivestar": "1.x-dev"
+	}
+}

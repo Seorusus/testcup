@@ -1,0 +1,158 @@
+$dsu_c_sideimagetext_title_text_size: 24px !default;
+$dsu_c_sideimagetext_title_space_top: 29px !default;
+$dsu_c_sideimagetext_title_space_bottom: 14.5px !default;
+$dsu_c_sideimagetext_subheading_text_size: 20px !default;
+$dsu_c_sideimagetext_subheading_space_top: 14.5px !default;
+$dsu_c_sideimagetext_subheading_space_bottom: 14.5px !default;
+$dsu_c_sideimagetext_summary_text_size: 16px !default;
+
+.paragraph--type--c-sideimagetext {
+  position: relative;
+
+  .field--name-field-c-title {
+    font-weight: bold;
+    font-size: $dsu_c_sideimagetext_title_text_size;
+    line-height: 29px;
+    margin-top: $dsu_c_sideimagetext_title_space_top;
+    margin-bottom: $dsu_c_sideimagetext_title_space_bottom;
+  }
+
+  .field--name-field-c-sideimagetext-subheading {
+    font-size: $dsu_c_sideimagetext_subheading_text_size;
+    line-height: 29px;
+    margin-top: $dsu_c_sideimagetext_subheading_space_top;
+    margin-bottom: $dsu_c_sideimagetext_subheading_space_bottom;
+  }
+
+  .wrapper-paragraph-section {
+    .inner-wrapper-c-sideimagetext {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    .wrapper-img-section {
+      align-self: flex-start;
+      padding: 0;
+      &.image-left {
+        order: 0;
+      }
+
+      &.image-right {
+        order: 2;
+      }
+    }
+
+    .wrapper-description-section {
+      align-self: flex-start;
+    }
+  }
+
+  .field--name-field-c-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .field--name-field-c-sideimagetext-summary {
+    font-size: $dsu_c_sideimagetext_summary_text_size;
+  }
+}
+
+.dark-bg {
+  overflow: hidden;
+  background-color: #333;
+  color: #FFF;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+
+.white-text, .light-text {
+  color: #FFF;
+
+  a {
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+.light-bg {
+  overflow: hidden;
+  background: #FFF;
+  color: #333;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+  }
+}
+
+.dark-text {
+  color: #333;
+
+  p {
+    color: #777;
+  }
+
+  strong {
+    color: #333;
+    font-weight: 600;
+  }
+
+  a {
+    color: #333;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+.image-bg {
+  position: relative;
+  overflow: hidden;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  text-align: center;
+
+  .background-image-overlay, .field--name-field-background-image {
+    display: none;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+.dsu_btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  &.horizontal-right {
+    text-align: right;
+  }
+  &.horizontal-left {
+    text-align: left;
+  }
+  &.vertical-bottom_center, &.vertical-top_center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_entitycycle
+label: 'Entity Cycle'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

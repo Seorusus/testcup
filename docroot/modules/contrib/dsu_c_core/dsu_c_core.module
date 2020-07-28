@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_theme.
+ */
+function dsu_c_core_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__layout_columns_1' => [
+      'template' => 'paragraph--layout-columns-1',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_2' => [
+      'template' => 'paragraph--layout-columns-2',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_3' => [
+      'template' => 'paragraph--layout-columns-3',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_4' => [
+      'template' => 'paragraph--layout-columns-4',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_columns_20' => [
+      'template' => 'paragraph--layout-columns-20',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_25_50' => [
+      'template' => 'paragraph--layout-25-25-50',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_50_25_25' => [
+      'template' => 'paragraph--layout-50-25-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_50_25' => [
+      'template' => 'paragraph--layout-25-50-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_25_75' => [
+      'template' => 'paragraph--layout-25-75',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_75_25' => [
+      'template' => 'paragraph--layout-75-25',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_33_66' => [
+      'template' => 'paragraph--layout-33-66',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__layout_66_33' => [
+      'template' => 'paragraph--layout-66-33',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

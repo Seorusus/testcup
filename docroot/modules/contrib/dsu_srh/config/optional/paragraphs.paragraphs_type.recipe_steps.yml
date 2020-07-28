@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8pCI5LyQSS4GZmFw0bq3AleswdBo3OyaqZFg6j9I73Q
+id: recipe_steps
+label: 'Recipe Steps'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

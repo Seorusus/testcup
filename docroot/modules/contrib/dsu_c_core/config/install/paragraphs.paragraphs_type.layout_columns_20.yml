@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_columns_20
+label: 'Layout Columns - 20'
+icon_uuid: null
+description: 'Provides a 5 column layout as a paragraph component.'
+behavior_plugins: {  }

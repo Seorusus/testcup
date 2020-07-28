@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_sideimagetext
+label: 'Text + Image'
+behavior_plugins: {  }

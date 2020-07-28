@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ln_adimo_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['productwidget'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+
+    ],
+    'template' => 'productwidget',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+  $theme['iframe'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'iframe',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+  $theme['lightbox'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'lightbox',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+  $theme['recipeiframe'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'recipeiframe',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+  $theme['recipelightbox'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'recipelightbox',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+
+  $theme['enhancedrecipe'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'enhancedrecipe',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+
+  $theme['storefirst'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'storefirst',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+
+  $theme['pricefirst'] = [
+    'variables' => [
+      'touchpointId' => NULL,
+      'customCSS' => NULL,
+    ],
+    'template' => 'pricefirst',
+    'render element' => 'element',
+    'path' => $path . '/templates',
+
+  ];
+
+
+  return $theme;
+}

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_link_document_container
+label: 'Link/document container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

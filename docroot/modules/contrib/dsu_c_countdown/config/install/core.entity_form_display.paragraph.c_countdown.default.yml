@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_countdown.field_c_end_date
+    - field.field.paragraph.c_countdown.field_c_timezone
+    - paragraphs.paragraphs_type.c_countdown
+  module:
+    - datetime
+id: paragraph.c_countdown.default
+targetEntityType: paragraph
+bundle: c_countdown
+mode: default
+content:
+  field_c_end_date:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_c_timezone:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

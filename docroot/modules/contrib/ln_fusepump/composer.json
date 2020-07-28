@@ -1,0 +1,10 @@
+{
+  "name": "lightnest/ln_fusepump",
+  "description": "Adds the integration from Drupal to Fusepump.",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "paragraphs",
+    "frontend"
+  ]
+}

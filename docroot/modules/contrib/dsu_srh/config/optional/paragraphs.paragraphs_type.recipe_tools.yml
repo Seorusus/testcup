@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KFPaq6q5LwzxVc8fvXbE4mW828vR1EEMMZxkcABmqOY
+id: recipe_tools
+label: 'Recipe tools'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

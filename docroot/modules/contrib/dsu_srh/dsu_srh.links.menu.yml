@@ -1,0 +1,12 @@
+dsu_srh.admin:
+  title: 'SRH connector configuration'
+  description: 'Configuration for the SRH connector'
+  parent: system.admin_config_services
+  route_name: dsu_srh.config
+  weight: 100
+dsu_srh.action:
+  title: 'SRH manual importer'
+  description: 'Import recipes from the Smart Reicipe Hub to local'
+  parent: system.admin_config_services
+  route_name: dsu_srh.action
+  weight: 101

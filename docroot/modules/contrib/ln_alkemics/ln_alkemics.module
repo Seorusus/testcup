@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Alkemics module.
+ */
+
+/**
+ * Implements Hook_cron().
+ */
+function ln_alkemics_cron() {
+  // Alkemics Cron queue jobs.
+  $config = Drupal::service('config.factory')
+    ->getEditable('ln_alkemics.settings');
+  $activeCron = $config->get('ln_alkemics.alkemics_periodic_import_time_interval');
+  $interval = $config->get('ln_alkemics.alkemics_connect_interval');
+  $last_run = Drupal::state()
+	  ->get('ln_alkemics.next_execution', time() - $interval - 1);
+  // Updated last cron and added in existing queue.
+  if ($activeCron == 1 && ($last_run <= time() - $interval)) {
+    $queue = Drupal::queue('syncronizer_queue');
+    Drupal::logger('AlkemicsLogger')->notice('Job created');
+    $item = 1;
+    $queue->createItem($item);
+    Drupal::state()->set('ln_alkemics.next_execution', time() + $interval);
+  }
+}
+

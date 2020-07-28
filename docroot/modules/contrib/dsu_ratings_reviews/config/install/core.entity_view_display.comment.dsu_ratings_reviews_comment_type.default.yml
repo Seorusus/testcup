@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.dsu_ratings_reviews_comment_type
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_comment
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_ratings
+  module:
+    - fivestar
+id: comment.dsu_ratings_reviews_comment_type.default
+targetEntityType: comment
+bundle: dsu_ratings_reviews_comment_type
+mode: default
+content:
+  field_dsu_comment:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dsu_ratings:
+    weight: 1
+    label: hidden
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

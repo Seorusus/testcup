@@ -1,0 +1,21 @@
+name: Article
+description: 'Provides Article content type and related configuration. Use articles to add timely content to your site.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - dsu_core
+  - entity_reference_revisions
+  - field
+  - lightning_media_document
+  - lightning_media_image
+  - media
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - taxonomy
+  - text
+  - user
+package: DSU
+version: 8.x-1.2.4

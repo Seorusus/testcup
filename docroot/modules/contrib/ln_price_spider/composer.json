@@ -1,0 +1,10 @@
+{
+    "name": "lightnest/ln_price_spider",
+    "description": "Integration from Drupal to PriceSpider.",
+    "type": "drupal-module",
+    "keywords": [
+        "content",
+        "paragraphs",
+        "frontend"
+    ]
+}

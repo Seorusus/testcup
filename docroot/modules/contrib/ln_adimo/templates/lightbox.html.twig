@@ -1,0 +1,23 @@
+{#
+
+/**
+ * @file
+ * Template file for adimo module.
+ */
+#}
+{% if touchpointId is not empty %}
+
+  {{ attach_library('ln_adimo/lightbox') }}
+
+
+  <!-- To be placed where you would like the button to appear -->
+  <div class="adimoWidget" data-type="lightbox"
+    data-static-touchpoint-identifier="{{ touchpointId }}"></div>
+
+
+  {% if customCSS is not empty %}
+
+    <style>{{ customCSS }}</style>
+
+  {% endif %}
+{% endif %}

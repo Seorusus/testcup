@@ -1,0 +1,27 @@
+name: DSU SRH Connector
+description: Connect with Smart Recipe Hub, import and syncronize recipes
+package: DSU
+type: module
+version: 8.x-2.2.8
+core: 8.x
+
+configure: dsu_srh.config
+
+dependencies:
+  - drupal:path
+  - drupal:pathauto
+  - drupal:entity_browser
+  - drupal:paragraphs
+  - drupal:metatag
+  - drupal:entity_reference_revisions
+  - drupal:options
+  - drupal:user
+  - drupal:video_embed_field
+  - drupal:media
+  - drupal:lightning_media
+enforced:
+  module:
+    - dsu_srh
+
+
+    

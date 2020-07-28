@@ -1,0 +1,14 @@
+name: DSU Store
+description: 'Provides Store content type and related configuration. Add store with store location and store details from this content type.'
+type: module
+core: 8.x
+version: 8.x-1.0.3
+dependencies:
+  - address
+  - field
+  - geolocation
+  - link
+  - menu_ui
+  - node
+  - path
+  - user

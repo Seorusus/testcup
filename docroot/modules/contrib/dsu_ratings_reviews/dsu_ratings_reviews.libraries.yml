@@ -1,0 +1,5 @@
+dsu-event-tracking:
+  footer: true
+  version: 1.x
+  js:
+    assets/js/dsu_event_tracking.js:

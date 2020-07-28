@@ -1,0 +1,5 @@
+dsu_ghostery.admin:
+  title: "DSU Ghostery"
+  description: 'Allows to add a Ghostery JS snippet to your site'
+  parent: system.admin_config_system
+  route_name: dsu_ghostery.settings_form

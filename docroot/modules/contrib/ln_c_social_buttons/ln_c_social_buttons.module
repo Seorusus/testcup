@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains ln_c_social_buttons.module.
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+
+/**
+ * Implements hook_theme().
+ */
+function ln_c_social_buttons_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__c_socialbuttons' => [
+      'template' => 'paragraph--c-socialbuttons',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__c_social_buttons_item' => [
+      'template' => 'paragraph--c-social-buttons-item',
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+function ln_c_social_buttons_preprocess_paragraph(&$variables) {
+  if($variables['paragraph']->getType() == 'c_socialbuttons') {
+    $variables['#attached']['library'][] = 'ln_c_social_buttons/social-buttons';
+  }
+  if($variables['paragraph']->getType() == 'c_social_buttons_item') {
+    if (!empty($variables['paragraph']->get('field_social_link_platform')->first())) {
+      $img_target_id = $variables['content']['field_social_link_platform'][0]['#options']['entity']->get('field_c_icon')->getString();
+      $entity_image = Media::load($img_target_id);
+      if (!empty($entity_image) && !empty($entity_image->get('image')->first())) {
+        $image_file_id = $entity_image->get('image')->first()->get('target_id')->getString();
+      }
+      $file = File::load($image_file_id);
+      $variables['content']['image_uri'] = file_create_url($file->getFileUri());
+    }
+  }
+}

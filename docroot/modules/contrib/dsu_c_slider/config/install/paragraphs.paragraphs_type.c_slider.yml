@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_slider
+label: 'Content: Slider'
+behavior_plugins: {  }

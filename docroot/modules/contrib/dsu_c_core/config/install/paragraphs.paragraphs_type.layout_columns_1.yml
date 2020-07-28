@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_columns_1
+label: 'Layout Columns - 100'
+behavior_plugins: {  }

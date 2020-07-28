@@ -1,0 +1,35 @@
+.paragraph--type--c-link {
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.paragraph--type--c-link a {
+    display: inline-flex;
+}
+.paragraph--type--c-link .field--name-field-c-image {
+    margin: auto 9px auto 0;
+}
+.paragraph--type--c-document {
+    display: inline-block;
+}
+.paragraph--type--c-document .file-link a {
+    display: inline-block;
+    line-height: 41px;
+}
+/*.paragraph--type--c-document .field--name-field-c-image,*/
+.paragraph--type--c-document .field--name-field-c-title {
+    display: inline-block;
+    margin-left: 25px;
+}
+.paragraph--type--c-document .field--name-field-c-image {
+    float: left;
+    width: 20px;
+    margin: 10px;
+}
+.paragraph--type--c-document .file-link .file-icon {
+    display: inline-block
+}
+
+.paragraph--type--c-link .btn .image_cta_link {
+    background: #007486;
+}

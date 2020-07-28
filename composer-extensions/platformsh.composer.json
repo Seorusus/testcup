@@ -1,0 +1,14 @@
+{
+  "require": {
+    "platformsh/config-reader": "^2.3",
+    "drupal/redis": "^1.8.0"
+  },
+  "extra": {
+    "enable-patching": true,
+    "patches": {
+      "acquia/blt": {
+        "Remove conflicting settings": "patches/blt-platform.patch"
+      }
+    }
+  }
+}

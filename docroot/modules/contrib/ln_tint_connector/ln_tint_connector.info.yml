@@ -1,0 +1,11 @@
+name: 'Lightnest components: Tint Integration'
+description: 'Lightnest components: Tint Integration'
+type: module
+core: 8.x
+version: 8.x-1.0.2
+dependencies:
+  - field
+  - options
+  - paragraphs
+  - text
+package: 'DSU Components'

@@ -1,0 +1,6 @@
+name: 'Fusepump connector'
+package: 'DSU'
+version: 8.x-1.1.0
+description: 'Adds the integration from Drupal to Fusepump.'
+type: module
+core: 8.x

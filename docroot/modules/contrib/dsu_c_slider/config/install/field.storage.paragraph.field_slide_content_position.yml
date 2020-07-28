@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slide_content_position
+field_name: field_slide_content_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: above_center
+      label: 'Above Center'
+    -
+      value: above_left
+      label: 'Above Left'
+    -
+      value: above_right
+      label: 'Above right'
+    -
+      value: bellow_center
+      label: 'Bellow Center'
+    -
+      value: bellow_left
+      label: 'Bellow Left'
+    -
+      value: bellow_right
+      label: 'Bellow Right'
+    -
+      value: over_center
+      label: 'Over Center'
+    -
+      value: over_right
+      label: 'Over Right'
+    -
+      value: over_left
+      label: 'Over Left'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

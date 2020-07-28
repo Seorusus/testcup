@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_vertical_alignment
+field_name: field_vertical_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: above
+      label: Above
+    -
+      value: below
+      label: below
+    -
+      value: top_center
+      label: 'On Top Center'
+    -
+      value: bottom_center
+      label: 'On Bottom Center'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

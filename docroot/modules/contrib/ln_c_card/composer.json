@@ -1,0 +1,11 @@
+{
+  "name": "lightnest/ln_c_card",
+  "description": "Provides a card component to be used as paragraph.",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "paragraphs",
+    "frontend",
+	"card"
+  ]
+}

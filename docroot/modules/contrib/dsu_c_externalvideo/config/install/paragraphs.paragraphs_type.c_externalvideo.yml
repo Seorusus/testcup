@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_externalvideo
+label: 'C Externalvideo'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

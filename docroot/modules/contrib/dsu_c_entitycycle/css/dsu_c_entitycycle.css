@@ -1,0 +1,16 @@
+.paragraph--type--c-entitycycle {
+    padding: 0 20px;
+}
+.paragraph--type--c-entitycycle .slick-dotted.slick-slider {
+    padding-bottom: 15px;
+}
+.paragraph--type--c-entitycycle .slick__slide {
+    margin: 0 5px;
+}
+.paragraph--type--c-entitycycle .slick-prev:before, .paragraph--type--c-entitycycle .slick-next:before {
+    color: #000000;
+}
+.paragraph--type--c-entitycycle .slick img {
+    width: auto;
+    max-width: 100%;
+}

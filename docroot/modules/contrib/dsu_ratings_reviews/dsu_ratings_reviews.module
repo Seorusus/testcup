@@ -1,0 +1,16 @@
+<?php
+
+  /**
+   * @file
+   * Contains dsu_ratings_reviews.module.
+   */
+
+  /**
+   * Implements hook_page_attachments().
+   *
+   * @param array $page
+   */
+  function dsu_ratings_reviews_page_attachments(array &$page) {
+    // Send event tracking for getting product from ratings reviews.
+	  $page['#attached']['library'][] = 'dsu_ratings_reviews/dsu-event-tracking';
+  }

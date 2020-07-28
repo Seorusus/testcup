@@ -1,0 +1,11 @@
+dsu_security_user_profile.settings_form:
+  route_name: dsu_security_user_profile.settings_form
+  title: 'DSU Security: Select Roles where to block UID in Edit page URL'
+  weight: 100
+  base_route: dsu_security_user_profile.settings_form
+
+dsu_security.settings_form:
+  route_name: dsu_security.settings_form
+  title: 'DSU Security: Settings Form'
+  weight: 90
+  base_route: dsu_security_user_profile.settings_form

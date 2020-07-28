@@ -1,0 +1,29 @@
+.paragraph--type--c-image {
+  position: relative;
+}
+
+.paragraph--type--c-image .field--name-field-c-title {
+  position: absolute;
+  top: 20%;
+  font-size: 32px;
+}
+
+.paragraph--type--c-image .field--name-field-c-image-subheading {
+  position: absolute;
+  top: 40%;
+  font-size: 22px;
+}
+
+.paragraph--type--c-image .field--name-field-c-image-summary-text{
+  position: absolute;
+  top: 60%;
+  font-size: 18px;
+}
+
+.paragraph--type--c-image .field--name-field-c-title,
+.paragraph--type--c-image .field--name-field-c-image-summary-text,
+.paragraph--type--c-image .field--name-field-c-image-subheading
+{
+  margin-left: 20px;
+}
+

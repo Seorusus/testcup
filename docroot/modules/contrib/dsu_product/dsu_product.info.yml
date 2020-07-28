@@ -1,0 +1,21 @@
+name: Product
+description: 'Provides Product content type and related configuration. A product for the site.'
+type: module
+core: 8.x
+dependencies:
+  - dsu_core
+  - entity_reference_revisions
+  - field
+  - image
+  - media
+  - menu_ui
+  - node
+  - paragraphs
+  - entity_browser
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+package: DSU
+version: 8.x-1.2.4

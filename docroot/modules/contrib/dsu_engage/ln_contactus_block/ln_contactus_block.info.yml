@@ -1,0 +1,14 @@
+name: 'Engage Contact us block'
+type: module
+description: 'Provides Engage Contact us form as a block'
+core: 8.x
+version: 8.x-1.0
+package: 'DSU'
+dependencies:
+  - webform
+  - webform_ui
+  - dsu_engage
+  - address
+  - clientside_validation
+
+

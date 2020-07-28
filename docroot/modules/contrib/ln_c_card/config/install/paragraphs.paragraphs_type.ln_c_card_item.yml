@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ln_c_card_item
+label: 'Card Item'
+icon_uuid: null
+description: 'Create card Items.'
+behavior_plugins: {  }

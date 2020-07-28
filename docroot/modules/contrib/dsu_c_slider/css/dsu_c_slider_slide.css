@@ -1,0 +1,102 @@
+.paragraph--type--c-slider .slick {
+  margin: 0 auto; }
+
+.paragraph--type--c-slider .slick-list {
+  margin-bottom: 10px;
+  padding: 0 !important; }
+
+.paragraph--type--c-slider .slick-arrow::before, .paragraph--type--c-slider .slick-arrow::after {
+  color: #fff;
+  font-size: 36px; }
+
+.paragraph--type--c-slide {
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+  .paragraph--type--c-slide .field--name-field-c-image {
+    width: 100%;
+    height: 645px; }
+    .paragraph--type--c-slide .field--name-field-c-image img {
+      width: 100%;
+      height: auto; }
+  .paragraph--type--c-slide .fields--wrapper {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    padding: 1.5em 1em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2; }
+  .paragraph--type--c-slide .field--name-field-c-title {
+    color: inherit;
+    font-size: 34px;
+    font-weight: bold; }
+  .paragraph--type--c-slide .field--name-field-slide-description {
+    color: inherit;
+    font-size: 18px; }
+  .paragraph--type--c-slide .image_cta_link {
+    color: inherit;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 16px;
+    line-height: 1.846;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    border: none;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-size: 200% 200%;
+    background-position: 50%;
+    color: #fff;
+    background-color: #222222;
+    border-color: transparent; }
+  .paragraph--type--c-slide .field--name-field-c-link a {
+    color: #fff; }
+  .paragraph--type--c-slide .vertical-over.horizontal-left {
+    left: 0%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%); }
+  .paragraph--type--c-slide .vertical-over.horizontal-right {
+    right: 0%;
+    left: 0%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%); }
+  .paragraph--type--c-slide .vertical-above,
+  .paragraph--type--c-slide .vertical-bellow {
+    position: static;
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%); }
+  .paragraph--type--c-slide .horizontal-right {
+    text-align: right; }
+  .paragraph--type--c-slide .horizontal-left {
+    text-align: left; }
+
+@media (min-width: 768px) {
+  .paragraph--type--c-slide .fields--wrapper {
+    padding: 3em; } }
+
+@media (min-width: 768px) {
+  .paragraph--type--c-slide .field--name-field-slide-description {
+    font-size: 24px; } }

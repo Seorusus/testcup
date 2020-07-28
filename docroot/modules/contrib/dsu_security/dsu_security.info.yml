@@ -1,0 +1,18 @@
+name: 'DSU Security'
+description: 'This module will setup the site security configurations to be compliant with Nestle DSU Standard'
+type: module
+core: 8.x
+version: 8.x-1.14.5
+package: DSU
+dependencies:
+  - autologout
+  - login_security
+  - password_policy
+  - seckit
+  - session_limit
+  - password_policy_length
+  - password_policy_characters
+  - password_policy_character_types
+  - password_policy_history
+  - password_policy_username
+  - prlp

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_66_33
+label: Layout_66_33
+icon_uuid: null
+description: 'Provides Layout_66_33 as a paragraph component.'
+behavior_plugins: {  }

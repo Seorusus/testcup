@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the dsu_c_core config.
+ */
+
+
+/**
+ * Implements hook_update().
+ * DWDL-438 : Disabled the /frontpage view
+ */
+function dsu_c_core_update_8601() {
+  Drupal::entityTypeManager()->getStorage('view')
+    ->load('frontpage')
+    ->setStatus(FALSE)
+    ->save();
+}

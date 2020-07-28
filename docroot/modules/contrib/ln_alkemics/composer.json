@@ -1,0 +1,11 @@
+{
+    "name": "lightnest/ln_alkemics",
+    "description": "Adds the integration from Drupal to Alkemics.",
+    "type": "drupal-module",
+    "keywords": [
+        "content",
+        "paragraphs",
+        "alkemics"
+    ],
+    "license": "GPL-2.0+"
+}

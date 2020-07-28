@@ -1,0 +1,10 @@
+{
+  "name": "lightnest/dsu_security_user_profile",
+  "description": "Security module to change the current user edit path.",
+  "type": "drupal-module",
+  "keywords": [
+    "security"
+  ],
+  "require": {
+  }
+}

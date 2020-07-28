@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_tab_item
+label: 'Tab'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

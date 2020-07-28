@@ -1,0 +1,5 @@
+dsu_security.admin:
+  title: "DSU Security"
+  description: 'Configure DSU security'
+  parent: system.admin_config_system
+  route_name: dsu_security.settings_form

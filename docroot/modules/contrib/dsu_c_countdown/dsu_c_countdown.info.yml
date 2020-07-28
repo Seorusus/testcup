@@ -1,0 +1,12 @@
+name: Countdown
+description: 'Provides Countdown paragraphs and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - datetime
+  - field
+  - field_timer
+  - options
+  - paragraphs
+package: 'DSU Components'

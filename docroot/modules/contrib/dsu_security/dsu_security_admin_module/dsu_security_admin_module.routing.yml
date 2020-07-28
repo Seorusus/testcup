@@ -1,0 +1,9 @@
+dsu_security_admin_module.auth_redirect_form:
+  path: '/admin/config/dsu_security_admin_module/authredirect'
+  defaults:
+    _form: '\Drupal\dsu_security_admin_module\Form\AuthRedirectForm'
+    _title: 'Disable auth form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: 'TRUE'

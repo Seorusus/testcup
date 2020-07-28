@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.c_countdown.field_c_end_date
+    - field.field.paragraph.c_countdown.field_c_timezone
+    - paragraphs.paragraphs_type.c_countdown
+  module:
+    - field_timer
+id: paragraph.c_countdown.default
+targetEntityType: paragraph
+bundle: c_countdown
+mode: default
+content:
+  field_c_end_date:
+    weight: 0
+    label: hidden
+    settings:
+      type: countdown
+      regional: en
+      format: dHMS
+      layout: ''
+      significant: '0'
+      timeSeparator: ':'
+      compact: 0
+      padZeroes: 0
+    third_party_settings: {  }
+    type: field_timer_countdown
+    region: content
+hidden:
+  field_c_timezone: true

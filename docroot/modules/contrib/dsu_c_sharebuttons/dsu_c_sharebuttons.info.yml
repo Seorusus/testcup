@@ -1,0 +1,13 @@
+name: 'Lightnest components: Share buttons'
+description: 'Allows to create a bar with share buttons.'
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_revisions
+  - field
+  - options
+  - paragraphs
+  - social_media
+  - google_tag
+package: 'DSU Components'
+version: 8.x-1.0.2

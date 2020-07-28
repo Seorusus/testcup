@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.store.field_address
+    - field.field.node.store.field_country
+    - field.field.node.store.field_location
+    - field.field.node.store.field_phone
+    - field.field.node.store.field_town
+    - field.field.node.store.field_website
+    - field.field.node.store.field_zip_code
+    - node.type.store
+  module:
+    - user
+id: node.store.teaser
+targetEntityType: node
+bundle: store
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_country: true
+  field_location: true
+  field_phone: true
+  field_town: true
+  field_website: true
+  field_zip_code: true

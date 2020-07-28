@@ -1,0 +1,7 @@
+ln_datalayer.admin_settings_form:
+  path: '/admin/config/system/lightnest_datalayer'
+  defaults:
+    _title: 'Lightnest Datalayer'
+    _form: '\Drupal\ln_datalayer\Form\LightnestDatalayerForm'
+  requirements:
+    _permission: 'administer lightnest datalayer settings'

@@ -1,0 +1,28 @@
+{#
+
+/**
+ * @file
+ * Template file for adimo module.
+ */
+#}
+{% if touchpointId is not empty %}
+
+  {{ attach_library('ln_adimo/recipeiframe') }}
+
+
+
+  <div class="adimo-iframe-outer">
+    <div class="adimo-iframe-inner">
+      <iframe class="adimo-iframe" data-touchpointId="{{ touchpointId }}"
+        border="0" frameborder="0" scrolling="no">
+      </iframe>
+    </div>
+  </div><!-- End demo -->
+
+  {% if customCSS is not empty %}
+
+    <style>{{ customCSS }}</style>
+
+  {% endif %}
+
+{% endif %}

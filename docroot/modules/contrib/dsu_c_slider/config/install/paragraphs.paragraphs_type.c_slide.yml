@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: c_slide
+label: 'Content: Slide'
+behavior_plugins: {  }

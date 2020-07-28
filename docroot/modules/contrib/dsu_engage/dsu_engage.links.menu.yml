@@ -1,0 +1,13 @@
+dsu_engage.admin_settings_form:
+  title: 'DSU Engage Settings'
+  route_name: dsu_engage.admin_settings_form
+  description: 'Configure Engage parameters'
+  parent: system.admin_config_system
+  weight: 99
+
+dsu_engage.admin_tool_tips_settings_form:
+  route_name: dsu_engage.admin_tool_tips_settings_form
+  title: DSU Engagee Tooltip settings
+  description: 'Configure for Engage Tooltip settings'
+  parent: system.admin_config_system
+

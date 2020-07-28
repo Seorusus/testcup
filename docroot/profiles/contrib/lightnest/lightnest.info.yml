@@ -1,0 +1,37 @@
+name: 'Lightnest'
+description: 'The LIGHTNEST Profile provided by WebCMS team'
+type: profile
+version: 8.x-3.4.0
+package: "Lightnest"
+core: '8.x'
+dependencies:
+  - admin_toolbar
+  - entity_reference_revisions
+  - responsive_image
+  - admin_toolbar_tools
+  - contact
+  - ctools
+  - breakpoint
+  - dsu_security
+themes:
+  - bootstrap
+  - seven
+base profile: lightning
+excluded:
+  - lightning_core
+  - lightning_api
+  - lightning_layout
+  - lightning_media
+  - lightning_workflow
+  - lightning_contact_form
+  - lightning_page
+  - lightning_roles
+  - lightning_search
+  - lightning_landing_page
+  - lightning_media_bulk_upload
+  - lightning_media_document
+  - lightning_media_image
+  - lightning_media_instagram
+  - lightning_media_twitter
+  - lightning_media_video
+  - lightning_scheduled_updates

@@ -1,0 +1,12 @@
+name: 'Lightnest components: Link/document container'
+description: 'Allows to create a list with links and documents.'
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - link_attributes
+  - dsu_c_core
+package: 'DSU Components'
+version: 8.x-1.1.3

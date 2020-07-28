@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.dsu_c_slider_large
+  module:
+    - crop
+name: crop_dsu_c_slider_large
+label: 'Cropped: dsu_c_slider_large'
+effects:
+  3e5b7b0a-b29f-4093-9ade-e8cbfb558fa4:
+    uuid: 3e5b7b0a-b29f-4093-9ade-e8cbfb558fa4
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: dsu_c_slider_large

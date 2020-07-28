@@ -1,0 +1,12 @@
+name: 'Lightnest components: Cards'
+description: 'Allows to create card component.'
+type: module
+core: 8.x
+dependencies:
+  - dsu_c_core
+  - dsu_core
+  - entity_class_formatter
+  - inline_entity_form
+  - link_attributes
+  - video_embed_field
+package: 'Ln Components'

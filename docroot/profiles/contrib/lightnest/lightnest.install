@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall hooks for the Lightnest subprofile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function lightnest_install() {
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'bootstrap')
+    ->save();
+
+  \Drupal::configFactory()
+    ->getEditable('bootstrap.settings')
+    ->set('fluid_container', '1')
+    ->save();
+
+}

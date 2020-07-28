@@ -1,0 +1,12 @@
+ln_bazaarvoice.admin_settings_form:
+  route_name: ln_bazaarvoice.admin_settings_form
+  title: Lighnest Bazaarvoice
+  description: 'Configure for Bazaarvoice integration'
+  parent: system.admin_config_development
+
+ln_bazaarvoice_productfeed.admin_settings_form:
+  route_name: ln_bazaarvoice_productfeed.admin_settings_form
+  title: Bazaarvoice Productfeed
+  description: 'Configure for Bazaarvoice Productfeed'
+  parent: ln_bazaarvoice.admin_settings_form
+

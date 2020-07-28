@@ -1,0 +1,8 @@
+{
+  "name": "lightnest/dsu_c_sharebuttons",
+  "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/social_media": "^1.3"
+    }
+}

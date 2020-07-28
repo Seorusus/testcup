@@ -1,0 +1,5 @@
+services:
+  dsu_c_core.twig.ResponsiveImageTwigExtension:
+    class: Drupal\dsu_c_core\ResponsiveImageTwigExtension
+    tags:
+      - {name: twig.extension}

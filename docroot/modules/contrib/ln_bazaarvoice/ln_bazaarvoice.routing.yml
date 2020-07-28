@@ -1,0 +1,15 @@
+ln_bazaarvoice.admin_settings_form:
+  path: /admin/config/services/ln_bazaarvoice
+  defaults:
+    _title: Lightnest Bazaarvoice
+    _form: \Drupal\ln_bazaarvoice\Form\AdminSettingsForm
+  requirements:
+    _permission: 'administer dsu_bazaarvoice'
+
+ln_bazaarvoice_productfeed.admin_settings_form:
+  path: /admin/config/services/ln_bazaarvoice/productfeed
+  defaults:
+    _title: Lightnest Productfeed
+    _form: \Drupal\ln_bazaarvoice\Form\ProductFeedAdminSettingsForm
+  requirements:
+    _permission: 'administer bazaarvoice productfeed'

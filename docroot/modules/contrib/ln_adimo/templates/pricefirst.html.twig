@@ -1,0 +1,21 @@
+{#
+
+/**
+ * @file
+ * Template file for adimo module.
+ */
+#}
+{% if touchpointId is not empty %}
+
+  {{ attach_library('ln_adimo/pricefirst') }}
+
+  <!-- To be placed where you would like the button to appear -->
+  <a class="adimo-site-product-first" data-type="site-product-first"
+    data-static-touchpoint-identifier="{{ touchpointId }}">Buy Now</a>
+
+  {% if customCSS is not empty %}
+
+    <style>{{ customCSS }}</style>
+
+  {% endif %}
+{% endif %}

@@ -1,0 +1,6 @@
+name: DSU Engage
+description: 'Provide a "Contact us" form connected with Engage'
+type: module
+core: 8.x
+version: '8.x-1.x-dev'
+package: DSU

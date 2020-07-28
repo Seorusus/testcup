@@ -1,0 +1,239 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dsu_product.field_al_allergens
+    - field.field.node.dsu_product.field_al_coffee_format
+    - field.field.node.dsu_product.field_al_coffee_range
+    - field.field.node.dsu_product.field_al_coffee_variety
+    - field.field.node.dsu_product.field_al_consumer_age
+    - field.field.node.dsu_product.field_al_consumer_gender
+    - field.field.node.dsu_product.field_al_good_question
+    - field.field.node.dsu_product.field_al_good_to_know
+    - field.field.node.dsu_product.field_al_good_to_remember
+    - field.field.node.dsu_product.field_al_gtin
+    - field.field.node.dsu_product.field_al_health_allegations
+    - field.field.node.dsu_product.field_al_ingredients
+    - field.field.node.dsu_product.field_al_keywords
+    - field.field.node.dsu_product.field_al_name_public_long
+    - field.field.node.dsu_product.field_al_name_public_short
+    - field.field.node.dsu_product.field_al_number_of_servings
+    - field.field.node.dsu_product.field_al_number_of_servings_labe
+    - field.field.node.dsu_product.field_al_nutrients
+    - field.field.node.dsu_product.field_al_pictures_p
+    - field.field.node.dsu_product.field_al_product_benefits
+    - field.field.node.dsu_product.field_al_sub_brand_text
+    - field.field.node.dsu_product.field_al_supplier_code
+    - node.type.dsu_product
+  module:
+    - paragraphs
+id: node.dsu_product.default
+targetEntityType: node
+bundle: dsu_product
+mode: default
+content:
+  field_al_allergens:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_coffee_format:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_coffee_range:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_coffee_variety:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_consumer_age:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_consumer_gender:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_good_question:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_good_to_know:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_good_to_remember:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_gtin:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_health_allegations:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_ingredients:
+    type: entity_reference_paragraphs
+    weight: 36
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_al_keywords:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_name_public_long:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_name_public_short:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_number_of_servings:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_number_of_servings_labe:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_al_nutrients:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_pictures_p:
+    type: entity_reference_paragraphs
+    weight: 33
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_al_product_benefits:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_sub_brand_text:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_al_supplier_code:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 1
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

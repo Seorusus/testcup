@@ -1,0 +1,8 @@
+{
+  "name": "lightnest/dsu_article",
+  "description": "Creates a basic article.",
+  "type": "drupal-module",
+  "keywords": [
+    "content"
+  ]
+}

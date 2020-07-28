@@ -1,0 +1,10 @@
+{
+    "name": "lightnest/dsu_c_sideimagetext",
+    "description": "Allows to create a component with text and an image next to it.",
+    "type": "drupal-module",
+    "keywords": [
+        "content",
+        "paragraphs",
+        "frontend"
+    ]
+}

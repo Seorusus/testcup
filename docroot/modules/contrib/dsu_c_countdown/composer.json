@@ -1,0 +1,13 @@
+{
+	"name": "lightnest/dsu_c_countdown",
+	"description": "Provides an countdown component to be used as paragraph.",
+	"type": "drupal-module",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"keywords": [
+		"countdown"
+	],
+	"require": {
+		"drupal/field_timer": "^1.0"
+	}
+}

@@ -1,0 +1,171 @@
+<?php
+
+  /**
+   * @file
+   * Provides primary Drupal hook implementations.
+   */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ln_datalayer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tint module.
+    case 'help.page.ln_datalayer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Lightnest Datalyer Integration for GMT.') . '</p>';
+
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Get saved form settings and replace with dynamic for current page.
+ *
+ * @param array $data_layer
+ */
+function ln_datalayer_datalayer_alter(&$data_layer) {
+
+  // Datalayer is not required on user entity for security purpose.
+  if (isset($data_layer['entityType']) && $data_layer['entityType'] == 'user') {
+    $data_layer = array();
+    return;
+  }
+  // Unset not required  dataset from datalayer module.
+  if (isset($data_layer['drupalLanguage']) || isset($data_layer['drupalCountry']) || isset($data_layer['pageName']) || isset($data_layer['userUid'])) {
+    unset($data_layer['drupalLanguage']);
+    unset($data_layer['drupalCountry']);
+    unset($data_layer['pageName']);
+    unset($data_layer['userUid']);
+    unset($data_layer['siteName']);
+  }
+
+  // System form config values.
+  $config = \Drupal::config('ln_datalayer.settings');
+  $brand = $config->get('brand');
+  $digiPiID = $config->get('digi_pi_id');
+  $zone = $config->get('zone');
+  $country = $config->get('country');
+  $business = $config->get('business');
+  $properties = $config->get('properties');
+  $siteType = $config->get('siteType');
+  $technology = $config->get('technology');
+
+  // Node type and cookies values for getting GA ID.
+  $nodeType = $pageName = '';
+  $gaClientID = '';
+  if (isset($_COOKIE['_ga'])) {
+    $gaID = $_COOKIE['_ga'];
+    $gaClientID = $gaID;
+  }
+
+  // Validation for node landing page attributes.
+  if ((\Drupal::request()->attributes->get('node')) != NULL) {
+    $nodeType = \Drupal::request()->attributes->get('node')->bundle();
+    $pageName = \Drupal::request()->attributes->get('node')->getTitle();
+  }
+
+  // Get name of language.
+  $language_name = \Drupal::LanguageManager()
+    ->getCurrentLanguage()
+    ->getName();
+
+  // Check current language and default language for site.
+  if (empty($language_name)) {
+    $all_languages = \Drupal::LanguageManager()->getLanguages();
+    $lang_code = \Drupal::LanguageManager()->getCurrentLanguage()->getId();
+    $language_name = $all_languages[$lang_code]->getName();
+  }
+
+  // Detect device and add it on json for header.
+  $device = detect_device();
+  $data_layer['event'] = 'fireTags';
+  $data_layer['pageInformation'] = [
+    'pageCategory' => $nodeType,
+    'pageName' => $pageName,
+    'pageType' => $nodeType,
+  ];
+
+  // Get all settings config form values.
+  $data_layer['siteInformation'] = [
+    'zone' => !empty($zone) ? $zone : NULL,
+    'country' => !empty($country) ? $country : NULL,
+    'business' => !empty($business) ? $business : NULL,
+    'brand' => !empty($brand) ? $brand : NULL,
+    'language' => !empty($language_name) ? $language_name : NULL,
+    'technology' => !empty($technology) ? $technology : NULL,
+    'properties' => !empty($properties) ? $properties : NULL,
+    'siteName' => !empty(\Drupal::config('system.site')->get('name')) ? \Drupal::config('system.site')->get('name') : NULL,
+    'siteType' => !empty($siteType) ? $siteType : NULL,
+    'digiPiID' => !empty($digiPiID) ? $digiPiID : NULL,
+  ];
+
+  // Set user information with another json structure for header.
+  $data_layer['userInformation'] = [
+    'deviceType' => $device,
+    'userID' => (\Drupal::currentUser()->isAnonymous()) ? NULL : \Drupal::currentUser()->id(),
+    'gaClientID' => !empty($gaClientID) ? $gaClientID : NULL
+  ];
+}
+
+/**
+ * Get current device name and type.
+ */
+function detect_device() {
+  $userAgent = $_SERVER["HTTP_USER_AGENT"];
+  // Define type of devices for comparing with current one.
+  $devicesTypes = [
+    "desktop" => [
+      "msie 10",
+      "msie 9",
+      "msie 8",
+      "windows.*firefox",
+      "windows.*chrome",
+      "x11.*chrome",
+      "x11.*firefox",
+      "macintosh.*chrome",
+      "macintosh.*firefox",
+      "opera",
+    ],
+    "tablet" => ["tablet", "android", "ipad", "tablet.*firefox"],
+    "mobile" => [
+      "mobile ",
+      "android.*mobile",
+      "iphone",
+      "ipod",
+      "opera mobi",
+      "opera mini",
+    ],
+  ];
+
+  // Looping to find matched device.
+  foreach ($devicesTypes as $deviceType => $devices) {
+    foreach ($devices as $device) {
+      if (preg_match("/" . $device . "/i", $userAgent)) {
+        $deviceName = $deviceType;
+      }
+    }
+  }
+  // Return with device name.
+  return ucfirst($deviceName);
+}
+
+/**
+ * Alter the Data Layer data before it is output to the screen.
+ *
+ * @param array $properties
+ *   Data layer properties to output on entiity pages.
+ */
+function ln_datalayer_datalayer_meta_alter($properties) {
+  // Remove author uid if anonymous or admin.
+  if (array_key_exists('uid', $properties)) {
+    if ($properties['uid'] == 0 || $properties['uid'] == 1) {
+      unset($properties['uid']);
+    }
+  }
+}

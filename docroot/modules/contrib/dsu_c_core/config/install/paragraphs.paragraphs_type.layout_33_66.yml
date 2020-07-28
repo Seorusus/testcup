@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_33_66
+label: Layout_33_66
+icon_uuid: null
+description: 'Create Layout_33_66 component.'
+behavior_plugins: {  }

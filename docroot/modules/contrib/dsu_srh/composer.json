@@ -1,0 +1,14 @@
+{
+	"name": "lightnest/dsu_srh",
+	"description": "DSU Smart Recipes Hub",
+	"type": "drupal-module",
+	"keywords": [
+		"content",
+		"paragraphs",
+		"frontend"
+	],
+	"require": {
+		"drupal/metatag": "^1.10"
+	},
+	"license": "GPL-2.0+"
+}

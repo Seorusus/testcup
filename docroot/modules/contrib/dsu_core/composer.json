@@ -1,0 +1,5 @@
+{
+  "name": "lightnest/dsu_core",
+  "description": "Adds core configuration to be used by the rest of DSU modules.",
+  "type": "drupal-module"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "lightnest/dsu_c_core",
+  "type": "drupal-module",
+  "keywords": [
+    "content",
+    "paragraphs",
+    "frontend",
+    "slick",
+    "google_tag"
+  ],
+
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/slick": "^1.0",
+    "drupal/slick_paragraphs": "1.0-rc1",
+    "drupal/slick_entityreference": "~1.0",
+    "drupal/twig_tweak": "^2.0"
+  }
+}

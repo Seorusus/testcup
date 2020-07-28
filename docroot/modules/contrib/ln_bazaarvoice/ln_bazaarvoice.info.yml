@@ -1,0 +1,7 @@
+name: 'Lightnest Bazaarvoice'
+description: 'Lightnest Provides integration with the Bazaarvoice Conversations API'
+package: 'DSU'
+version: 8.x-1.2.0
+type: module
+core: 8.x
+configure: ln_bazaarvoice.admin_settings_form

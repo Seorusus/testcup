@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - gallery: .
+ * - gallery_preview: .
+ * - parent_paragraph: .
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+  'paragraph',
+] %}
+{% block paragraph %}
+  {% block content %}
+    {% for key,value in gallery %}
+      <li
+        class="gallery_{{ value.field_title_positions }}"
+        data-thumb="{{ value.thumbnail_url }}"
+        data-poster="{{ value.image_url }}">
+        <div class="caption">
+          <h2
+            class="image-gallery-text__sub-title text--white">{{ value.field_c_title }}</h2>
+        </div>
+        {% if value.video_url is not empty %}
+          {{ value.field_c_gallery_video_embed_url }}
+        {% else %}
+          <img src="{{ value.image_url }}" alt="{{ value.image_alt }}"
+            class="slide-image">
+        {% endif %}
+      </li>
+    {% endfor %}
+  {% endblock %}
+{% endblock paragraph %}

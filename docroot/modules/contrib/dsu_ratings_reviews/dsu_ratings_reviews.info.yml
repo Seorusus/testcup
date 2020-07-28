@@ -1,0 +1,12 @@
+name: 'DSU Ratings and Reviews'
+description: 'Provides the ratings and review comment type.'
+type: module
+core: 8.x
+dependencies:
+  - drupal:comment
+  - drupal:field
+  - drupal:fivestar
+  - drupal:text
+  - google_tag
+package: DSU
+version: 8.x-1.0.4

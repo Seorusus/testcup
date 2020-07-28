@@ -1,0 +1,28 @@
+ln_datalayer.settings:
+  type: mapping
+  label: 'Lightnest Datalayer Settings'
+  mapping:
+    brand:
+      type: string
+      label: 'Site Brand'
+    zone:
+      type: string
+      label: 'Site Zone'
+    country:
+      type: string
+      label: 'Default Site Country'
+    business:
+      type: string
+      label: 'Site Business Type'
+    siteType:
+      type: string
+      label: 'Site Type'
+    technology:
+      type: string
+      label: 'Technology'
+    digi_pi_id:
+      type: string
+      label: 'Site DIGI-PI ID'
+    properties:
+      type: string
+      label: 'Site Properties'

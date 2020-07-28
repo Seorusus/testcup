@@ -1,0 +1,127 @@
+.dsu-engage-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.tooltip img{
+    max-height: 200px;
+	max-width: 250px;
+	padding: 5px;
+}
+.tooltip .tooltip-inner{
+    max-width: 100%;
+}
+.tooltip .tooltip-text{padding: 0}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255, 255, 255, .1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255, 255, 255, .1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    background: #d2d9dd;
+}
+
+.form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div#edit-request-type {
+    display: none;
+}
+
+.questionbuttons {
+    background-color: #e8eeef;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px 12px;
+    background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%);
+    background-image: -webkit-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: -o-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    color: #333333;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.questionbuttons.active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    color: #333333;
+    background-color: #bebebe;
+    border-color: #bebebe;
+    outline: 0;
+    background-image: none;
+}
+
+.questionbuttons:hover {
+    color: #333333;
+    background-color: #d4d4d4;
+    border-color: #9d9d9d;
+    text-decoration: none;
+}
+
+.quetsionbuttons:active:hover {
+    color: #333333;
+    background-color: #d4d4d4;
+    border-color: #9d9d9d;
+}

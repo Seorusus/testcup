@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_25_75
+label: Layout_25_75
+icon_uuid: null
+description: 'Create Layout_25_75 component.'
+behavior_plugins: {  }

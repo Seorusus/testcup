@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.dsu_c_slider_medium
+  module:
+    - crop
+name: crop_dsu_c_slider_medium
+label: 'Cropped: dsu_c_slider_medium'
+effects:
+  0b2d4786-3201-4c99-8a6f-07feb565a508:
+    uuid: 0b2d4786-3201-4c99-8a6f-07feb565a508
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: dsu_c_slider_medium

@@ -1,0 +1,23 @@
+{#
+
+/**
+ * @file
+ * Template file for adimo module.
+ */
+#}
+{% if touchpointId is not empty %}
+
+  {{ attach_library('ln_adimo/storefirst') }}
+
+  <!-- To be placed where you would like the button to appear -->
+  <button class="adimo-store-first-button"
+    data-adimo="store-first" data-type="lightbox" data-disable-css="false"
+    data-touchpoint-identifier="{{ touchpointId }}">Add to basket
+  </button>
+
+  {% if customCSS is not empty %}
+
+    <style>{{ customCSS }}</style>
+
+  {% endif %}
+{% endif %}

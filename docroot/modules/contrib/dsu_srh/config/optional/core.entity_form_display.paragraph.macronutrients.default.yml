@@ -1,0 +1,86 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.macronutrients.field_para_macro_display
+    - field.field.paragraph.macronutrients.field_para_macro_id
+    - field.field.paragraph.macronutrients.field_para_macro_name
+    - field.field.paragraph.macronutrients.field_para_macro_quantity
+    - field.field.paragraph.macronutrients.field_para_macro_type
+    - field.field.paragraph.macronutrients.field_para_macro_unit
+    - paragraphs.paragraphs_type.macronutrients
+id: paragraph.macronutrients.default
+targetEntityType: paragraph
+bundle: macronutrients
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_para_macro_display:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_macro_id:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_macro_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_macro_quantity:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_macro_type:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_macro_unit:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

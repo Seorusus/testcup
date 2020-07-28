@@ -1,0 +1,146 @@
+$dsu_c_slider_title_color: #fff !default;
+$dsu_c_slider_title_text_size: 60px !default;
+$dsu_c_slider_description_color: #fff !default;
+$dsu_c_slider_description_text_size: 30px !default;
+$dsu_c_slider_link_color: #fff !default;
+$dsu_c_slider_arrow_color: #fff !default;
+$dsu_c_slider_arrow_size: 36px !default;
+$dsu_c_slider_link_text_size: 30px !default;
+
+.paragraph--type--c-slider {
+    .slick {
+        margin: 0 auto;
+    }
+
+    .slick-list {
+        margin-bottom: 10px;
+        padding: 0 !important;
+    }
+
+    .slick-arrow {
+
+        &::before,
+        &::after {
+            color: $dsu_c_slider_arrow_color;
+            font-size: $dsu_c_slider_arrow_size;
+        }
+    }
+}
+
+.paragraph--type--c-slide {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    .field--name-field-c-image {
+        width: 100%;
+        height: 645px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .fields--wrapper {
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 1.5em 1em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .field--name-field-c-title {
+        color: inherit;
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    .field--name-field-slide-description {
+        color: inherit;
+        font-size: 18px;
+    }
+
+    .image_cta_link {
+        color: inherit;
+        font-size: 16px;
+        display: inline-block;
+        margin: 10px auto;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 6px 16px;
+        line-height: 1.846;
+        border-radius: 3px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-transform: uppercase;
+        border: none;
+        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        background-size: 200% 200%;
+        background-position: 50%;
+        color: #fff;
+        background-color: #222222;
+        border-color: transparent;
+    }
+
+    .field--name-field-c-link a {
+        color: #fff;
+    }
+
+    .vertical-over {
+        &.horizontal-left {
+            left: 0%;
+            -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+        }
+
+        &.horizontal-right {
+            right: 0%;
+            left: 0%;
+            -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+        }
+    }
+
+    .vertical-above,
+    .vertical-bellow {
+        position: static;
+        transform: translate(0%, 0%);
+    }
+
+    .horizontal-right {
+        text-align: right;
+    }
+
+    .horizontal-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .paragraph--type--c-slide .fields--wrapper {
+        padding: 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .paragraph--type--c-slide .field--name-field-slide-description {
+        font-size: 24px;
+    }
+}

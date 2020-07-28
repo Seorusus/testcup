@@ -1,0 +1,12 @@
+name: 'Lightnest components: Webform'
+type: module
+description: 'Provides webform as a paragraph.'
+core: 8.x
+package: 'DSU Components'
+dependencies:
+  - paragraphs
+  - webform
+  - webform_ui
+  - entity_class_formatter
+  - clientside_validation
+  - clientside_validation_jquery

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_50_25_25
+label: Layout_50_25_25
+icon_uuid: null
+description: 'Provides Layout_50_25_25 as a paragraph component.'
+behavior_plugins: {  }

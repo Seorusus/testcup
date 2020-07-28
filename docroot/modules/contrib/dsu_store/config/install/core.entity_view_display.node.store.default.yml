@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.store.field_address
+    - field.field.node.store.field_country
+    - field.field.node.store.field_location
+    - field.field.node.store.field_phone
+    - field.field.node.store.field_town
+    - field.field.node.store.field_website
+    - field.field.node.store.field_zip_code
+    - node.type.store
+  module:
+    - address
+    - geolocation
+    - link
+    - user
+id: node.store.default
+targetEntityType: node
+bundle: store
+mode: default
+content:
+  field_address:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_country:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
+    region: content
+  field_location:
+    weight: 8
+    label: above
+    settings:
+      title: ''
+      set_marker: '1'
+      common_map: ''
+      info_text: ''
+      use_overridden_map_settings: 0
+      google_map_settings:
+        type: ROADMAP
+        zoom: '10'
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        fullscreenControl: 0
+        scrollwheel: 1
+        disableDoubleClickZoom: 0
+        draggable: 1
+        height: 400px
+        width: 100%
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        style: ''
+        preferScrollingToZooming: 0
+        gestureHandling: auto
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_phone:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_website:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_zip_code:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

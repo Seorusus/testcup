@@ -1,0 +1,10 @@
+name: 'Lightnest components: Encryption'
+description: 'Provides field encryption.'
+type: module
+core: 8.x
+dependencies:
+  - encrypt
+  - field_encrypt
+  - key
+  - real_aes
+package: 'DSU Components'
