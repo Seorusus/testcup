@@ -1,0 +1,10 @@
+name: 'Language Switcher langcode'
+type: module
+description: 'Alters the core Language Switcher block to display the language code for each of the links.'
+core: 8.x
+package: 'Multilingual'
+
+# Information added by Drupal.org packaging script on 2020-08-21
+version: '8.x-1.0-beta1'
+project: 'language_switcher_langcode'
+datestamp: 1598029417

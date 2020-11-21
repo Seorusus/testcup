@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains language_switcher_langcode.module.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_language_switch_links_alter().
+ */
+function language_switcher_langcode_language_switch_links_alter(array &$links, $type, Url $url) {
+  foreach ($links as $langcode => &$link) {
+    $link['attributes']['title'] = $link['title'];
+    $link['title'] = strtoupper($langcode);
+  }
+}
