@@ -1,0 +1,52 @@
+# Library.
+# ----------------------------
+romania_library: 'production'
+# Layout.
+# ----------------------------
+romania_sidebar_position: 'both'
+romania_content_offset: 0
+romania_sidebar_first_width: 4
+romania_sidebar_first_offset: 0
+romania_sidebar_second_width: 3
+romania_sidebar_second_offset: 0
+
+# Container.
+# ----------------------------
+romania_fluid_container: 0
+
+# Buttons.
+# ----------------------------
+romania_button: 1
+romania_button_size: ''
+romania_button_outline: 0
+
+# Navbar.
+# ----------------------------
+romania_navbar_toggle: 'navbar-toggleable-lg'
+romania_navbar_container: ''
+romania_navbar_top_position: ''
+romania_navbar_top_color: ''
+romania_navbar_top_background: ''
+romania_navbar_position: ''
+romania_navbar_color: ''
+romania_navbar_background: ''
+
+# Messages.
+# ----------------------------
+romania_messages_widget: 'alerts'
+
+# Form.
+# ----------------------------
+romania_radio: 'custom'
+romania_checkbox: 'switch'
+romania_select: 'custom'
+romania_file: 'custom'
+
+# Colors.
+# ----------------------------
+romania_system_messages: 'messages_white'
+
+# Tables.
+# ----------------------------
+romania_table_hover: 1
+romania_table_style: 'table-striped'

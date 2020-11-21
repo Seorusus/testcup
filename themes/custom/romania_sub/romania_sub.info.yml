@@ -1,0 +1,15 @@
+name: Romania Sub
+type: theme
+description: This is a Romania sub theme of Bootstrap4
+core: 8.x
+# Defines the base theme
+base theme: bootstrap4
+# Defines libraries group in which we can add css/js.
+libraries:
+  - romania_sub/global-styling
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  footer: Footer
