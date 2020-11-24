@@ -2564,6 +2564,11 @@ li.slide__grid.grid.grid--rendered.grid--0 {
   }
 }
 
+/*footer terms*/
+.footer.terms {
+  background: none;
+}
+
 @media only screen and (max-width: 767px) {
   .teaser-section .group-left {
     width: 100%;

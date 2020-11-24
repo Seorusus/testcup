@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cc51806a-8bf7-4dda-a367-23ae0fcfc196" name="Romania" url="https://dev-romania.pantheonsite.io">
+        <fileTransfer accessType="SFTP" host="appserver.dev.19c50377-f1b7-4e14-8b4f-da17bde6134b.drush.in" port="2222" sshConfigId="ead2af59-e365-4a76-a5b1-f73227c6f5f9" sshConfig="dev.19c50377-f1b7-4e14-8b4f-da17bde6134b@appserver.dev.19c50377-f1b7-4e14-8b4f-da17bde6134b.drush.in:2222 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
