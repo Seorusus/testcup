@@ -115,8 +115,8 @@ class ReverseProxyMiddlewareTest extends UnitTestCase {
         // trusted.
         Request::HEADER_X_FORWARDED_AWS_ELB,
         [
-          'The \'reverse_proxy_host_header\' setting in settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
-          'The \'reverse_proxy_forwarded_header\' setting in settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
+          'The \'reverse_proxy_host_header\' setting in _settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
+          'The \'reverse_proxy_forwarded_header\' setting in _settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
           'The "Symfony\Component\HttpFoundation\Request::setTrustedHeaderName()" method is deprecated since Symfony 3.3 and will be removed in 4.0. Use the $trustedHeaderSet argument of the Request::setTrustedProxies() method instead.',
         ],
       ],
@@ -129,7 +129,7 @@ class ReverseProxyMiddlewareTest extends UnitTestCase {
         // the x_forwarded headers.
         Request::HEADER_X_FORWARDED_ALL,
         [
-          'The \'reverse_proxy_forwarded_header\' setting in settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
+          'The \'reverse_proxy_forwarded_header\' setting in _settings.php is deprecated in Drupal 8.7.0 and will be removed before Drupal 9.0.0. Use the \'reverse_proxy_trusted_headers\' setting instead. See https://www.drupal.org/node/3030558',
           'The "Symfony\Component\HttpFoundation\Request::setTrustedHeaderName()" method is deprecated since Symfony 3.3 and will be removed in 4.0. Use the $trustedHeaderSet argument of the Request::setTrustedProxies() method instead.',
         ],
       ],

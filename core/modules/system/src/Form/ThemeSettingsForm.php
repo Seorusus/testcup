@@ -354,9 +354,9 @@ class ThemeSettingsForm extends ConfigFormBase {
 
       // Process the theme and all its base themes.
       foreach ($theme_keys as $theme) {
-        // Include the theme-settings.php file.
+        // Include the theme-_settings.php file.
         $theme_path = drupal_get_path('theme', $theme);
-        $theme_settings_file = $theme_path . '/theme-settings.php';
+        $theme_settings_file = $theme_path . '/theme-_settings.php';
         $theme_file = $theme_path . '/' . $theme . '.theme';
         $filenames = [$theme_settings_file, $theme_file];
         foreach ($filenames as $filename) {

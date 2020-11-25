@@ -46,7 +46,7 @@ abstract class Database {
   protected static $connections = [];
 
   /**
-   * A processed copy of the database connection information from settings.php.
+   * A processed copy of the database connection information from _settings.php.
    *
    * @var array
    */
@@ -203,7 +203,7 @@ abstract class Database {
    * Process the configuration file for database information.
    *
    * @param array $info
-   *   The database connection information, as defined in settings.php. The
+   *   The database connection information, as defined in _settings.php. The
    *   structure of this array depends on the database driver it is connecting
    *   to.
    */
@@ -236,7 +236,7 @@ abstract class Database {
    * This method allows to add new connections at runtime.
    *
    * Under normal circumstances the preferred way to specify database
-   * credentials is via settings.php. However, this method allows them to be
+   * credentials is via _settings.php. However, this method allows them to be
    * added at arbitrary times, such as during unit tests, when connecting to
    * admin-defined third party databases, etc.
    *
@@ -247,7 +247,7 @@ abstract class Database {
    * @param string $target
    *   The database target name.
    * @param array $info
-   *   The database connection information, as defined in settings.php. The
+   *   The database connection information, as defined in _settings.php. The
    *   structure of this array depends on the database driver it is connecting
    *   to.
    */
@@ -285,7 +285,7 @@ abstract class Database {
    *
    * @param array $databases
    *   A multi-dimensional array specifying database connection parameters, as
-   *   defined in settings.php.
+   *   defined in _settings.php.
    */
   final public static function setMultipleConnectionInfo(array $databases) {
     foreach ($databases as $key => $targets) {
@@ -349,7 +349,7 @@ abstract class Database {
    * Opens a connection to the server specified by the given key and target.
    *
    * @param string $key
-   *   The database connection key, as specified in settings.php. The default is
+   *   The database connection key, as specified in _settings.php. The default is
    *   "default".
    * @param string $target
    *   The database target to open.
@@ -527,7 +527,7 @@ abstract class Database {
    * - Console commands and test runners that connect to a database specified
    *   by a database URL rather than a connection info array.
    * - During installation, prior to the connection info array being written to
-   *   settings.php.
+   *   _settings.php.
    *
    * This method returns the directory that must be added to the autoloader for
    * the given namespace.
@@ -542,7 +542,7 @@ abstract class Database {
    * - If the namespace is anything else, then this method returns FALSE,
    *   because neither drupal_get_database_types() nor
    *   static::convertDbUrlToConnectionInfo() support that anyway. One can
-   *   manually edit the connection info array in settings.php to reference
+   *   manually edit the connection info array in _settings.php to reference
    *   any arbitrary namespace, but requests using that would use the
    *   corresponding 'autoload' key in that connection info rather than calling
    *   this method.
@@ -622,7 +622,7 @@ abstract class Database {
    * Gets the PHP namespace of a database driver from the connection info.
    *
    * @param array $connection_info
-   *   The database connection information, as defined in settings.php. The
+   *   The database connection information, as defined in _settings.php. The
    *   structure of this array depends on the database driver it is connecting
    *   to.
    *
@@ -633,7 +633,7 @@ abstract class Database {
     if (isset($connection_info['namespace'])) {
       return $connection_info['namespace'];
     }
-    // Fallback for Drupal 7 settings.php.
+    // Fallback for Drupal 7 _settings.php.
     return 'Drupal\\Core\\Database\\Driver\\' . $connection_info['driver'];
   }
 

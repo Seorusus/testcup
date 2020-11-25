@@ -181,7 +181,7 @@ EOD;
         'sites' => [
           'sites.php' => $sites_php,
           'example' => [
-            'settings.php' => 'test',
+            '_settings.php' => 'test',
           ],
         ],
       ]);

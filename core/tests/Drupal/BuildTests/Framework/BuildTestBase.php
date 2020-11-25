@@ -534,7 +534,7 @@ abstract class BuildTestBase extends TestCase {
    * Use this method to copy the current codebase, including any patched
    * changes, into the workspace.
    *
-   * By default, the copy will exclude sites/default/settings.php,
+   * By default, the copy will exclude sites/default/_settings.php,
    * sites/default/files, and vendor/. Use the $iterator parameter to override
    * this behavior.
    *

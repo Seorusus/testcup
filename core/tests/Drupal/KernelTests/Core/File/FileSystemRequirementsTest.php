@@ -34,7 +34,7 @@ class FileSystemRequirementsTest extends KernelTestBase {
   /**
    * Tests requirements warnings.
    *
-   * @expectedDeprecation The 'system.file' config 'path.temporary' is deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Set 'file_temp_path' in settings.php instead. See https://www.drupal.org/node/3039255
+   * @expectedDeprecation The 'system.file' config 'path.temporary' is deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Set 'file_temp_path' in _settings.php instead. See https://www.drupal.org/node/3039255
    */
   public function testFileSystemRequirements() {
     $this->config('system.file')

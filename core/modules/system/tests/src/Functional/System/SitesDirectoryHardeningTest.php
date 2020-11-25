@@ -23,7 +23,7 @@ class SitesDirectoryHardeningTest extends BrowserTestBase {
   /**
    * Tests the default behavior to restrict directory permissions is enforced.
    *
-   * Checks both the current sites directory and settings.php.
+   * Checks both the current sites directory and _settings.php.
    */
   public function testSitesDirectoryHardening() {
     $site_path = $this->kernel->getSitePath();
@@ -62,10 +62,10 @@ class SitesDirectoryHardeningTest extends BrowserTestBase {
     $this->assertEqual(REQUIREMENT_WARNING, $requirements['configuration_files']['severity'], 'Warning severity is properly set.');
     $this->assertEquals('Protection disabled', (string) $requirements['configuration_files']['value']);
     $description = strip_tags(\Drupal::service('renderer')->renderPlain($requirements['configuration_files']['description']));
-    $this->assertStringContainsString('settings.php is not protected from modifications and poses a security risk.', $description);
+    $this->assertStringContainsString('_settings.php is not protected from modifications and poses a security risk.', $description);
     $this->assertStringContainsString('services.yml is not protected from modifications and poses a security risk.', $description);
 
-    // Verify that site directory and the settings.php remain writable when
+    // Verify that site directory and the _settings.php remain writable when
     // automatically enforcing file permissions is disabled.
     $this->assertDirectoryIsWritable($site_path);
     $this->assertFileIsWritable($settings_file);
@@ -79,7 +79,7 @@ class SitesDirectoryHardeningTest extends BrowserTestBase {
     $requirements = $this->checkSystemRequirements();
     $this->assertEquals('Protected', (string) $requirements['configuration_files']['value']);
 
-    // Verify that site directory and the settings.php remain protected when
+    // Verify that site directory and the _settings.php remain protected when
     // automatically enforcing file permissions is enabled.
     $this->assertDirectoryNotIsWritable($site_path);
     $this->assertFileNotIsWritable($settings_file);
@@ -108,16 +108,16 @@ class SitesDirectoryHardeningTest extends BrowserTestBase {
   }
 
   /**
-   * Returns the path to settings.php
+   * Returns the path to _settings.php
    *
    * @param string $site_path
    *   The sites subdirectory path.
    *
    * @return string
-   *   The path to settings.php.
+   *   The path to _settings.php.
    */
   protected function settingsFile($site_path) {
-    $settings_file = $site_path . '/settings.php';
+    $settings_file = $site_path . '/_settings.php';
     return $settings_file;
   }
 

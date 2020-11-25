@@ -16,7 +16,7 @@ class Yaml extends ComponentYaml {
    * {@inheritdoc}
    */
   protected static function getSerializer() {
-    // Allow settings.php to override the YAML serializer.
+    // Allow _settings.php to override the YAML serializer.
     if (!isset(static::$serializer) &&
       $class = Settings::get('yaml_parser_class')) {
 

@@ -21,7 +21,7 @@ class InstallerExistingSettingsTest extends InstallerTestBase {
   /**
    * {@inheritdoc}
    *
-   * Fully configures a preexisting settings.php file before invoking the
+   * Fully configures a preexisting _settings.php file before invoking the
    * interactive installer.
    */
   protected function prepareEnvironment() {
@@ -69,7 +69,7 @@ class InstallerExistingSettingsTest extends InstallerTestBase {
    * {@inheritdoc}
    */
   protected function setUpSettings() {
-    // This step should not appear, since settings.php is fully configured
+    // This step should not appear, since _settings.php is fully configured
     // already.
   }
 

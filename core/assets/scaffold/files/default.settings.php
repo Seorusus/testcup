@@ -24,7 +24,7 @@
  * 'sites/default' will be used.
  *
  * For example, for a fictitious site installed at
- * https://www.drupal.org:8080/mysite/test/, the 'settings.php' file is searched
+ * https://www.drupal.org:8080/mysite/test/, the '_settings.php' file is searched
  * for in the following directories:
  *
  * - sites/8080.www.drupal.org.mysite.test
@@ -53,7 +53,7 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  *
  * In addition to customizing application settings through variables in
- * settings.php, you can create a services.yml file in the same directory to
+ * _settings.php, you can create a services.yml file in the same directory to
  * register custom, site-specific service definitions and/or swap out default
  * implementations with custom ones.
  */
@@ -361,7 +361,7 @@ $settings['update_free_access'] = FALSE;
  * reverse proxy IP address in $settings['reverse_proxy_addresses'].
  * If a complete list of reverse proxies is not available in your
  * environment (for example, if you use a CDN) you may set the
- * $_SERVER['REMOTE_ADDR'] variable directly in settings.php.
+ * $_SERVER['REMOTE_ADDR'] variable directly in _settings.php.
  * Be aware, however, that it is likely that this would allow IP
  * address spoofing unless more advanced precautions are taken.
  */
@@ -625,7 +625,7 @@ if ($settings['hash_salt']) {
  * To globally override specific configuration values for this site,
  * set them here. You usually don't need to use this feature. This is
  * useful in a configuration file for a vhost or directory, rather than
- * the default settings.php.
+ * the default _settings.php.
  *
  * Note that any values you provide in these variable overrides will not be
  * viewable from the Drupal administration interface. The administration
@@ -638,7 +638,7 @@ if ($settings['hash_salt']) {
  * include field storage configuration, because it has effects on database
  * structure, and 'core.menu.static_menu_link_overrides' since this is cached in
  * a way that is not config override aware. Also, note that changing
- * configuration values in settings.php will not fire any of the configuration
+ * configuration values in _settings.php will not fire any of the configuration
  * change events.
  */
 # $config['system.site']['name'] = 'My Drupal site';

@@ -44,7 +44,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * - If all of the above steps fail, RequirementsException is thrown.
  *
  * Drupal Database API supports multiple database connections. The connection
- * parameters are defined in $databases array in settings.php or
+ * parameters are defined in $databases array in _settings.php or
  * settings.local.php. It is also possible to modify the $databases array in
  * runtime. For example, Migrate Drupal, which provides the migrations from
  * Drupal 6 / 7, asks for the source database connection parameters in the UI

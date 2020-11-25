@@ -33,7 +33,8 @@
         "drupal/slick_video": "^1.0@RC",
         "drupal/slick_views": "^2.3",
         "drupal/views_field_formatter": "^1.11",
-        "drupal/viewsreference": "^1.6"
+        "drupal/viewsreference": "^1.6",
+        "platformsh/config-reader": "^2.3"
     },
     "conflict": {
         "drupal/drupal": "*"

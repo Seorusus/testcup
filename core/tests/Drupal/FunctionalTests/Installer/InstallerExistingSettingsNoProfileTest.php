@@ -21,7 +21,7 @@ class InstallerExistingSettingsNoProfileTest extends InstallerTestBase {
   /**
    * {@inheritdoc}
    *
-   * Configures a preexisting settings.php file without an install_profile
+   * Configures a preexisting _settings.php file without an install_profile
    * setting before invoking the interactive installer.
    */
   protected function prepareEnvironment() {
@@ -56,7 +56,7 @@ class InstallerExistingSettingsNoProfileTest extends InstallerTestBase {
    * {@inheritdoc}
    */
   protected function setUpSettings() {
-    // This step should not appear, since settings.php is fully configured
+    // This step should not appear, since _settings.php is fully configured
     // already.
   }
 

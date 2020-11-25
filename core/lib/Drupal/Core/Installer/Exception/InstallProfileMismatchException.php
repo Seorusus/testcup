@@ -7,7 +7,7 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 @trigger_error(__NAMESPACE__ . '/InstallProfileMismatchException is deprecated in Drupal 8.6.0 and will be removed before Drupal 9. See https://www.drupal.org/node/2538996', E_USER_DEPRECATED);
 
 /**
- * Exception thrown if settings.php cannot be written and the chosen profile does not match.
+ * Exception thrown if _settings.php cannot be written and the chosen profile does not match.
  */
 class InstallProfileMismatchException extends InstallerException {
 
@@ -17,9 +17,9 @@ class InstallProfileMismatchException extends InstallerException {
    * @param string $selected_profile
    *   The profile selected by _install_select_profile().
    * @param string $settings_profile
-   *   The profile in settings.php.
+   *   The profile in _settings.php.
    * @param string $settings_file
-   *   The path to settings.php.
+   *   The path to _settings.php.
    * @param \Drupal\Core\StringTranslation\TranslationInterface $string_translation
    *   The string translation manager.
    *

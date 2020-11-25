@@ -64,7 +64,7 @@ trait InstallerRedirectTrait {
     }
 
     // Redirect if there isn't even any database connection information in
-    // settings.php yet, since that means Drupal is not installed.
+    // _settings.php yet, since that means Drupal is not installed.
     if (!Database::getConnectionInfo()) {
       return TRUE;
     }

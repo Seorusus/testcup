@@ -115,7 +115,7 @@ class ConfigFactory implements ConfigFactoryInterface, EventSubscriberInterface 
         if (isset($overrides[$name])) {
           $config->setModuleOverride($overrides[$name]);
         }
-        // Apply any settings.php overrides.
+        // Apply any _settings.php overrides.
         if (isset($GLOBALS['config'][$name])) {
           $config->setSettingsOverride($GLOBALS['config'][$name]);
         }

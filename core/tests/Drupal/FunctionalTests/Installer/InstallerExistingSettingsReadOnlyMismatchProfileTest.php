@@ -8,7 +8,7 @@ use Drupal\Core\Site\Settings;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Tests installer breaks with a profile mismatch and a read-only settings.php.
+ * Tests installer breaks with a profile mismatch and a read-only _settings.php.
  *
  * @group Installer
  * @group legacy
@@ -23,7 +23,7 @@ class InstallerExistingSettingsReadOnlyMismatchProfileTest extends InstallerTest
   /**
    * {@inheritdoc}
    *
-   * Configures a preexisting settings.php file without an install_profile
+   * Configures a preexisting _settings.php file without an install_profile
    * setting before invoking the interactive installer.
    */
   protected function prepareEnvironment() {
@@ -46,7 +46,7 @@ class InstallerExistingSettingsReadOnlyMismatchProfileTest extends InstallerTest
     ];
 
     // During interactive install we'll change this to a different profile and
-    // this test will ensure that the new value is written to settings.php.
+    // this test will ensure that the new value is written to _settings.php.
     $this->settings['settings']['install_profile'] = (object) [
       'value' => 'minimal',
       'required' => TRUE,
@@ -66,7 +66,7 @@ class InstallerExistingSettingsReadOnlyMismatchProfileTest extends InstallerTest
    */
   protected function visitInstaller() {
     // Make settings file not writable. This will break the installer.
-    $filename = $this->siteDirectory . '/settings.php';
+    $filename = $this->siteDirectory . '/_settings.php';
     // Make the settings file read-only.
     // Not using File API; a potential error must trigger a PHP warning.
     chmod($filename, 0444);
@@ -92,7 +92,7 @@ class InstallerExistingSettingsReadOnlyMismatchProfileTest extends InstallerTest
    * {@inheritdoc}
    */
   protected function setUpSettings() {
-    // This step should not appear, since settings.php is fully configured
+    // This step should not appear, since _settings.php is fully configured
     // already.
   }
 
@@ -107,7 +107,7 @@ class InstallerExistingSettingsReadOnlyMismatchProfileTest extends InstallerTest
     $this->assertEquals('testing', \Drupal::installProfile());
     $this->assertEquals('minimal', Settings::get('install_profile'));
     $this->drupalGet('admin/reports/status');
-    $this->assertSession()->pageTextContains("Drupal 8 no longer uses the \$settings['install_profile'] value in settings.php and it can be removed.");
+    $this->assertSession()->pageTextContains("Drupal 8 no longer uses the \$settings['install_profile'] value in _settings.php and it can be removed.");
   }
 
 }

@@ -195,7 +195,7 @@ define('DRUPAL_ROOT', dirname(dirname(__DIR__)));
  * Returns the path of a configuration directory.
  *
  * Configuration directories are configured using $config_directories in
- * settings.php.
+ * _settings.php.
  *
  * @param string $type
  *   The type of config directory to return. Drupal core provides the
@@ -675,7 +675,7 @@ function drupal_valid_test_ua($new_prefix = NULL) {
     list(, $prefix, $time, $salt, $hmac) = $matches;
     $check_string = $prefix . ':' . $time . ':' . $salt;
     // Read the hash salt prepared by drupal_generate_test_ua().
-    // This function is called before settings.php is read and Drupal's error
+    // This function is called before _settings.php is read and Drupal's error
     // handlers are set up. While Drupal's error handling may be properly
     // configured on production sites, the server's PHP error_reporting may not.
     // Ensure that no information leaks on production sites.
@@ -733,7 +733,7 @@ function drupal_generate_test_ua($prefix) {
     }
     else {
       // Generate and save a new hash salt for a test run.
-      // Consumed by drupal_valid_test_ua() before settings.php is loaded.
+      // Consumed by drupal_valid_test_ua() before _settings.php is loaded.
       $private_key = Crypt::randomBytesBase64(55);
       file_put_contents($key_file, $private_key);
     }

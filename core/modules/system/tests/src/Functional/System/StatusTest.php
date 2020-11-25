@@ -29,7 +29,7 @@ class StatusTest extends BrowserTestBase {
   protected function setUp() {
     parent::setUp();
 
-    // Unset the sync directory in settings.php to trigger the error.
+    // Unset the sync directory in _settings.php to trigger the error.
     $settings['settings']['config_sync_directory'] = (object) [
       'value' => '',
       'required' => TRUE,
@@ -64,7 +64,7 @@ class StatusTest extends BrowserTestBase {
     $this->assertNoText(t('Out of date'));
 
     // The global $config_directories is not properly formed.
-    $this->assertRaw(t("Your %file file must define the %setting setting", ['%file' => $this->siteDirectory . '/settings.php', '%setting' => "\$settings['config_sync_directory']"]));
+    $this->assertRaw(t("Your %file file must define the %setting setting", ['%file' => $this->siteDirectory . '/_settings.php', '%setting' => "\$settings['config_sync_directory']"]));
 
     // Set the schema version of update_test_postupdate to a lower version, so
     // update_test_postupdate_update_8001() needs to be executed.

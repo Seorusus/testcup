@@ -8,7 +8,7 @@ use Drupal\Core\Database\Database;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Tests install with existing settings.php and a mismatching install profile.
+ * Tests install with existing _settings.php and a mismatching install profile.
  *
  * @group Installer
  * @group legacy
@@ -23,7 +23,7 @@ class InstallerExistingSettingsMismatchProfileTest extends InstallerTestBase {
   /**
    * {@inheritdoc}
    *
-   * Configures a preexisting settings.php file without an install_profile
+   * Configures a preexisting _settings.php file without an install_profile
    * setting before invoking the interactive installer.
    */
   protected function prepareEnvironment() {
@@ -46,7 +46,7 @@ class InstallerExistingSettingsMismatchProfileTest extends InstallerTestBase {
     ];
 
     // During interactive install we'll change this to a different profile and
-    // this test will ensure that the new value is written to settings.php.
+    // this test will ensure that the new value is written to _settings.php.
     $this->settings['settings']['install_profile'] = (object) [
       'value' => 'minimal',
       'required' => TRUE,
@@ -86,7 +86,7 @@ class InstallerExistingSettingsMismatchProfileTest extends InstallerTestBase {
    * {@inheritdoc}
    */
   protected function setUpSettings() {
-    // This step should not appear, since settings.php is fully configured
+    // This step should not appear, since _settings.php is fully configured
     // already.
   }
 

@@ -383,7 +383,7 @@ abstract class WebTestBase extends TestBase {
     // Execute the non-interactive installer.
     $this->doInstall();
 
-    // Import new settings.php written by the installer.
+    // Import new _settings.php written by the installer.
     $this->initSettings();
 
     // Initialize the request and container post-install.
@@ -432,7 +432,7 @@ abstract class WebTestBase extends TestBase {
   }
 
   /**
-   * Queues custom translations to be written to settings.php.
+   * Queues custom translations to be written to _settings.php.
    *
    * Use WebTestBase::writeCustomTranslations() to apply and write the queued
    * translations.
@@ -469,7 +469,7 @@ abstract class WebTestBase extends TestBase {
   }
 
   /**
-   * Writes custom translations to the test site's settings.php.
+   * Writes custom translations to the test site's _settings.php.
    *
    * Use TestBase::addCustomTranslations() to queue custom translations before
    * calling this method.

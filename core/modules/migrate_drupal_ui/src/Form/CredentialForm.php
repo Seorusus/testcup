@@ -207,7 +207,7 @@ class CredentialForm extends MigrateUpgradeFormBase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
     // Retrieve the database driver from the form, use reflection to get the
     // namespace, and then construct a valid database array the same as in
-    // settings.php.
+    // _settings.php.
     $driver = $form_state->getValue('driver');
     $drivers = $this->getDatabaseTypes();
     $reflection = new \ReflectionClass($drivers[$driver]);

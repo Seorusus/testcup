@@ -6,7 +6,7 @@ use Drupal\Core\Language\Language;
 use Drupal\KernelTests\KernelTestBase;
 
 /**
- * Tests that language, module and settings.php are applied in the correct
+ * Tests that language, module and _settings.php are applied in the correct
  * order.
  *
  * @group config
@@ -80,7 +80,7 @@ class ConfigOverridesPriorityTest extends KernelTestBase {
     $this->assertEqual($language_overridden_mail, $config_factory->get('system.site')->get('mail'));
     $this->assertEqual(50, $config_factory->get('system.site')->get('weight_select_max'));
 
-    // Configure a global override to simulate overriding using settings.php. Do
+    // Configure a global override to simulate overriding using _settings.php. Do
     // not override system.site:mail or system.site:slogan to prove that the
     // language and module overrides still apply.
     $GLOBALS['config']['system.site']['name'] = 'Site name global conf override';

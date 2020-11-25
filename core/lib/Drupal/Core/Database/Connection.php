@@ -291,7 +291,7 @@ abstract class Connection {
    *
    * @param array|string $prefix
    *   Either a single prefix, or an array of prefixes, in any of the multiple
-   *   forms documented in default.settings.php.
+   *   forms documented in default._settings.php.
    */
   protected function setPrefix($prefix) {
     if (is_array($prefix)) {
@@ -785,7 +785,7 @@ abstract class Connection {
   public function getDriverClass($class) {
     if (empty($this->driverClasses[$class])) {
       if (empty($this->connectionOptions['namespace'])) {
-        // Fallback for Drupal 7 settings.php and the test runner script.
+        // Fallback for Drupal 7 _settings.php and the test runner script.
         $this->connectionOptions['namespace'] = (new \ReflectionObject($this))->getNamespaceName();
       }
       $driver_class = $this->connectionOptions['namespace'] . '\\' . $class;

@@ -138,7 +138,7 @@ class ComposerIntegrationTest extends UnitTestCase {
       ['sites/example.settings.local.php', 'assets/scaffold/files/example.settings.local.php'],
       ['sites/example.sites.php', 'assets/scaffold/files/example.sites.php'],
       ['sites/default/default.services.yml', 'assets/scaffold/files/default.services.yml'],
-      ['sites/default/default.settings.php', 'assets/scaffold/files/default.settings.php'],
+      ['sites/default/default._settings.php', 'assets/scaffold/files/default._settings.php'],
       ['modules/README.txt', 'assets/scaffold/files/modules.README.txt'],
       ['profiles/README.txt', 'assets/scaffold/files/profiles.README.txt'],
       ['themes/README.txt', 'assets/scaffold/files/themes.README.txt'],

@@ -32,7 +32,7 @@ class RequestSanitizer {
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The incoming request to sanitize.
    * @param string[] $whitelist
-   *   An array of keys to whitelist as safe. See default.settings.php.
+   *   An array of keys to whitelist as safe. See default._settings.php.
    * @param bool $log_sanitized_keys
    *   (optional) Set to TRUE to log keys that are sanitized.
    *

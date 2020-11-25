@@ -47,7 +47,7 @@ use GuzzleHttp\Exception\RequestException;
  * conditions are met, even though the task may still show on the list of
  * installation tasks presented to the user. For example, the Drupal installer
  * uses this flag to skip over the database configuration form when valid
- * database connection information is already available from settings.php. It
+ * database connection information is already available from _settings.php. It
  * also uses this flag to skip language import tasks when the installation is
  * being performed in English.
  */
@@ -204,7 +204,7 @@ function install_state_defaults() {
     'config_verified' => FALSE,
     // TRUE when there is a valid database connection.
     'database_verified' => FALSE,
-    // TRUE when a valid settings.php exists (containing both database
+    // TRUE when a valid _settings.php exists (containing both database
     // connection information and config directory names).
     'settings_verified' => FALSE,
     // TRUE when the base system has been installed and is ready to operate.
@@ -390,7 +390,7 @@ function install_begin_request($class_loader, &$install_state) {
     $install_state['config_verified'] = FALSE;
   }
   $install_state['database_verified'] = install_verify_database_settings($site_path);
-  // A valid settings.php has database settings and a hash_salt value. Other
+  // A valid _settings.php has database settings and a hash_salt value. Other
   // settings like config_directories will be checked by system_requirements().
   $install_state['settings_verified'] = $install_state['database_verified'] && (bool) Settings::get('hash_salt', FALSE);
 
@@ -783,8 +783,8 @@ function install_tasks($install_state) {
       'display_name' => t('Set up database'),
       'type' => 'form',
       // Even though the form only allows the user to enter database settings,
-      // we still need to display it if settings.php is invalid in any way,
-      // since the form submit handler is where settings.php is rewritten.
+      // we still need to display it if _settings.php is invalid in any way,
+      // since the form submit handler is where _settings.php is rewritten.
       'run' => $install_state['settings_verified'] ? INSTALL_TASK_SKIP : INSTALL_TASK_RUN_IF_NOT_COMPLETED,
       'function' => 'Drupal\Core\Installer\Form\SiteSettingsForm',
     ],
@@ -1023,7 +1023,7 @@ function install_display_output($output, $install_state) {
   // Prevent install.php from being indexed when installed in a sub folder.
   // robots.txt rules are not read if the site is within domain.com/subfolder
   // resulting in /subfolder/install.php being found through search engines.
-  // When settings.php is writable this can be used via an external database
+  // When _settings.php is writable this can be used via an external database
   // leading a malicious user to gain php access to the server.
   $noindex_meta_tag = [
     '#tag' => 'meta',
@@ -1142,7 +1142,7 @@ function install_verify_completed_task() {
 }
 
 /**
- * Verifies that settings.php specifies a valid database connection.
+ * Verifies that _settings.php specifies a valid database connection.
  *
  * @param string $site_path
  *   The site path.
@@ -1153,7 +1153,7 @@ function install_verify_completed_task() {
 function install_verify_database_settings($site_path) {
   if ($database = Database::getConnectionInfo()) {
     $database = $database['default'];
-    $settings_file = './' . $site_path . '/settings.php';
+    $settings_file = './' . $site_path . '/_settings.php';
     $errors = install_database_errors($database, $settings_file);
     if (empty($errors)) {
       return TRUE;
@@ -2071,9 +2071,9 @@ function install_check_requirements($install_state) {
   // If Drupal is not set up already, we need to try to create the default
   // settings and services files.
   $default_files = [];
-  $default_files['settings.php'] = [
-    'file' => 'settings.php',
-    'file_default' => 'default.settings.php',
+  $default_files['_settings.php'] = [
+    'file' => '_settings.php',
+    'file_default' => 'default._settings.php',
     'title_default' => t('Default settings file'),
     'description_default' => t('The default settings file does not exist.'),
     'title' => t('Settings file'),
@@ -2224,13 +2224,13 @@ function install_check_requirements($install_state) {
       }
     }
 
-    // Check the database settings if they have been configured in settings.php
+    // Check the database settings if they have been configured in _settings.php
     // before running the Drupal installer.
     if ($database = Database::getConnectionInfo()) {
       $request = Request::createFromGlobals();
       $site_path = empty($install_state['site_path']) ? DrupalKernel::findSitePath($request, FALSE) : $install_state['site_path'];
       $database = $database['default'];
-      $settings_file = './' . $site_path . '/settings.php';
+      $settings_file = './' . $site_path . '/_settings.php';
 
       $errors = install_database_errors($database, $settings_file);
       if (count($errors)) {
@@ -2304,7 +2304,7 @@ function install_display_requirements($install_state, $requirements) {
 }
 
 /**
- * Installation task; writes profile to settings.php if possible.
+ * Installation task; writes profile to _settings.php if possible.
  *
  * @param array $install_state
  *   An array of information about the current installation state.
@@ -2315,11 +2315,11 @@ function install_display_requirements($install_state, $requirements) {
  *    install profile is written to core.extension.
  */
 function install_write_profile($install_state) {
-  // Only write the install profile to settings.php if it already exists. The
-  // value from settings.php is never used but drupal_rewrite_settings() does
-  // not support removing a setting. If the value is present in settings.php
+  // Only write the install profile to _settings.php if it already exists. The
+  // value from _settings.php is never used but drupal_rewrite_settings() does
+  // not support removing a setting. If the value is present in _settings.php
   // there will be an informational notice on the status report.
-  $settings_path = \Drupal::service('site.path') . '/settings.php';
+  $settings_path = \Drupal::service('site.path') . '/_settings.php';
   if (is_writable($settings_path) && array_key_exists('install_profile', Settings::getAll())) {
     // Remember the profile which was used.
     $settings['settings']['install_profile'] = (object) [

@@ -5,7 +5,7 @@ namespace Drupal\FunctionalTests\Installer;
 use Drupal\Core\Database\Database;
 
 /**
- * Tests the installer with broken database connection info in settings.php.
+ * Tests the installer with broken database connection info in _settings.php.
  *
  * @group Installer
  */
@@ -21,7 +21,7 @@ class InstallerExistingBrokenDatabaseSettingsTest extends InstallerTestBase {
    */
   protected function prepareEnvironment() {
     parent::prepareEnvironment();
-    // Pre-configure database credentials in settings.php.
+    // Pre-configure database credentials in _settings.php.
     $connection_info = Database::getConnectionInfo();
 
     if ($connection_info['default']['driver'] !== 'mysql') {

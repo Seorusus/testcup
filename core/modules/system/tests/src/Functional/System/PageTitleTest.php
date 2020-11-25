@@ -132,7 +132,7 @@ class PageTitleTest extends BrowserTestBase {
     $settings[$settings_key] = ['' => ['Static title' => 'Static title translated']];
     new Settings($settings);
 
-    // Rewrites the settings.php.
+    // Rewrites the _settings.php.
     $this->writeSettings([
       'settings' => [
         $settings_key => (object) [

@@ -99,28 +99,28 @@ class FileSystemForm extends ConfigFormBase {
       '#type' => 'item',
       '#title' => t('Public file system path'),
       '#markup' => PublicStream::basePath(),
-      '#description' => t('A local file system path where public files will be stored. This directory must exist and be writable by Drupal. This directory must be relative to the Drupal installation directory and be accessible over the web. This must be changed in settings.php'),
+      '#description' => t('A local file system path where public files will be stored. This directory must exist and be writable by Drupal. This directory must be relative to the Drupal installation directory and be accessible over the web. This must be changed in _settings.php'),
     ];
 
     $form['file_public_base_url'] = [
       '#type' => 'item',
       '#title' => t('Public file base URL'),
       '#markup' => PublicStream::baseUrl(),
-      '#description' => t('The base URL that will be used for public file URLs. This can be changed in settings.php'),
+      '#description' => t('The base URL that will be used for public file URLs. This can be changed in _settings.php'),
     ];
 
     $form['file_private_path'] = [
       '#type' => 'item',
       '#title' => t('Private file system path'),
       '#markup' => (PrivateStream::basePath() ? PrivateStream::basePath() : t('Not set')),
-      '#description' => t('An existing local file system path for storing private files. It should be writable by Drupal and not accessible over the web. This must be changed in settings.php'),
+      '#description' => t('An existing local file system path for storing private files. It should be writable by Drupal and not accessible over the web. This must be changed in _settings.php'),
     ];
 
     $form['file_temporary_path'] = [
       '#type' => 'item',
       '#title' => t('Temporary directory'),
       '#markup' => $this->fileSystem->getTempDirectory(),
-      '#description' => t('A local file system path where temporary files will be stored. This directory should not be accessible over the web. This must be changed in settings.php.'),
+      '#description' => t('A local file system path where temporary files will be stored. This directory should not be accessible over the web. This must be changed in _settings.php.'),
     ];
     // Any visible, writable wrapper can potentially be used for the files
     // directory, including a remote file system that integrates with a CDN.

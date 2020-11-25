@@ -23,8 +23,8 @@ class InstallerExistingInstallationTest extends InstallerTestBase {
     $this->visitInstaller();
     $this->assertRaw('Drupal already installed');
 
-    // Delete settings.php and attempt to reinstall again.
-    unlink($this->siteDirectory . '/settings.php');
+    // Delete _settings.php and attempt to reinstall again.
+    unlink($this->siteDirectory . '/_settings.php');
     $this->visitInstaller();
     $this->setUpLanguage();
     $this->setUpProfile();

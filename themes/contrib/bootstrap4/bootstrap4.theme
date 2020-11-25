@@ -296,14 +296,14 @@ function bootstrap4_form_system_theme_settings_subtheme_submit($form, FormStateI
     $fs->mirror(drupal_get_path('theme', 'bootstrap4') . '/style-guide', $themePath . '/style-guide');
 
     $files = [
-      'romania_subtheme.info._yml' => $themeMName . '.info.yml',
-      'romania_subtheme.libraries.yml' => $themeMName . '.libraries.yml',
-      'romania_subtheme.breakpoints.yml' => $themeMName . '.breakpoints.yml',
-      'romania_subtheme.theme' => $themeMName . '.theme',
+      'SUBTHEME.info._yml' => $themeMName . '.info.yml',
+      'SUBTHEME.libraries.yml' => $themeMName . '.libraries.yml',
+      'SUBTHEME.breakpoints.yml' => $themeMName . '.breakpoints.yml',
+      'SUBTHEME.theme' => $themeMName . '.theme',
     ];
 
     foreach ($files as $before => $after) {
-      if ($before === 'romania_subtheme.info._yml') {
+      if ($before === 'SUBTHEME.info._yml') {
         $infoYml = Yaml::decode(file_get_contents($themePath . '/' . $before));
         $infoYml['name'] = $themeName;
         $infoYml['description'] = $themeName . ' subtheme based on Bootstrap 4 theme.';
@@ -311,7 +311,7 @@ function bootstrap4_form_system_theme_settings_subtheme_submit($form, FormStateI
         $infoYml['libraries'][] = $themeMName . '/global-styling';
         $fs->dumpFile($themePath . '/' . $after, Yaml::encode($infoYml));
       }
-      elseif ($before === 'romania_subtheme.breakpoints.yml') {
+      elseif ($before === 'SUBTHEME.breakpoints.yml') {
         $breakpointsYml = file_get_contents($themePath . '/' . $before);
         $breakpointsYml = str_replace('SUBTHEME', $themeMName, $breakpointsYml);
         $fs->dumpFile($themePath . '/' . $after, $breakpointsYml);

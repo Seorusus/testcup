@@ -73,11 +73,11 @@ trait FunctionalTestSetupTrait {
    */
   protected function prepareSettings() {
     // Prepare installer settings that are not install_drupal() parameters.
-    // Copy and prepare an actual settings.php, so as to resemble a regular
+    // Copy and prepare an actual _settings.php, so as to resemble a regular
     // installation.
     // Not using File API; a potential error must trigger a PHP warning.
     $directory = DRUPAL_ROOT . '/' . $this->siteDirectory;
-    copy(DRUPAL_ROOT . '/sites/default/default.settings.php', $directory . '/settings.php');
+    copy(DRUPAL_ROOT . '/sites/default/default._settings.php', $directory . '/_settings.php');
 
     // The public file system path is created during installation. Additionally,
     // during tests:
@@ -116,11 +116,11 @@ trait FunctionalTestSetupTrait {
     // Allow for test-specific overrides.
     $settings_testing_file = DRUPAL_ROOT . '/' . $this->originalSite . '/settings.testing.php';
     if (file_exists($settings_testing_file)) {
-      // Copy the testing-specific settings.php overrides in place.
+      // Copy the testing-specific _settings.php overrides in place.
       copy($settings_testing_file, $directory . '/settings.testing.php');
-      // Add the name of the testing class to settings.php and include the
+      // Add the name of the testing class to _settings.php and include the
       // testing specific overrides.
-      file_put_contents($directory . '/settings.php', "\n\$test_class = '" . get_class($this) . "';\n" . 'include DRUPAL_ROOT . \'/\' . $site_path . \'/settings.testing.php\';' . "\n", FILE_APPEND);
+      file_put_contents($directory . '/_settings.php', "\n\$test_class = '" . get_class($this) . "';\n" . 'include DRUPAL_ROOT . \'/\' . $site_path . \'/settings.testing.php\';' . "\n", FILE_APPEND);
     }
     $settings_services_file = DRUPAL_ROOT . '/' . $this->originalSite . '/testing.services.yml';
     if (!file_exists($settings_services_file)) {
@@ -143,12 +143,12 @@ trait FunctionalTestSetupTrait {
     }
     // Since Drupal is bootstrapped already, install_begin_request() will not
     // bootstrap again. Hence, we have to reload the newly written custom
-    // settings.php manually.
+    // _settings.php manually.
     Settings::initialize(DRUPAL_ROOT, $this->siteDirectory, $this->classLoader);
   }
 
   /**
-   * Rewrites the settings.php file of the test site.
+   * Rewrites the _settings.php file of the test site.
    *
    * @param array $settings
    *   An array of settings to write out, in the format expected by
@@ -158,8 +158,8 @@ trait FunctionalTestSetupTrait {
    */
   protected function writeSettings(array $settings) {
     include_once DRUPAL_ROOT . '/core/includes/install.inc';
-    $filename = $this->siteDirectory . '/settings.php';
-    // system_requirements() removes write permissions from settings.php
+    $filename = $this->siteDirectory . '/_settings.php';
+    // system_requirements() removes write permissions from _settings.php
     // whenever it is invoked.
     // Not using File API; a potential error must trigger a PHP warning.
     chmod($filename, 0666);
@@ -303,7 +303,7 @@ trait FunctionalTestSetupTrait {
     Settings::initialize(DRUPAL_ROOT, $this->siteDirectory, $this->classLoader);
     $this->configDirectories['sync'] = Settings::get('config_sync_directory');
 
-    // After writing settings.php, the installer removes write permissions
+    // After writing _settings.php, the installer removes write permissions
     // from the site directory. To allow drupal_generate_test_ua() to write
     // a file containing the private key for drupal_valid_test_ua(), the site
     // directory has to be writable.
@@ -330,7 +330,7 @@ trait FunctionalTestSetupTrait {
 
     // Manually configure the test mail collector implementation to prevent
     // tests from sending out emails and collect them in state instead.
-    // While this should be enforced via settings.php prior to installation,
+    // While this should be enforced via _settings.php prior to installation,
     // some tests expect to be able to test mail system implementations.
     $config->getEditable('system.mail')
       ->set('interface.default', 'test_mail_collector')
@@ -407,7 +407,7 @@ trait FunctionalTestSetupTrait {
    * @code
    * $settings['extension_discovery_scan_tests'] = TRUE;
    * @endcode
-   * to your settings.php.
+   * to your _settings.php.
    *
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
    *   The container.
@@ -456,7 +456,7 @@ trait FunctionalTestSetupTrait {
    * @code
    * $settings['extension_discovery_scan_tests'] = TRUE;
    * @endcode
-   * to your settings.php.
+   * to your _settings.php.
    *
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
    *   The container.

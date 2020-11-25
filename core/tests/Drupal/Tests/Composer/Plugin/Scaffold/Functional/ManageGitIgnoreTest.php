@@ -179,7 +179,7 @@ EOT;
     $this->assertFileExists($sut . '/index.php');
 
     $this->assertScaffoldedFile($sut . '/sites/.gitignore', FALSE, 'example.sites.php');
-    $this->assertScaffoldedFileDoesNotContain($sut . '/sites/.gitignore', 'settings.php');
+    $this->assertScaffoldedFileDoesNotContain($sut . '/sites/.gitignore', '_settings.php');
   }
 
   /**
@@ -230,7 +230,7 @@ Scaffolding files for fixtures/drupal-assets-fixture:
   - Copy [web-root]/.ht.router.php from assets/.ht.router.php
   - Skip [web-root]/.htaccess: overridden in fixtures/drupal-composer-drupal-project
   - Copy [web-root]/sites/default/default.services.yml from assets/default.services.yml
-  - Skip [web-root]/sites/default/default.settings.php: overridden in fixtures/scaffold-override-fixture
+  - Skip [web-root]/sites/default/default._settings.php: overridden in fixtures/scaffold-override-fixture
   - Copy [web-root]/sites/example.settings.local.php from assets/example.settings.local.php
   - Copy [web-root]/sites/example.sites.php from assets/example.sites.php
   - Copy [web-root]/index.php from assets/index.php
@@ -238,7 +238,7 @@ Scaffolding files for fixtures/drupal-assets-fixture:
   - Copy [web-root]/update.php from assets/update.php
   - Copy [web-root]/web.config from assets/web.config
 Scaffolding files for fixtures/scaffold-override-fixture:
-  - Copy [web-root]/sites/default/default.settings.php from assets/override-settings.php
+  - Copy [web-root]/sites/default/default._settings.php from assets/override-_settings.php
 Scaffolding files for fixtures/drupal-composer-drupal-project:
   - Skip [web-root]/.htaccess: disabled
   - Copy [web-root]/robots.txt from assets/robots-default.txt

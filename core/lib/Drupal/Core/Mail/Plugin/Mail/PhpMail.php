@@ -85,7 +85,7 @@ class PhpMail implements MailInterface {
     // Note: email uses CRLF for line-endings. PHP's API requires LF
     // on Unix and CRLF on Windows. Drupal automatically guesses the
     // line-ending format appropriate for your system. If you need to
-    // override this, adjust $settings['mail_line_endings'] in settings.php.
+    // override this, adjust $settings['mail_line_endings'] in _settings.php.
     $mail_body = preg_replace('@\r?\n@', $line_endings, $message['body']);
     // For headers, PHP's API suggests that we use CRLF normally,
     // but some MTAs incorrectly replace LF with CRLF. See #234403.

@@ -322,7 +322,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    * Once the kernel has been created DrupalKernelInterface::getSitePath() is
    * preferred since it gets the statically cached result of this method.
    *
-   * Site directories contain all site specific code. This includes settings.php
+   * Site directories contain all site specific code. This includes _settings.php
    * for bootstrap level configuration, file configuration stores, public file
    * storage and site specific modules and themes.
    *
@@ -331,12 +331,12 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    *
    * Finds a matching site directory file by stripping the website's hostname
    * from left to right and pathname from right to left. By default, the
-   * directory must contain a 'settings.php' file for it to match. If the
+   * directory must contain a '_settings.php' file for it to match. If the
    * parameter $require_settings is set to FALSE, then a directory without a
-   * 'settings.php' file will match as well. The first configuration file found
+   * '_settings.php' file will match as well. The first configuration file found
    * will be used and the remaining ones will be ignored. If no configuration
    * file is found, returns a default value 'sites/default'. See
-   * default.settings.php for examples on how the URL is converted to a
+   * default._settings.php for examples on how the URL is converted to a
    * directory.
    *
    * The sites.php file in the sites directory can define aliases in an
@@ -353,10 +353,10 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The current request.
    * @param bool $require_settings
-   *   Only directories with an existing settings.php file will be recognized.
+   *   Only directories with an existing _settings.php file will be recognized.
    *   Defaults to TRUE. During initial installation, this is set to FALSE so
    *   that Drupal can detect a matching directory, then create a new
-   *   settings.php file in it.
+   *   _settings.php file in it.
    * @param string $app_root
    *   (optional) The path to the application root as a string. If not supplied,
    *   the application root will be computed.
@@ -369,7 +369,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    *
    * @see \Drupal\Core\DrupalKernelInterface::getSitePath()
    * @see \Drupal\Core\DrupalKernelInterface::setSitePath()
-   * @see default.settings.php
+   * @see default._settings.php
    * @see example.sites.php
    */
   public static function findSitePath(Request $request, $require_settings = TRUE, $app_root = NULL) {
@@ -410,7 +410,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
         if (isset($sites[$dir]) && file_exists($app_root . '/sites/' . $sites[$dir])) {
           $dir = $sites[$dir];
         }
-        if (file_exists($app_root . '/sites/' . $dir . '/settings.php') || (!$require_settings && file_exists($app_root . '/sites/' . $dir))) {
+        if (file_exists($app_root . '/sites/' . $dir . '/_settings.php') || (!$require_settings && file_exists($app_root . '/sites/' . $dir))) {
           return "sites/$dir";
         }
       }
@@ -699,7 +699,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
 
       // Redirect the user to the installation script if Drupal has not been
       // installed yet (i.e., if no $databases array has been defined in the
-      // settings.php file) and we are not already installing.
+      // _settings.php file) and we are not already installing.
       if (!Database::getConnectionInfo() && !InstallerKernel::installationAttempted() && PHP_SAPI !== 'cli') {
         $response = new RedirectResponse($request->getBasePath() . '/core/install.php', 302, ['Cache-Control' => 'no-cache']);
       }
@@ -847,11 +847,11 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    * The 'environment' consists of:
    * - The kernel environment string.
    * - The Drupal version constant.
-   * - The deployment identifier from settings.php. This allows custom
+   * - The deployment identifier from _settings.php. This allows custom
    *   deployments to force a container rebuild.
    * - The operating system running PHP. This allows compiler passes to optimize
    *   services for different operating systems.
-   * - The paths to any additional container YAMLs from settings.php.
+   * - The paths to any additional container YAMLs from _settings.php.
    *
    * @return string
    *   The cache key used for the service container.
@@ -998,7 +998,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
     error_reporting(E_STRICT | E_ALL);
 
     // Override PHP settings required for Drupal to work properly.
-    // sites/default/default.settings.php contains more runtime settings.
+    // sites/default/default._settings.php contains more runtime settings.
     // The .htaccess file contains settings that cannot be changed at runtime.
 
     if (PHP_SAPI !== 'cli') {
@@ -1040,7 +1040,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
         ini_set('log_errors', 1);
         ini_set('error_log', $app_root . '/' . $test_db->getTestSitePath() . '/error.log');
 
-        // Ensure that a rewritten settings.php is used if opcache is on.
+        // Ensure that a rewritten _settings.php is used if opcache is on.
         ini_set('opcache.validate_timestamps', 'on');
         ini_set('opcache.revalidate_freq', 0);
       }
@@ -1557,7 +1557,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    * Symfony provides a mechanism for creating a list of trusted Host values.
    *
    * Host patterns (as regular expressions) can be configured through
-   * settings.php for multisite installations, sites using ServerAlias without
+   * _settings.php for multisite installations, sites using ServerAlias without
    * canonical redirection, or configurations where the site responds to default
    * requests. For example,
    *

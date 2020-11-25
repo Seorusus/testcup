@@ -74,7 +74,7 @@ class InstallCommand extends Command {
     if ($this->isDrupalInstalled()) {
       // Do not fail if the site is already installed so this command can be
       // chained with ServerCommand.
-      $output->writeln('<info>Drupal is already installed.</info> If you want to reinstall, remove sites/default/files and sites/default/settings.php.');
+      $output->writeln('<info>Drupal is already installed.</info> If you want to reinstall, remove sites/default/files and sites/default/_settings.php.');
       return 0;
     }
 
@@ -125,7 +125,7 @@ class InstallCommand extends Command {
    *   The site name.
    *
    * @throws \Exception
-   *   Thrown when failing to create the $site_path directory or settings.php.
+   *   Thrown when failing to create the $site_path directory or _settings.php.
    *
    * @return int
    *   The command exit status.
@@ -165,7 +165,7 @@ class InstallCommand extends Command {
       ],
     ];
 
-    // Create the directory and settings.php if not there so that the installer
+    // Create the directory and _settings.php if not there so that the installer
     // works.
     if (!is_dir($site_path)) {
       if ($io->isVerbose()) {
@@ -175,12 +175,12 @@ class InstallCommand extends Command {
         throw new \RuntimeException("Failed to create directory $site_path");
       }
     }
-    if (!file_exists("{$site_path}/settings.php")) {
+    if (!file_exists("{$site_path}/_settings.php")) {
       if ($io->isVerbose()) {
-        $io->writeln("Creating file: {$site_path}/settings.php");
+        $io->writeln("Creating file: {$site_path}/_settings.php");
       }
-      if (!copy('sites/default/default.settings.php', "{$site_path}/settings.php")) {
-        throw new \RuntimeException("Copying sites/default/default.settings.php to {$site_path}/settings.php failed.");
+      if (!copy('sites/default/default._settings.php', "{$site_path}/_settings.php")) {
+        throw new \RuntimeException("Copying sites/default/default._settings.php to {$site_path}/_settings.php failed.");
       }
     }
 

@@ -12,7 +12,7 @@ use Drupal\Core\Site\Settings;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a form to configure and rewrite settings.php.
+ * Provides a form to configure and rewrite _settings.php.
  *
  * @internal
  */
@@ -64,7 +64,7 @@ class SiteSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $settings_file = './' . $this->sitePath . '/settings.php';
+    $settings_file = './' . $this->sitePath . '/_settings.php';
 
     $form['#title'] = $this->t('Database configuration');
 
@@ -74,10 +74,10 @@ class SiteSettingsForm extends FormBase {
     // Unless there is input for this form (for a non-interactive installation,
     // input originates from the $settings array passed into install_drupal()),
     // check whether database connection settings have been prepared in
-    // settings.php already.
+    // _settings.php already.
     // Note: The installer even executes this form if there is a valid database
     // connection already, since the submit handler of this form is responsible
-    // for writing all $settings to settings.php (not limited to $databases).
+    // for writing all $settings to _settings.php (not limited to $databases).
     $input = &$form_state->getUserInput();
     if (!isset($input['driver']) && $database = Database::getConnectionInfo()) {
       $input['driver'] = $database['default']['driver'];
@@ -86,7 +86,7 @@ class SiteSettingsForm extends FormBase {
 
     if (isset($input['driver'])) {
       $default_driver = $input['driver'];
-      // In case of database connection info from settings.php, as well as for a
+      // In case of database connection info from _settings.php, as well as for a
       // programmed form submission (non-interactive installer), the table prefix
       // information is usually normalized into an array already, but the form
       // element only allows to configure one default prefix for all tables.
@@ -160,7 +160,7 @@ class SiteSettingsForm extends FormBase {
     // Cut the trailing \Install from namespace.
     $database['namespace'] = substr($install_namespace, 0, strrpos($install_namespace, '\\'));
     $database['driver'] = $driver;
-    // See default.settings.php for an explanation of the 'autoload' key.
+    // See default._settings.php for an explanation of the 'autoload' key.
     if ($autoload = Database::findDriverAutoloadDirectory($database['namespace'], DRUPAL_ROOT)) {
       $database['autoload'] = $autoload;
     }
@@ -244,11 +244,11 @@ class SiteSettingsForm extends FormBase {
       'value'    => Crypt::randomBytesBase64(55),
       'required' => TRUE,
     ];
-    // If settings.php does not contain a config sync directory name we need to
+    // If _settings.php does not contain a config sync directory name we need to
     // configure one.
     if (empty(Settings::get('config_sync_directory'))) {
       if (empty($install_state['config_install_path'])) {
-        // Add a randomized config directory name to settings.php
+        // Add a randomized config directory name to _settings.php
         $config_sync_directory = $this->createRandomConfigDirectory();
       }
       else {

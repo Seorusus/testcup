@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
  * @code
  * $settings['extension_discovery_scan_tests'] = TRUE;
  * @endcode
- * to your settings.php.
+ * to your _settings.php.
  */
 class ExtensionDiscovery {
 
@@ -132,7 +132,7 @@ class ExtensionDiscovery {
    * @code
    * $settings['extension_discovery_scan_tests'] = TRUE;
    * @endcode
-   * to your settings.php.
+   * to your _settings.php.
    *
    * The information is returned in an associative array, keyed by the extension
    * name (without .info.yml extension). Extensions found later in the search
@@ -193,7 +193,7 @@ class ExtensionDiscovery {
     // Unless an explicit value has been passed, manually check whether we are
     // in a test environment, in which case test extensions must be included.
     // Test extensions can also be included for debugging purposes by setting a
-    // variable in settings.php.
+    // variable in _settings.php.
     if (!isset($include_tests)) {
       $include_tests = Settings::get('extension_discovery_scan_tests') || drupal_valid_test_ua();
     }
@@ -408,7 +408,7 @@ class ExtensionDiscovery {
     $flags |= \FilesystemIterator::CURRENT_AS_SELF;
     $directory_iterator = new \RecursiveDirectoryIterator($absolute_dir, $flags);
 
-    // Allow directories specified in settings.php to be ignored. You can use
+    // Allow directories specified in _settings.php to be ignored. You can use
     // this to not check for files in common special-purpose directories. For
     // example, node_modules and bower_components. Ignoring irrelevant
     // directories is a performance boost.

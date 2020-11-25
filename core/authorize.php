@@ -12,7 +12,7 @@
  * a multistep process. This script actually performs the selected operations
  * without loading all of Drupal, to be able to more gracefully recover from
  * errors. Access to the script is controlled by a global killswitch in
- * settings.php ('allow_authorize_operations') and via the 'administer software
+ * _settings.php ('allow_authorize_operations') and via the 'administer software
  * updates' permission.
  *
  * There are helper functions for setting up an operation to run via this
@@ -47,7 +47,7 @@ const MAINTENANCE_MODE = 'update';
 /**
  * Determines if the current user is allowed to run authorize.php.
  *
- * The killswitch in settings.php overrides all else, otherwise, the user must
+ * The killswitch in _settings.php overrides all else, otherwise, the user must
  * have access to the 'administer software updates' permission.
  *
  * @param \Symfony\Component\HttpFoundation\Request $request

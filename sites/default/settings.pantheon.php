@@ -7,7 +7,7 @@
  * IMPORTANT NOTE:
  * Do not modify this file. This file is maintained by Pantheon.
  *
- * Site-specific modifications belong in settings.php, not this file. This file
+ * Site-specific modifications belong in _settings.php, not this file. This file
  * may change in future releases and modifications would cause conflicts when
  * attempting to apply upstream updates.
  */
@@ -58,7 +58,7 @@ $settings['file_private_path'] = 'sites/default/files/private';
 $is_installer_url = (strpos($_SERVER['SCRIPT_NAME'], '/core/install.php') === 0);
 
 /**
- * Add the Drupal 8 CMI Directory Information directly in settings.php to make sure
+ * Add the Drupal 8 CMI Directory Information directly in _settings.php to make sure
  * Drupal knows all about that.
  *
  * Issue: https://github.com/pantheon-systems/drops-8/issues/2

@@ -5,7 +5,7 @@ namespace Drupal\KernelTests\Core\Config;
 use Drupal\KernelTests\KernelTestBase;
 
 /**
- * Tests configuration overrides via $config in settings.php.
+ * Tests configuration overrides via $config in _settings.php.
  *
  * @group config
  */

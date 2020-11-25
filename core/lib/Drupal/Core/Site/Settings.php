@@ -71,7 +71,7 @@ final class Settings {
   /**
    * Returns a setting.
    *
-   * Settings can be set in settings.php in the $settings array and requested
+   * Settings can be set in _settings.php in the $settings array and requested
    * by this function. Settings should be used over configuration for read-only,
    * possibly low bootstrap configuration that is environment specific.
    *
@@ -101,7 +101,7 @@ final class Settings {
   }
 
   /**
-   * Bootstraps settings.php and the Settings singleton.
+   * Bootstraps _settings.php and the Settings singleton.
    *
    * @param string $app_root
    *   The app root.
@@ -109,20 +109,20 @@ final class Settings {
    *   The current site path.
    * @param \Composer\Autoload\ClassLoader $class_loader
    *   The class loader that is used for this request. Passed by reference and
-   *   exposed to the local scope of settings.php, so as to allow it to be
+   *   exposed to the local scope of _settings.php, so as to allow it to be
    *   decorated with Symfony's ApcClassLoader, for example.
    *
-   * @see default.settings.php
+   * @see default._settings.php
    */
   public static function initialize($app_root, $site_path, &$class_loader) {
-    // Export these settings.php variables to the global namespace.
+    // Export these _settings.php variables to the global namespace.
     global $config_directories, $config;
     $settings = [];
     $config = [];
     $databases = [];
 
-    if (is_readable($app_root . '/' . $site_path . '/settings.php')) {
-      require $app_root . '/' . $site_path . '/settings.php';
+    if (is_readable($app_root . '/' . $site_path . '/_settings.php')) {
+      require $app_root . '/' . $site_path . '/_settings.php';
     }
 
     // Initialize databases.
@@ -159,7 +159,7 @@ final class Settings {
    * Gets a salt useful for hardening against SQL injection.
    *
    * @return string
-   *   A salt based on information in settings.php, not in the database.
+   *   A salt based on information in _settings.php, not in the database.
    *
    * @throws \RuntimeException
    */
@@ -169,7 +169,7 @@ final class Settings {
     // services. Therefore, explicitly notify the user (developer) by throwing
     // an exception.
     if (empty($hash_salt)) {
-      throw new \RuntimeException('Missing $settings[\'hash_salt\'] in settings.php.');
+      throw new \RuntimeException('Missing $settings[\'hash_salt\'] in _settings.php.');
     }
 
     return $hash_salt;

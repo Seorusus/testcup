@@ -7,7 +7,7 @@
 /docroot/profiles/contrib/
 
 # Ignore sensitive information
-# /docroot/sites/*/settings.php
+# /docroot/sites/*/_settings.php
 
 # Ignore Drupal's file directory
 /docroot/sites/*/files/

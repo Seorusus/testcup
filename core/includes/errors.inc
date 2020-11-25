@@ -314,7 +314,7 @@ function _drupal_get_error_level() {
   $error_level = NULL;
   // Try to get the error level configuration from database. If this fails,
   // for example if the database connection is not there, try to read it from
-  // settings.php.
+  // _settings.php.
   try {
     $error_level = \Drupal::config('system.logging')->get('error_level');
   }

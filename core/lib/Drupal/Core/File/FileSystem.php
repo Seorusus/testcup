@@ -642,7 +642,7 @@ class FileSystem implements FileSystemInterface {
     if (\Drupal::hasContainer()) {
       $temporary_directory = \Drupal::config('system.file')->get('path.temporary');
       if (!empty($temporary_directory)) {
-        @trigger_error("The 'system.file' config 'path.temporary' is deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Set 'file_temp_path' in settings.php instead. See https://www.drupal.org/node/3039255", E_USER_DEPRECATED);
+        @trigger_error("The 'system.file' config 'path.temporary' is deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. Set 'file_temp_path' in _settings.php instead. See https://www.drupal.org/node/3039255", E_USER_DEPRECATED);
         return $temporary_directory;
       }
     }
@@ -678,7 +678,7 @@ class FileSystem implements FileSystemInterface {
     if (!is_dir($dir)) {
       throw new NotRegularDirectoryException("$dir is not a directory.");
     }
-    // Allow directories specified in settings.php to be ignored. You can use
+    // Allow directories specified in _settings.php to be ignored. You can use
     // this to not check for files in common special-purpose directories. For
     // example, node_modules and bower_components. Ignoring irrelevant
     // directories is a performance boost.

@@ -266,7 +266,7 @@ All arguments are long options.
   --dburl     A URI denoting the database driver, credentials, server hostname,
               and database name to use in tests.
               Required when running tests without a Drupal installation that
-              contains default database connection info in settings.php.
+              contains default database connection info in _settings.php.
               Examples:
                 mysql://username:password@localhost/databasename#table_prefix
                 sqlite://localhost/relative/path/db.sqlite
@@ -317,7 +317,7 @@ All arguments are long options.
   --die-on-fail
 
               Exit test execution immediately upon any failed assertion. This
-              allows to access the test site by changing settings.php to use the
+              allows to access the test site by changing _settings.php to use the
               test database and configuration directories. Use in combination
               with --repeat for debugging random test failures.
 
@@ -612,14 +612,14 @@ function simpletest_script_setup_database($new = FALSE) {
   global $args;
 
   // If there is an existing Drupal installation that contains a database
-  // connection info in settings.php, then $databases['default']['default'] will
+  // connection info in _settings.php, then $databases['default']['default'] will
   // hold the default database connection already. This connection is assumed to
   // be valid, and this connection will be used in tests, so that they run
   // against e.g. MySQL instead of SQLite.
   // However, in case no Drupal installation exists, this default database
   // connection can be set and/or overridden with the --dburl parameter.
   if (!empty($args['dburl'])) {
-    // Remove a possibly existing default connection (from settings.php).
+    // Remove a possibly existing default connection (from _settings.php).
     Database::removeConnection('default');
     try {
       $databases['default']['default'] = Database::convertDbUrlToConnectionInfo($args['dburl'], DRUPAL_ROOT);
@@ -629,7 +629,7 @@ function simpletest_script_setup_database($new = FALSE) {
       exit(SIMPLETEST_SCRIPT_EXIT_FAILURE);
     }
   }
-  // Otherwise, use the default database connection from settings.php.
+  // Otherwise, use the default database connection from _settings.php.
   else {
     $databases['default'] = Database::getConnectionInfo('default');
   }
@@ -791,7 +791,7 @@ function simpletest_script_execute_batch($test_classes) {
             $db_prefix = TestDatabase::lastTestGet($child['test_id'])['last_prefix'];
             $test_db = new TestDatabase($db_prefix);
             $test_directory = $test_db->getTestSitePath();
-            echo 'Simpletest database and files kept and test exited immediately on fail so should be reproducible if you change settings.php to use the database prefix ' . $db_prefix . ' and config directories in ' . $test_directory . "\n";
+            echo 'Simpletest database and files kept and test exited immediately on fail so should be reproducible if you change _settings.php to use the database prefix ' . $db_prefix . ' and config directories in ' . $test_directory . "\n";
             $args['keep-results'] = TRUE;
             // Exit repeat loop immediately.
             $args['repeat'] = -1;

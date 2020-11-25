@@ -406,7 +406,7 @@ class Drupal {
   /**
    * Returns a queue for the given queue name.
    *
-   * The following values can be set in your settings.php file's $settings
+   * The following values can be set in your _settings.php file's $settings
    * array to define which services are used for queues:
    * - queue_reliable_service_$name: The container service to use for the
    *   reliable queue $name.

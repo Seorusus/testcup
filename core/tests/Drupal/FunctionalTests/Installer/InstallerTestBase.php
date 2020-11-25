@@ -23,7 +23,7 @@ abstract class InstallerTestBase extends BrowserTestBase {
   use RequirementsPageTrait;
 
   /**
-   * Custom settings.php values to write for a test run.
+   * Custom _settings.php values to write for a test run.
    *
    * @var array
    *   An array of settings to write out, in the format expected by
@@ -94,10 +94,10 @@ abstract class InstallerTestBase extends BrowserTestBase {
     ]);
 
     // If any $settings are defined for this test, copy and prepare an actual
-    // settings.php, so as to resemble a regular installation.
+    // _settings.php, so as to resemble a regular installation.
     if (!empty($this->settings)) {
       // Not using File API; a potential error must trigger a PHP warning.
-      copy(DRUPAL_ROOT . '/sites/default/default.settings.php', DRUPAL_ROOT . '/' . $this->siteDirectory . '/settings.php');
+      copy(DRUPAL_ROOT . '/sites/default/default._settings.php', DRUPAL_ROOT . '/' . $this->siteDirectory . '/_settings.php');
       $this->writeSettings($this->settings);
     }
 
@@ -167,13 +167,13 @@ abstract class InstallerTestBase extends BrowserTestBase {
     $this->setUpSite();
 
     if ($this->isInstalled) {
-      // Import new settings.php written by the installer.
+      // Import new _settings.php written by the installer.
       $request = Request::createFromGlobals();
       $class_loader = require $this->container->get('app.root') . '/autoload.php';
       Settings::initialize($this->container->get('app.root'), DrupalKernel::findSitePath($request), $class_loader);
       $this->configDirectories['sync'] = Settings::get('config_sync_directory');
 
-      // After writing settings.php, the installer removes write permissions
+      // After writing _settings.php, the installer removes write permissions
       // from the site directory. To allow drupal_generate_test_ua() to write
       // a file containing the private key for drupal_valid_test_ua(), the site
       // directory has to be writable.

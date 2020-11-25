@@ -65,7 +65,7 @@ class BuildTestTest extends BuildTestBase {
           'files' => [
             'a_file.txt' => 'some file.',
           ],
-          'settings.php' => '<?php $settings = stuff;',
+          '_settings.php' => '<?php $settings = stuff;',
           'settings.local.php' => '<?php $settings = override;',
         ],
         'simpletest' => [

@@ -163,7 +163,7 @@ class SettingsTest extends UnitTestCase {
 
     $vfs_root = vfsStream::setup('root');
     $sites_directory = vfsStream::newDirectory('sites')->at($vfs_root);
-    vfsStream::newFile('settings.php')
+    vfsStream::newFile('_settings.php')
       ->at($sites_directory)
       ->setContent($settings_file_content);
 
@@ -217,7 +217,7 @@ EOD;
 
     $vfs_root = vfsStream::setup('root');
     $sites_directory = vfsStream::newDirectory('sites')->at($vfs_root);
-    vfsStream::newFile('settings.php')->at($sites_directory)->setContent(<<<'EOD'
+    vfsStream::newFile('_settings.php')->at($sites_directory)->setContent(<<<'EOD'
 <?php
 $settings = [];
 EOD
@@ -238,7 +238,7 @@ EOD
 
     $vfs_root = vfsStream::setup('root');
     $sites_directory = vfsStream::newDirectory('sites')->at($vfs_root);
-    vfsStream::newFile('settings.php')->at($sites_directory)->setContent(<<<'EOD'
+    vfsStream::newFile('_settings.php')->at($sites_directory)->setContent(<<<'EOD'
 <?php
 $settings['config_sync_directory'] = 'foo';
 $config_directories['sync'] = 'bar';

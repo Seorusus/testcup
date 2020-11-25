@@ -592,7 +592,7 @@
  * though so that all cached data, or that of an individual cache bin, uses a
  * different cache backend, such as APCu or Memcache, for storage.
  *
- * In a settings.php file, you can override the service used for a particular
+ * In a _settings.php file, you can override the service used for a particular
  * cache bin. For example, if your service implementation of
  * \Drupal\Core\Cache\CacheBackendInterface was called cache.custom, the
  * following line would make Drupal use it for the 'cache_render' bin:

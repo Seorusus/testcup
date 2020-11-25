@@ -7,7 +7,7 @@ files/*
 # created from this upstream
 pantheon.upstream.yml
 
-# Pantheon commits a settings.php for environment-specific settings.
+# Pantheon commits a _settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 sites/*/settings.local.php
 

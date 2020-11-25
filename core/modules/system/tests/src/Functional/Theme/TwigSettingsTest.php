@@ -6,7 +6,7 @@ use Drupal\Tests\BrowserTestBase;
 use Drupal\Core\PhpStorage\PhpStorageFactory;
 
 /**
- * Tests overriding Twig engine settings via settings.php.
+ * Tests overriding Twig engine settings via _settings.php.
  *
  * @group Theme
  */

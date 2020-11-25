@@ -234,7 +234,7 @@ function drupal_get_database_types() {
 }
 
 /**
- * Replaces values in settings.php with values in the submitted array.
+ * Replaces values in _settings.php with values in the submitted array.
  *
  * This function replaces values in place if possible, even for
  * multidimensional arrays. This way the old settings do not linger,
@@ -257,7 +257,7 @@ function drupal_get_database_types() {
  */
 function drupal_rewrite_settings($settings = [], $settings_file = NULL) {
   if (!isset($settings_file)) {
-    $settings_file = \Drupal::service('site.path') . '/settings.php';
+    $settings_file = \Drupal::service('site.path') . '/_settings.php';
   }
   // Build list of setting names and insert the values into the global namespace.
   $variable_names = [];
@@ -273,11 +273,11 @@ function drupal_rewrite_settings($settings = [], $settings_file = NULL) {
   }
   $contents = file_get_contents($settings_file);
   if ($contents !== FALSE) {
-    // Initialize the contents for the settings.php file if it is empty.
+    // Initialize the contents for the _settings.php file if it is empty.
     if (trim($contents) === '') {
       $contents = "<?php\n";
     }
-    // Step through each token in settings.php and replace any variables that
+    // Step through each token in _settings.php and replace any variables that
     // are in the passed-in array.
     $buffer = '';
     $state = 'default';
@@ -392,7 +392,7 @@ function drupal_rewrite_settings($settings = [], $settings_file = NULL) {
         $old_settings = Settings::getAll();
         new Settings($settings_settings + $old_settings);
       }
-      // The existing settings.php file might have been included already. In
+      // The existing _settings.php file might have been included already. In
       // case an opcode cache is enabled, the rewritten contents of the file
       // will not be reflected in this process. Ensure to invalidate the file
       // in case an opcode cache is enabled.
@@ -481,7 +481,7 @@ function _drupal_rewrite_settings_global(&$ref, $variable) {
  *
  * @return string
  *   A string containing valid PHP code of the variable suitable for placing
- *   into settings.php.
+ *   into _settings.php.
  */
 function _drupal_rewrite_settings_dump($variable, $variable_name) {
   $return = '';
@@ -512,7 +512,7 @@ function _drupal_rewrite_settings_dump($variable, $variable_name) {
  *
  * @return string
  *   A string containing valid PHP code of the variable suitable for placing
- *   into settings.php.
+ *   into _settings.php.
  */
 function _drupal_rewrite_settings_dump_one(\stdClass $variable, $prefix = '', $suffix = '') {
   $return = $prefix . var_export($variable->value, TRUE) . ';';
@@ -535,11 +535,11 @@ function drupal_install_config_directories() {
   @trigger_error('drupal_install_config_directories() is deprecated in drupal:8.8.0 and is removed from drupal:9.0.0. There is no replacement. See https://www.drupal.org/node/3018145.', E_USER_DEPRECATED);
   global $config_directories, $install_state;
 
-  // If settings.php does not contain a config sync directory name we need to
+  // If _settings.php does not contain a config sync directory name we need to
   // configure one.
   if (empty($config_directories[CONFIG_SYNC_DIRECTORY])) {
     if (empty($install_state['config_install_path'])) {
-      // Add a randomized config directory name to settings.php
+      // Add a randomized config directory name to _settings.php
       $config_directories[CONFIG_SYNC_DIRECTORY] = \Drupal::service('site.path') . '/files/config_' . Crypt::randomBytesBase64(55) . '/sync';
     }
     else {
@@ -551,13 +551,13 @@ function drupal_install_config_directories() {
       'value' => $config_directories[CONFIG_SYNC_DIRECTORY],
       'required' => TRUE,
     ];
-    // Rewrite settings.php, which also sets the value as global variable.
+    // Rewrite _settings.php, which also sets the value as global variable.
     drupal_rewrite_settings($settings);
   }
 
   // This should never fail, since if the config directory was specified in
-  // settings.php it will have already been created and verified earlier, and
-  // if it wasn't specified in settings.php, it is created here inside the
+  // _settings.php it will have already been created and verified earlier, and
+  // if it wasn't specified in _settings.php, it is created here inside the
   // public files directory, which has already been verified to be writable
   // itself. But if it somehow fails anyway, the installation cannot proceed.
   // Bail out using a similar error message as in system_requirements().
@@ -592,7 +592,7 @@ function drupal_install_config_directories() {
  */
 function install_ensure_config_directory($type) {
   @trigger_error('install_ensure_config_directory() is deprecated in Drupal 8.1.0 and will be removed before Drupal 9.0.0. Use config_get_config_directory() and \Drupal\Core\File\FileSystemInterface::prepareDirectory() instead. See https://www.drupal.org/node/2501187.', E_USER_DEPRECATED);
-  // The config directory must be defined in settings.php.
+  // The config directory must be defined in _settings.php.
   global $config_directories;
   if (!isset($config_directories[$type])) {
     return FALSE;
@@ -884,7 +884,7 @@ function drupal_install_fix_file($file, $mask, $message = TRUE) {
   // FILE_READABLE, FILE_WRITABLE, and FILE_EXECUTABLE permission strings
   // can theoretically be 0400, 0200, and 0100 respectively, but to be safe
   // we set all three access types in case the administrator intends to
-  // change the owner of settings.php after installation.
+  // change the owner of _settings.php after installation.
   foreach ($masks as $m) {
     if ($mask & $m) {
       switch ($m) {

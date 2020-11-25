@@ -39,10 +39,10 @@ class SelectProfileFormTest extends WebDriverTestBase {
     ]);
 
     // If any $settings are defined for this test, copy and prepare an actual
-    // settings.php, so as to resemble a regular installation.
+    // _settings.php, so as to resemble a regular installation.
     if (!empty($this->settings)) {
       // Not using File API; a potential error must trigger a PHP warning.
-      copy(DRUPAL_ROOT . '/sites/default/default.settings.php', DRUPAL_ROOT . '/' . $this->siteDirectory . '/settings.php');
+      copy(DRUPAL_ROOT . '/sites/default/default._settings.php', DRUPAL_ROOT . '/' . $this->siteDirectory . '/_settings.php');
       $this->writeSettings($this->settings);
     }
 

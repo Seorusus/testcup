@@ -181,8 +181,8 @@ class TestSiteApplicationTest extends UnitTestCase {
     $this->assertFileExists($test_file);
 
     // Tear down the other site. Tear down should work if the test site is
-    // broken. Prove this by removing its settings.php.
-    $test_site_settings = $this->root . DIRECTORY_SEPARATOR . $test_database->getTestSitePath() . DIRECTORY_SEPARATOR . 'settings.php';
+    // broken. Prove this by removing its _settings.php.
+    $test_site_settings = $this->root . DIRECTORY_SEPARATOR . $test_database->getTestSitePath() . DIRECTORY_SEPARATOR . '_settings.php';
     $this->assertTrue(unlink($test_site_settings));
     $command_line = $this->php . ' core/scripts/test-site.php tear-down ' . $other_db_prefix . ' --db-url "' . getenv('SIMPLETEST_DB') . '"';
     $process = new Process($command_line, $this->root);

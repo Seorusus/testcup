@@ -15,7 +15,7 @@ use Drupal\Core\Site\Settings;
  * It also applies when the database is unavailable or bootstrap was not
  * complete. Seven is always used for the initial install and update
  * operations. In other cases, Bartik is used, but this can be overridden by
- * setting a "maintenance_theme" key in the $settings variable in settings.php.
+ * setting a "maintenance_theme" key in the $settings variable in _settings.php.
  */
 function _drupal_maintenance_theme() {
   // If the theme is already set, assume the others are set too, and do nothing.

@@ -266,13 +266,13 @@ class ScaffoldTest extends TestCase {
         [
           'drupal-drupal-append-settings',
           FALSE,
-          'sites/default/settings.php',
+          'sites/default/_settings.php',
           '<?php
 
-// Default settings.php contents
+// Default _settings.php contents
 
 include __DIR__ . "/settings-custom-additions.php";',
-          'NOTICE Creating a new file at [web-root]/sites/default/settings.php. Examine the contents and ensure that it came out correctly.',
+          'NOTICE Creating a new file at [web-root]/sites/default/_settings.php. Examine the contents and ensure that it came out correctly.',
         ],
       ]
     );
@@ -360,7 +360,7 @@ include __DIR__ . "/settings-custom-additions.php";',
    *   Whether or not symlinking is used.
    */
   protected function assertDefaultSettingsFromScaffoldOverride($docroot, $is_link) {
-    $this->assertScaffoldedFile($docroot . '/sites/default/default.settings.php', $is_link, 'scaffolded from the scaffold-override-fixture');
+    $this->assertScaffoldedFile($docroot . '/sites/default/default._settings.php', $is_link, 'scaffolded from the scaffold-override-fixture');
   }
 
   /**
@@ -379,7 +379,7 @@ include __DIR__ . "/settings-custom-additions.php";',
    * Asserts that the scaffold files from drupal/assets are placed as expected.
    *
    * This tests that all assets from drupal/assets were scaffolded, save
-   * for .htaccess, robots.txt and default.settings.php, which are scaffolded
+   * for .htaccess, robots.txt and default._settings.php, which are scaffolded
    * in different ways in different tests.
    *
    * @param string $docroot

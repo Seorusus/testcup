@@ -110,7 +110,7 @@ class Config extends StorableConfigBase {
   }
 
   /**
-   * Sets settings.php overrides for this configuration object.
+   * Sets _settings.php overrides for this configuration object.
    *
    * The overridden data only applies to this configuration object.
    *
@@ -145,7 +145,7 @@ class Config extends StorableConfigBase {
    * Sets the current data for this configuration object.
    *
    * Configuration overrides operate at two distinct layers: modules and
-   * settings.php. Overrides in settings.php take precedence over values
+   * _settings.php. Overrides in _settings.php take precedence over values
    * provided by modules. Precedence or different module overrides is
    * determined by the priority of the config.factory.override tagged services.
    *

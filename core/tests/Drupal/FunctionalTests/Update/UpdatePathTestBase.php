@@ -180,7 +180,7 @@ abstract class UpdatePathTestBase extends BrowserTestBase {
     }
     $this->installDrupal();
 
-    // Add the config directories to settings.php.
+    // Add the config directories to _settings.php.
     $sync_directory = Settings::get('config_sync_directory');
     \Drupal::service('file_system')->prepareDirectory($sync_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 

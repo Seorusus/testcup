@@ -22,7 +22,7 @@ class DbUpdateAccessCheck implements AccessInterface {
    *   The access result.
    */
   public function access(AccountInterface $account) {
-    // Allow the global variable in settings.php to override the access check.
+    // Allow the global variable in _settings.php to override the access check.
     if (Settings::get('update_free_access')) {
       return AccessResult::allowed()->setCacheMaxAge(0);
     }

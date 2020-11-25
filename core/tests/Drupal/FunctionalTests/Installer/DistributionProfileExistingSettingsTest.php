@@ -81,7 +81,7 @@ class DistributionProfileExistingSettingsTest extends InstallerTestBase {
    */
   protected function setUpLanguage() {
     // Make settings file not writable.
-    $filename = $this->siteDirectory . '/settings.php';
+    $filename = $this->siteDirectory . '/_settings.php';
     // Make the settings file read-only.
     // Not using File API; a potential error must trigger a PHP warning.
     chmod($filename, 0444);
@@ -107,7 +107,7 @@ class DistributionProfileExistingSettingsTest extends InstallerTestBase {
    * {@inheritdoc}
    */
   protected function setUpSettings() {
-    // This step should not appear, since settings.php is fully configured
+    // This step should not appear, since _settings.php is fully configured
     // already.
   }
 
@@ -122,7 +122,7 @@ class DistributionProfileExistingSettingsTest extends InstallerTestBase {
 
     // Confirm that Drupal recognizes this distribution as the current profile.
     $this->assertEqual(\Drupal::installProfile(), 'mydistro');
-    $this->assertArrayNotHasKey('install_profile', Settings::getAll(), 'The install profile has not been written to settings.php.');
+    $this->assertArrayNotHasKey('install_profile', Settings::getAll(), 'The install profile has not been written to _settings.php.');
     $this->assertEqual($this->config('core.extension')->get('profile'), 'mydistro', 'The install profile has been written to core.extension configuration.');
 
     $this->rebuildContainer();

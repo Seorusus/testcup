@@ -41,7 +41,7 @@ class TwigSandboxPolicy implements \Twig_Sandbox_SecurityPolicyInterface {
    * Constructs a new TwigSandboxPolicy object.
    */
   public function __construct() {
-    // Allow settings.php to override our default whitelisted classes, methods,
+    // Allow _settings.php to override our default whitelisted classes, methods,
     // and prefixes.
     $whitelisted_classes = Settings::get('twig_sandbox_whitelisted_classes', [
       // Allow any operations on the Attribute object as it is intended to be

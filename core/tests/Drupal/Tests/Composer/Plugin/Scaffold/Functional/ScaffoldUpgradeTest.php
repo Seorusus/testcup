@@ -60,7 +60,7 @@ class ScaffoldUpgradeTest extends TestCase {
     // First step: set up the Scaffold plug in. Ensure that scaffold operation
     // ran. This is more of a control than a test.
     $this->mustExec("composer install --no-ansi", $sut);
-    $this->assertScaffoldedFile($sut . '/sites/default/default.settings.php', FALSE, 'A settings.php fixture file scaffolded from the scaffold-override-fixture');
+    $this->assertScaffoldedFile($sut . '/sites/default/default._settings.php', FALSE, 'A _settings.php fixture file scaffolded from the scaffold-override-fixture');
 
     // Next, bring back packagist.org and install core-composer-scaffold:8.8.0.
     // Packagist is disabled in the fixture; we bring it back by removing the

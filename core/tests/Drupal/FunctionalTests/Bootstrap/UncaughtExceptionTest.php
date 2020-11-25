@@ -51,7 +51,7 @@ class UncaughtExceptionTest extends BrowserTestBase {
   protected function setUp() {
     parent::setUp();
 
-    $settings_filename = $this->siteDirectory . '/settings.php';
+    $settings_filename = $this->siteDirectory . '/_settings.php';
     chmod($settings_filename, 0777);
     $settings_php = file_get_contents($settings_filename);
     $settings_php .= "\ninclude_once 'core/tests/Drupal/FunctionalTests/Bootstrap/ErrorContainer.php';\n";
@@ -128,7 +128,7 @@ class UncaughtExceptionTest extends BrowserTestBase {
    * Tests uncaught exception handling with custom exception handler.
    */
   public function testUncaughtExceptionCustomExceptionHandler() {
-    $settings_filename = $this->siteDirectory . '/settings.php';
+    $settings_filename = $this->siteDirectory . '/_settings.php';
     chmod($settings_filename, 0777);
     $settings_php = file_get_contents($settings_filename);
     $settings_php .= "\n";
@@ -169,7 +169,7 @@ class UncaughtExceptionTest extends BrowserTestBase {
    * Tests a missing dependency on a service with a custom error handler.
    */
   public function testMissingDependencyCustomErrorHandler() {
-    $settings_filename = $this->siteDirectory . '/settings.php';
+    $settings_filename = $this->siteDirectory . '/_settings.php';
     chmod($settings_filename, 0777);
     $settings_php = file_get_contents($settings_filename);
     $settings_php .= "\n";
@@ -243,7 +243,7 @@ class UncaughtExceptionTest extends BrowserTestBase {
         $this->markTestSkipped('Unable to run \Drupal\system\Tests\System\UncaughtExceptionTest::testLostDatabaseConnection for this database type.');
     }
 
-    // We simulate a broken database connection by rewrite settings.php to no
+    // We simulate a broken database connection by rewrite _settings.php to no
     // longer have the proper data.
     $settings['databases']['default']['default']['username'] = (object) [
       'value' => $incorrect_username,

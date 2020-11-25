@@ -9,7 +9,7 @@ use Drupal\Core\DependencyInjection\DependencySerializationTrait;
  * String translator using overrides from variables.
  *
  * This is a high performance way to provide a handful of string replacements.
- * See settings.php for examples.
+ * See _settings.php for examples.
  */
 class CustomStrings extends StaticTranslation {
 

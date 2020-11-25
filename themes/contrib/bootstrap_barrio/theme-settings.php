@@ -2,7 +2,7 @@
 
 /**
  * @file
- * theme-settings.php
+ * theme-_settings.php
  *
  * Provides theme settings for Bootstrap Barrio-based themes.
  */

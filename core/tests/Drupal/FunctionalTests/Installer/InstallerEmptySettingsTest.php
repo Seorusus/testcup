@@ -19,9 +19,9 @@ class InstallerEmptySettingsTest extends InstallerTestBase {
    */
   protected function prepareEnvironment() {
     parent::prepareEnvironment();
-    // Create an empty settings.php file.
+    // Create an empty _settings.php file.
     $path = $this->root . DIRECTORY_SEPARATOR . $this->siteDirectory;
-    file_put_contents($path . '/settings.php', '');
+    file_put_contents($path . '/_settings.php', '');
   }
 
   /**

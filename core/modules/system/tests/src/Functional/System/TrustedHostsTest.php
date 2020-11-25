@@ -30,18 +30,18 @@ class TrustedHostsTest extends BrowserTestBase {
 
   /**
    * Tests that the status page shows an error when the trusted host setting
-   * is missing from settings.php
+   * is missing from _settings.php
    */
   public function testStatusPageWithoutConfiguration() {
     $this->drupalGet('admin/reports/status');
     $this->assertSession()->statusCodeEquals(200);
 
     $this->assertRaw(t('Trusted Host Settings'));
-    $this->assertRaw(t('The trusted_host_patterns setting is not configured in settings.php.'));
+    $this->assertRaw(t('The trusted_host_patterns setting is not configured in _settings.php.'));
   }
 
   /**
-   * Tests that the status page shows the trusted patterns from settings.php.
+   * Tests that the status page shows the trusted patterns from _settings.php.
    */
   public function testStatusPageWithConfiguration() {
     $settings['settings']['trusted_host_patterns'] = (object) [

@@ -22,7 +22,7 @@ interface ModuleInstallerInterface {
    * @code
    * $settings['extension_discovery_scan_tests'] = TRUE;
    * @endcode
-   * to your settings.php.
+   * to your _settings.php.
    *
    * @param string[] $module_list
    *   An array of module names.

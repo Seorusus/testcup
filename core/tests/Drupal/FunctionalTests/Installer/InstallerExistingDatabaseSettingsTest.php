@@ -22,7 +22,7 @@ class InstallerExistingDatabaseSettingsTest extends InstallerTestBase {
    */
   protected function prepareEnvironment() {
     parent::prepareEnvironment();
-    // Pre-configure database credentials in settings.php.
+    // Pre-configure database credentials in _settings.php.
     $connection_info = Database::getConnectionInfo();
     unset($connection_info['default']['pdo']);
     unset($connection_info['default']['init_commands']);
@@ -36,7 +36,7 @@ class InstallerExistingDatabaseSettingsTest extends InstallerTestBase {
   /**
    * {@inheritdoc}
    *
-   * @todo The database settings form is not supposed to appear if settings.php
+   * @todo The database settings form is not supposed to appear if _settings.php
    *   contains a valid database connection already (but e.g. no config
    *   directories yet).
    */

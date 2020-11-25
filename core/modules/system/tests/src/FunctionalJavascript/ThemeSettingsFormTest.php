@@ -76,7 +76,7 @@ class ThemeSettingsFormTest extends WebDriverTestBase {
   public function providerTestFormSettingsSubmissionHandler() {
     return [
       'test theme.theme' => ['test_theme_theme'],
-      'test theme-settings.php' => ['test_theme_settings'],
+      'test theme-_settings.php' => ['test_theme_settings'],
     ];
   }
 

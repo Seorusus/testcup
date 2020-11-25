@@ -21,7 +21,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * The number of entities processed in each batch is determined by the
  * 'entity_update_batch_size' setting.
  *
- * @see default.settings.php
+ * @see default._settings.php
  */
 class ConfigEntityUpdater implements ContainerInjectionInterface {
 

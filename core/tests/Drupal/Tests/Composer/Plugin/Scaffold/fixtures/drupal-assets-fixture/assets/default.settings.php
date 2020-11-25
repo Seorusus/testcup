@@ -2,5 +2,5 @@
 
 /**
  * @file
- * Test version of default.settings.php from drupal/core.
+ * Test version of default._settings.php from drupal/core.
  */

@@ -474,7 +474,7 @@ class ImageStyle extends ConfigEntityBase implements ImageStyleInterface, Entity
    * Gets a salt useful for hardening against SQL injection.
    *
    * @return string
-   *   A salt based on information in settings.php, not in the database.
+   *   A salt based on information in _settings.php, not in the database.
    *
    * @throws \RuntimeException
    */

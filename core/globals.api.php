@@ -57,7 +57,7 @@ global $base_url;
 global $conf;
 
 /**
- * Array of configuration overrides from the settings.php file.
+ * Array of configuration overrides from the _settings.php file.
  */
 global $config;
 
