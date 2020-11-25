@@ -13,142 +13,19 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f01d0134-cec7-434b-bd76-f033124fc551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/romania.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/custom_barrio/bootstrap_barrio.layouts.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/custom_barrio/custom_barrio.layouts.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/_bootstrap_barrio_subtheme.theme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/bootstrap_barrio_subtheme.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/bootstrap_barrio_subtheme.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/color/color.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/color/preview.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/color/preview.es6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/color/preview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/color/preview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/config/install/bootstrap_barrio_subtheme.settings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/config/install/romania.settings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/config/schema/bootstrap_barrio_subtheme.schema.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/config/schema/romania.schema.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/css/colors.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/New1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/New2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/New2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/first-section-video-ro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/first-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/icon7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/no-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/product/new8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/second-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/sprite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/arrow-next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/arrow-prev.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/checked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/error.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/facebook.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/instagram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/leaf-big.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/leaf-medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/leaf-small.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/line-horizontal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/line-vertical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/loading.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/mail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/play.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/twitter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/svg-icons/youtube.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/img/third-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/js/global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/romania.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/romania.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/romania.theme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania/templates/_page.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/css/style_.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/New1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/New2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/New2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/first-section-video-ro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/first-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/icon7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/no-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/product/new8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/second-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/sprite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/arrow-next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/arrow-prev.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/checked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/error.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/facebook.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/instagram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/leaf-big.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/leaf-medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/leaf-small.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/line-horizontal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/line-vertical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/loading.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/mail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/play.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/twitter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/svg-icons/youtube.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/img/third-section-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/custom/romania_subtheme/templates/page--node--9.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/romania_sub.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/romania_sub.libraries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_sub/templates/page--front.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/custom/romania_subtheme/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/custom/romania_subtheme/css/style.css" afterDir="false" />
+    <list default="true" id="e36cc038-e7de-463c-a9d3-31fcfa9cee63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.platform.app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.platform.app.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +103,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1kYxqFwN50pQYx6ptKzmeXPY9gZ" />
+  <component name="ProjectId" id="1kkhNzvbqwoyq1dzFgHVHuBKkCg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -235,7 +112,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -250,13 +126,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f01d0134-cec7-434b-bd76-f033124fc551" name="Default Changelist" comment="" />
-      <created>1605891514258</created>
+      <changelist id="e36cc038-e7de-463c-a9d3-31fcfa9cee63" name="Default Changelist" comment="" />
+      <created>1606250460482</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605891514258</updated>
-      <workItem from="1605891515346" duration="828000" />
-      <workItem from="1605892888141" duration="1201000" />
+      <updated>1606250460482</updated>
+      <workItem from="1606250461578" duration="525000" />
+      <workItem from="1606293505349" duration="49000" />
+      <workItem from="1606310295641" duration="922000" />
     </task>
     <servers />
   </component>
@@ -275,29 +152,18 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1606245945967">
+    <state x="811" y="437" width="355" height="230" key="#Drupal" timestamp="1606250485015">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053@67.27.1853.1053" timestamp="1606245945967" />
-    <state x="811" y="437" width="355" height="230" key="#Drupal" timestamp="1605891740531">
+    <state x="811" y="437" width="355" height="230" key="#Drupal/67.27.1853.1053@67.27.1853.1053" timestamp="1606250485015" />
+    <state x="656" y="354" width="664" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606250648247">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="811" y="437" width="355" height="230" key="#Drupal/67.27.1853.1053@67.27.1853.1053" timestamp="1605891740531" />
-    <state x="567" y="201" width="832" height="704" key="#SSH_Configurations" timestamp="1606245899314">
+    <state x="656" y="354" width="664" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606250648247" />
+    <state x="772" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1606293546757">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="567" y="201" width="832" height="704" key="#SSH_Configurations/67.27.1853.1053@67.27.1853.1053" timestamp="1606245899314" />
-    <state x="772" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1605891736253">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="772" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1605891736253" />
-    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1606244645586">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606244645586" />
+    <state x="772" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1606293546757" />
   </component>
 </project>
