@@ -1,0 +1,19 @@
+uuid: feda888f-2250-474c-ac43-d106549cefe9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.slider_bottom
+id: paragraph.slider_bottom.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: slider_bottom
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

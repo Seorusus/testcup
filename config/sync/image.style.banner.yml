@@ -1,0 +1,15 @@
+uuid: 35f02dc3-919d-4c89-b148-b2c290f1e295
+langcode: ru
+status: true
+dependencies: {  }
+name: banner
+label: banner
+effects:
+  9d6cd0ff-dd05-467f-9059-d0f91e6633f4:
+    uuid: 9d6cd0ff-dd05-467f-9059-d0f91e6633f4
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 690
+      upscale: true

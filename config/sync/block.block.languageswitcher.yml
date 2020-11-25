@@ -1,0 +1,29 @@
+uuid: 37b0e028-4cce-4e7e-a6f7-7d5802008b19
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - romania_subtheme
+id: languageswitcher
+theme: romania_subtheme
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+      ro: ro
+      ru: ru
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

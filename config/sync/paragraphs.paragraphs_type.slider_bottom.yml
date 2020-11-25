@@ -1,0 +1,10 @@
+uuid: 8988bbea-a36b-451b-8d18-e081f56a8d6f
+langcode: ru
+status: true
+dependencies: {  }
+id: slider_bottom
+label: 'Slider bottom'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

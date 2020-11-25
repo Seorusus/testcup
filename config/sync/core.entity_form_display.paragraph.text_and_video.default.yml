@@ -1,0 +1,34 @@
+uuid: 3395850c-2f6a-4512-974a-a62656a927ee
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_video.field_text
+    - field.field.paragraph.text_and_video.field_video
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - media_library
+    - text
+id: paragraph.text_and_video.default
+targetEntityType: paragraph
+bundle: text_and_video
+mode: default
+content:
+  field_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_video:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,22 @@
+uuid: fcbacaaa-0c8d-455a-9f12-7ff306d17d12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_banner
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_banner:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

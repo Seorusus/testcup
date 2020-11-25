@@ -1,0 +1,20 @@
+uuid: aa587316-9ba9-40d1-99f8-e3bb38570cc8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - romania_sub
+_core:
+  default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
+id: romania_sub_local_actions
+theme: romania_sub
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 37f71db1-1bb9-440c-8c30-2ffb53d10501
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - text
+id: paragraph.text_and_video.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: text_and_video
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: c266446d-f94f-4b6e-ae45-1466a744a861
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_left_text
+    - paragraphs.paragraphs_type.text_and_text
+  module:
+    - text
+id: paragraph.text_and_text.field_left_text
+field_name: field_left_text
+entity_type: paragraph
+bundle: text_and_text
+label: 'Left text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

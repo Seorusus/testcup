@@ -1,0 +1,51 @@
+uuid: bc049981-ae39-48f1-bdaf-108aec94a84d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.slider_bottom
+    - paragraphs.paragraphs_type.text_and_text
+    - paragraphs.paragraphs_type.text_and_video
+    - paragraphs.paragraphs_type.video_and_text
+  module:
+    - entity_reference_revisions
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slider: slider
+      video_and_text: video_and_text
+      text_and_text: text_and_text
+      text_and_video: text_and_video
+      slider_bottom: slider_bottom
+    target_bundles_drag_drop:
+      slider:
+        enabled: true
+        weight: -11
+      slider_bottom:
+        enabled: true
+        weight: -7
+      text_and_text:
+        enabled: true
+        weight: -9
+      text_and_video:
+        enabled: true
+        weight: -8
+      video_and_text:
+        enabled: true
+        weight: -10
+field_type: entity_reference_revisions

@@ -1,0 +1,97 @@
+uuid: 57145bc3-929e-4fa2-9919-27e43302435f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.banner.body
+    - field.field.node.banner.field_bottom
+    - field.field.node.banner.field_media
+    - image.style.banner
+    - image.style.banner_thabnail_100_100
+    - node.type.banner
+  module:
+    - ds
+    - slick
+    - text
+    - user
+id: node.banner.default
+targetEntityType: node
+bundle: banner
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media:
+    type: slick_media
+    weight: 1
+    label: hidden
+    settings:
+      style: ''
+      optionset: banner
+      optionset_thumbnail: ''
+      skin: split
+      skin_thumbnail: ''
+      image_style: banner
+      thumbnail_effect: grid
+      thumbnail_position: left
+      media_switch: media
+      thumbnail_style: banner_thabnail_100_100
+      ratio: '1:1'
+      view_mode: default
+      grid: null
+      grid_medium: 1
+      grid_small: 1
+      visible_items: 1
+      image: field_media_image
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      override: true
+      overridables:
+        dots: dots
+        arrows: '0'
+        autoplay: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      current_view_mode: default
+      vanilla: false
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden:
+  field_bottom: true
+  langcode: true
+  links: true

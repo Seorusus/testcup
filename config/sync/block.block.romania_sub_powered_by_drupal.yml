@@ -1,0 +1,22 @@
+uuid: 18db819c-6ea9-4449-859b-6d012b207bd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - romania_sub
+_core:
+  default_config_hash: pCYcyBIVbwKUmraga_6Ycz5P-bhQJLJS_8HtOFpMq-o
+id: romania_sub_powered_by_drupal
+theme: romania_sub
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

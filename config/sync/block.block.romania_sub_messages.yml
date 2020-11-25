@@ -1,0 +1,22 @@
+uuid: 4747036e-e6ac-4019-8c49-670d264a8ce1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - romania_sub
+_core:
+  default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
+id: romania_sub_messages
+theme: romania_sub
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

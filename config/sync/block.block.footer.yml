@@ -1,0 +1,25 @@
+uuid: ff747e9e-7e27-4e70-8595-622586832615
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:866b1399-938c-40ec-9973-520f52c7c3da'
+  module:
+    - block_content
+  theme:
+    - romania_subtheme
+id: footer
+theme: romania_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:866b1399-938c-40ec-9973-520f52c7c3da'
+settings:
+  id: 'block_content:866b1399-938c-40ec-9973-520f52c7c3da'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

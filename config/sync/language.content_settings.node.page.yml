@@ -1,0 +1,16 @@
+uuid: e802a862-da10-4148-9938-5eff7fd34571
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: current_interface
+language_alterable: true

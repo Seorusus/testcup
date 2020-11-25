@@ -1,0 +1,36 @@
+uuid: 3830d104-8db4-4e41-8409-68f31db45ad4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_bottom.field_banner_slider
+    - field.field.paragraph.slider_bottom.field_title
+    - paragraphs.paragraphs_type.slider_bottom
+  module:
+    - viewsreference
+id: paragraph.slider_bottom.default
+targetEntityType: paragraph
+bundle: slider_bottom
+mode: default
+content:
+  field_banner_slider:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

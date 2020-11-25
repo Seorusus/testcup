@@ -1,0 +1,20 @@
+uuid: 4d9a4a90-13e3-44cd-9f61-90a618ace330
+langcode: en
+status: true
+dependencies:
+  theme:
+    - romania_sub
+_core:
+  default_config_hash: _0ZyPKUqcQMu9FlcCoa_Y-No4zdv-wUNF4hlSj60yi0
+id: romania_sub_page_title
+theme: romania_sub
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

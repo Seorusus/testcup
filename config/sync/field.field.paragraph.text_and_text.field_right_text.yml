@@ -1,0 +1,21 @@
+uuid: 518e43ac-c6e7-4cf5-9f37-462cf69f39d8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_right_text
+    - paragraphs.paragraphs_type.text_and_text
+  module:
+    - text
+id: paragraph.text_and_text.field_right_text
+field_name: field_right_text
+entity_type: paragraph
+bundle: text_and_text
+label: 'Right text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

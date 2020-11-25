@@ -1,0 +1,21 @@
+uuid: 6718e5cb-d6ee-4969-8b82-9d00e9f66554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_banner
+    - paragraphs.paragraphs_type.slider
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_banner:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

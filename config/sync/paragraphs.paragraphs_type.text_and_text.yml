@@ -1,0 +1,10 @@
+uuid: a213e205-4854-48b5-9462-360b579b4e74
+langcode: ru
+status: true
+dependencies: {  }
+id: text_and_text
+label: 'Text and Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

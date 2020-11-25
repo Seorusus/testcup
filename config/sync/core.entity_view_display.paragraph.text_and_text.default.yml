@@ -1,0 +1,56 @@
+uuid: b07e83c9-9da2-41f1-8f0b-95668b1ed70a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_text.field_left_text
+    - field.field.paragraph.text_and_text.field_right_text
+    - paragraphs.paragraphs_type.text_and_text
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_left_text
+      right:
+        - field_right_text
+id: paragraph.text_and_text.default
+targetEntityType: paragraph
+bundle: text_and_text
+mode: default
+content:
+  field_left_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_right_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: text_default
+    region: right
+hidden: {  }

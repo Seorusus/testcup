@@ -1,0 +1,22 @@
+uuid: c2a6bacd-ee12-4a53-b4b9-dee99aa585fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - romania_subtheme
+_core:
+  default_config_hash: aJ6ps0sJm9MtQffqINgRms1JaSQgjsg68REaPdN-BGk
+id: romania_subtheme_content
+theme: romania_subtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

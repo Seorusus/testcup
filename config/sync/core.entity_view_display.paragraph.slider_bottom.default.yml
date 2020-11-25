@@ -1,0 +1,57 @@
+uuid: ba75035e-f065-4567-ba3f-90ae7472f5e3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_bottom.field_banner_slider
+    - field.field.paragraph.slider_bottom.field_title
+    - paragraphs.paragraphs_type.slider_bottom
+  module:
+    - ds
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_title
+      right:
+        - field_banner_slider
+id: paragraph.slider_bottom.default
+targetEntityType: paragraph
+bundle: slider_bottom
+mode: default
+content:
+  field_banner_slider:
+    type: viewsreference_formatter
+    weight: 1
+    region: right
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+hidden: {  }

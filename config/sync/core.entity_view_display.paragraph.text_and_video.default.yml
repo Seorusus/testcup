@@ -1,0 +1,56 @@
+uuid: 29c708cd-72ac-445d-90ed-6519401910fb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_video.field_text
+    - field.field.paragraph.text_and_video.field_video
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_text
+      right:
+        - field_video
+id: paragraph.text_and_video.default
+targetEntityType: paragraph
+bundle: text_and_video
+mode: default
+content:
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_video:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: right
+hidden: {  }

@@ -1,0 +1,15 @@
+uuid: 33e29b1a-cb57-424d-9107-5524de11aa47
+langcode: ru
+status: true
+dependencies: {  }
+name: banner_thabnail_100_100
+label: 'Banner thabnail 100*100'
+effects:
+  13c86e5a-f380-436c-bb02-09d647b0789c:
+    uuid: 13c86e5a-f380-436c-bb02-09d647b0789c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-top
