@@ -31,9 +31,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_sub/romania_sub.info.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/romania_subtheme.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/romania_subtheme.info.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/romania_subtheme.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/romania_subtheme.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +179,7 @@
       <workItem from="1606405103685" duration="264000" />
       <workItem from="1606406186100" duration="292000" />
       <workItem from="1606407081154" duration="3524000" />
+      <workItem from="1606410984132" duration="7172000" />
     </task>
     <servers />
   </component>
@@ -204,6 +203,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="811" y="437" width="355" height="230" key="#Drupal/67.27.1853.1053@67.27.1853.1053" timestamp="1606331076441" />
+    <state x="633" y="354" width="714" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606425169740">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="633" y="354" width="714" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606425169740" />
     <state x="772" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1606331072900">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
