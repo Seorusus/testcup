@@ -30,7 +30,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,7 @@
       <workItem from="1606330953067" duration="2536000" />
       <workItem from="1606405103685" duration="264000" />
       <workItem from="1606406186100" duration="292000" />
-      <workItem from="1606407081154" duration="1120000" />
+      <workItem from="1606407081154" duration="2045000" />
     </task>
     <servers />
   </component>
