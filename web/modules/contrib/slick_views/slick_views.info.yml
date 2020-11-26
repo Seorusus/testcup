@@ -8,7 +8,7 @@ dependencies:
   - slick:slick (>= 2.x)
   - drupal:views
 
-# Add a fake version so local drush and Git checkouts do not fail dependencies.
+# Add a fake version so local .drush and Git checkouts do not fail dependencies.
 # version: 8.x-2.x
 
 # Information added by Drupal.org packaging script on 2020-05-10

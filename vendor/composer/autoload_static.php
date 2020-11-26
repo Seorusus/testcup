@@ -287,11 +287,11 @@ class ComposerStaticInit4a90a53e132c38597312751091071d71
         ),
         'Drupal\\Driver\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/drivers/lib/Drupal/Driver',
+            0 => __DIR__ . '/../..' . '/web/drivers/lib/Drupal/Driver',
         ),
         'Drupal\\Core\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/core/lib/Drupal/Core',
+            0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core',
         ),
         'Drupal\\Composer\\Plugin\\VendorHardening\\' => 
         array (
@@ -307,7 +307,7 @@ class ComposerStaticInit4a90a53e132c38597312751091071d71
         ),
         'Drupal\\Component\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/core/lib/Drupal/Component',
+            0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component',
         ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
@@ -396,13 +396,13 @@ class ComposerStaticInit4a90a53e132c38597312751091071d71
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
-        'Drupal' => __DIR__ . '/../..' . '/core/lib/Drupal.php',
-        'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Timer.php',
-        'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Unicode.php',
-        'Drupal\\Core\\Database\\Database' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/Database/Database.php',
-        'Drupal\\Core\\DrupalKernel' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/DrupalKernel.php',
-        'Drupal\\Core\\DrupalKernelInterface' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/DrupalKernelInterface.php',
-        'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/Site/Settings.php',
+        'Drupal' => __DIR__ . '/../..' . '/web/core/lib/Drupal.php',
+        'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Utility/Timer.php',
+        'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Utility/Unicode.php',
+        'Drupal\\Core\\Database\\Database' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Database/Database.php',
+        'Drupal\\Core\\DrupalKernel' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/DrupalKernel.php',
+        'Drupal\\Core\\DrupalKernelInterface' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/DrupalKernelInterface.php',
+        'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Site/Settings.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',

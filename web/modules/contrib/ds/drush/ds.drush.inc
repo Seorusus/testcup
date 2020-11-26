@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Display Suite drush integration.
+ * Display Suite .drush integration.
  */
 
 use Drupal\Component\Utility\Html;
@@ -25,9 +25,9 @@ function ds_drush_command() {
       'image'   => 'Set this to true if you want to include a preview image for your layout.',
     ],
     'examples' => [
-      'drush ds-build "My layout name"' => 'Create a layout with a few example regions.',
-      'drush ds-build "My layout name" --regions="Region 1, Region 2"' => 'Create a layout with custom regions.',
-      'drush ds-build "My layout name" --css' => 'Create a layout with an included CSS file.',
+      '.drush ds-build "My layout name"' => 'Create a layout with a few example regions.',
+      '.drush ds-build "My layout name" --regions="Region 1, Region 2"' => 'Create a layout with custom regions.',
+      '.drush ds-build "My layout name" --css' => 'Create a layout with an included CSS file.',
     ],
   ];
 
@@ -41,8 +41,8 @@ function ds_drush_command() {
       'entity'  => 'Name of the entity',
     ],
     'examples' => [
-      'drush ds-field "MyField"' => 'Create a field with only a render function',
-      'drush ds-field "MyTest" --entity=user' => 'Create a field for the user entity',
+      '.drush ds-field "MyField"' => 'Create a field with only a render function',
+      '.drush ds-field "MyTest" --entity=user' => 'Create a field for the user entity',
     ],
   ];
 
@@ -58,7 +58,7 @@ function drush_ds_build($name = NULL) {
     $name = drush_get_option('name');
   }
   if (!$name) {
-    drush_die(dt('You need to set a name for your layout. Type "drush help ds-build" for help.'));
+    drush_die(dt('You need to set a name for your layout. Type ".drush help ds-build" for help.'));
   }
 
   // Determine the machine name.

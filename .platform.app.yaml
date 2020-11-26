@@ -45,12 +45,12 @@ mounts:
   # Drush needs a scratch space for its own caches.
   '/.drush':
     source: local
-    source_path: 'drush'
+    source_path: '.drush'
   # Drush will try to save backups to this directory, so it must be
   # writeable even though you will almost never need to use it.
   '/drush-backups':
     source: local
-    source_path: 'drush-backups'
+    source_path: '.drush-backups'
   # Drupal Console will try to save backups to this directory, so it must be
   # writeable even though you will almost never need to use it.
   '/.console':
@@ -140,4 +140,4 @@ crons:
   # Run Drupal's cron tasks every 19 minutes.
   drupal:
     spec: '*/19 * * * *'
-    cmd: 'cd web ; drush core-cron'
+    cmd: 'cd web ; .drush core-cron'

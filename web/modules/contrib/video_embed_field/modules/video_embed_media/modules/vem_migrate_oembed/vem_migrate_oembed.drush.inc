@@ -14,7 +14,7 @@ function vem_migrate_oembed_drush_command() {
     'aliases' => ['vemmo'],
     'core' => ['8+'],
     'examples' => [
-      "drush vemmo" => "Migrates from VEF to core media.",
+      ".drush vemmo" => "Migrates from VEF to core media.",
     ],
   ];
 
@@ -22,7 +22,7 @@ function vem_migrate_oembed_drush_command() {
 }
 
 /**
- * Callback for drush commmand "video-embed-media-migrate-oembed" (vemmo).
+ * Callback for .drush commmand "video-embed-media-migrate-oembed" (vemmo).
  */
 function drush_vem_migrate_oembed_vem_migrate_oembed() {
   /** @var \Drupal\vem_migrate_oembed\VemMigrate $migrate */

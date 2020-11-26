@@ -8,7 +8,7 @@ use Drush\Commands\DrushCommands;
 /**
  * A Drush commandfile.
  *
- * In addition to this file, you need a drush.services.yml
+ * In addition to this file, you need a .drush.services.yml
  * in root of your module, and a composer.json file that provides the name
  * of the services file to use.
  *
@@ -39,7 +39,7 @@ class VemCommands extends DrushCommands {
   /**
    * Migrates from VEF to core media.
    *
-   * @usage drush vemmo
+   * @usage .drush vemmo
    *   Migrates from VEF to core media.
    *
    * @command vem:migrate_oembed

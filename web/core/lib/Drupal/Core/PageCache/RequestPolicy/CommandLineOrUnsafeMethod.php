@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
  * Reject when running from the command line or when HTTP method is not safe.
  *
  * The policy denies caching if the request was initiated from the command line
- * interface (drush) or the request method is neither GET nor HEAD (see RFC
+ * interface (.drush) or the request method is neither GET nor HEAD (see RFC
  * 2616, section 9.1.1 - Safe Methods).
  */
 class CommandLineOrUnsafeMethod implements RequestPolicyInterface {
