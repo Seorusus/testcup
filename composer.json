@@ -34,6 +34,7 @@
         "drupal/slick_views": "^2.3",
         "drupal/views_field_formatter": "^1.11",
         "drupal/viewsreference": "^1.6",
+        "drush/drush": "^10.3",
         "platformsh/config-reader": "^2.3"
     },
     "conflict": {
