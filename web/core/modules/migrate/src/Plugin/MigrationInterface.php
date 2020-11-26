@@ -66,7 +66,7 @@ interface MigrationInterface extends PluginInspectionInterface, DerivativeInspec
   const RESULT_INCOMPLETE = 2;
 
   /**
-   * The process was stopped externally (e.g., via .drush migrate-stop).
+   * The process was stopped externally (e.g., via drush migrate-stop).
    */
   const RESULT_STOPPED = 3;
 
