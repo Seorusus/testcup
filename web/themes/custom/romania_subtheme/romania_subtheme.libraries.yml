@@ -2,3 +2,12 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+
+glogal-scripts:
+  version: VERSION
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

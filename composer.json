@@ -27,6 +27,7 @@
         "drupal/ds": "^3.9",
         "drupal/field_group": "^3.1",
         "drupal/language_switcher_langcode": "^1.0@beta",
+        "drupal/metatag": "^1.14",
         "drupal/paragraphs": "^1.12",
         "drupal/redis": "^1.4",
         "drupal/slick": "^2.2",

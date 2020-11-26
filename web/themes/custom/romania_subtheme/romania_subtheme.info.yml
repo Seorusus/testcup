@@ -12,6 +12,7 @@ stylesheets-remove:
 # Libraries.
 libraries:
   - romania_subtheme/global-styling
+  - romania_subtheme/glogal-scripts
 
 # Regions.
 regions:
