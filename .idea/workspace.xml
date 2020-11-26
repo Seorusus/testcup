@@ -29,11 +29,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testcup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testcup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-    </list>
+    <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,6 +173,7 @@
       <updated>1606330951046</updated>
       <workItem from="1606330953067" duration="2536000" />
       <workItem from="1606405103685" duration="264000" />
+      <workItem from="1606406186100" duration="292000" />
     </task>
     <servers />
   </component>

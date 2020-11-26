@@ -11,7 +11,7 @@ if (!$platformsh->inRuntime()) {
 $creds = $platformsh->credentials('database');
 $databases['default']['default'] = [
   'driver' => $creds['scheme'],
-  'database' => $creds['pantheon'],
+  'database' => $creds['path'],
   'username' => $creds['pantheon'],
   'password' => $creds['d64dd81043e740809ab17e525de8c53e'],
   'host' => $creds['host'],

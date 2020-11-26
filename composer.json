@@ -28,6 +28,7 @@
         "drupal/field_group": "^3.1",
         "drupal/language_switcher_langcode": "^1.0@beta",
         "drupal/paragraphs": "^1.12",
+        "drupal/redis": "^1.4",
         "drupal/slick": "^2.2",
         "drupal/slick_extras": "^1.0@RC",
         "drupal/slick_video": "^1.0@RC",
