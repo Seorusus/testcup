@@ -120,7 +120,20 @@ set footer_classes = ' ' ~
       {% endif %}
     </div>
   </div>
-
+  <section class="social">
+    <div class="wrap">
+      <h3 class="bold-ro">{{ 'Оставайтесь на связи'|t }}</h3>
+      <p class="regular-ro">
+        {{ 'Присоединяйтесь к нашим группам в социальных сетях.'|t }}<br />
+        {{ 'Следите за новостями и первыми узнавайте об акциях!'|t }}
+      </p>
+      <div class="share-container">
+        <a class="icon" href="https://www.facebook.com/NescafeMoldova" title="Facebook" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/facebook.svg" alt="facebook" /> </a>
+        <a class="icon" href="https://www.instagram.com/nescafemoldova/?hl=en" title="Instagram" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/instagram.svg" alt="instagram" /> </a>
+        <a class="icon" href="https://www.youtube.com/channel/UCCg8u6DBVu6oGcTdQPZ9IRQ" title="YouTube" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/youtube.svg" alt="youtube" /> </a>
+      </div>
+    </div>
+  </section>
 </main>
 
 {% if page.footer %}
@@ -128,15 +141,9 @@ set footer_classes = ' ' ~
     <div class="{{ b4_top_container }}">
       {#    {{ page.footer }}#}
       <div class="wrap">
-        <h3 class="bold-ro">platea dictumst</h3>
-        <p class="regular-ro">
-          In hac habitasse platea dictumst. In hac habitasse platea dictumst. <br />
-          In hac habitasse platea
-        </p>
-        <div class="share-container">
-          <a class="icon" href="https://www.facebook.com/NescafeMoldova" title="Facebook" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/facebook.svg" alt="facebook" /> </a>
-          <a class="icon" href="https://www.instagram.com/nescafemoldova/?hl=en" title="Instagram" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/instagram.svg" alt="instagram" /> </a>
-          <a class="icon" href="https://www.youtube.com/channel/UCCg8u6DBVu6oGcTdQPZ9IRQ" title="YouTube" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/youtube.svg" alt="youtube" /> </a>
+        <div class="footer-row">
+          <div class="copyright">{{ '©2020 NESTLÉ'|t }}</div>
+          <a href="/terms-and-conditions">{{ 'ПРАВОВАЯ ИНФОРМАЦИЯ'|t }}</a>
         </div>
       </div>
     </div>

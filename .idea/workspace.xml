@@ -30,8 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +181,8 @@
       <workItem from="1606407081154" duration="3524000" />
       <workItem from="1606410984132" duration="7172000" />
       <workItem from="1606427991456" duration="5916000" />
-      <workItem from="1606509416058" duration="9254000" />
+      <workItem from="1606509416058" duration="9624000" />
+      <workItem from="1606659374045" duration="9276000" />
     </task>
     <servers />
   </component>

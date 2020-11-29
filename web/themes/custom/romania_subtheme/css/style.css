@@ -786,23 +786,23 @@ a {
 .header a {
   font-size: 21px;
   line-height: 1;
-  font-family: HelveticaNeueCyr-Bold
+  font-family: "HelveticaNeueCyr-Bold";
 }
 
 .regular-ru {
-  font-family: HelveticaNeueCyr-Roman
+  font-family: "HelveticaNeueCyr-Roman";
 }
 
 .regular-ro {
-  font-family: HelveticaNeueLTPro-Roman
+  font-family: "HelveticaNeueLTPro-Roman";
 }
 
 .bold-ru {
-  font-family: HelveticaNeueCyr-Bold
+  font-family: "HelveticaNeueCyr-Bold";
 }
 
 .bold-ro {
-  font-family: HelveticaNeueLTProBd
+  font-family: "HelveticaNeueCyr-Bold";
 }
 
 .play-button {
@@ -2169,6 +2169,7 @@ a {
   border-radius: 10px;
   padding: 48px;
   margin: 0 20px;
+  max-width: 336px;
 }
 
 @media only screen and (max-width:1620px) {
@@ -2684,4 +2685,158 @@ span.media__icon.media__icon--close {
     top: -22px !important;
     width: 100%;
   }
+}
+
+.product-list img.media__image.media__element.b-lazy.b-loaded {
+  max-height: 316px;
+  width: auto;
+}
+
+
+.product-list .slick-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.path-frontpage .page-title {
+  display: none;
+}
+
+/*Social*/
+/*** Social ***/
+.social {
+  background: #222;
+  padding: 100px 0;
+  /*** Cookies ***/
+  /*** Footer ***/
+}
+.social h3 {
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+.social h3 p {
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 50px 0;
+}
+.social h3 .share-container {
+  display: flex;
+  justify-content: center;
+}
+.social h3 .share-container .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  margin: 0 10px 0 0;
+}
+.social .cookies {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  background: red;
+  z-index: 2;
+}
+.social .cookies.hidden {
+  display: none;
+}
+.social .cookies .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social .cookies .text-container {
+  max-width: calc(100% - 300px);
+}
+.social .cookies .text-container div {
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+}
+.social .cookies .text-container p {
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+}
+.social .cookies .text-container p a {
+  color: #fff;
+}
+.social .cookies button {
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: red;
+  background: #fff;
+  padding: 10px 50px;
+  border-radius: 5px;
+}
+.social h3 {
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+.social .share-container {
+  display: flex;
+  justify-content: center;
+}
+.social .share-container .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c81b12;
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  margin: 0 10px 0 0;
+}
+.social p {
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 50px 0;
+}
+
+.social .footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+.social .footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.social .footer .footer-row a {
+  display: block;
+  color: #fff;
+}
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .footer-row a {
+  display: block;
+  color: #fff;
 }
