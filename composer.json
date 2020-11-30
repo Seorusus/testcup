@@ -20,6 +20,7 @@
         "drupal/bootstrap4": "^2.1",
         "drupal/bootstrap_barrio": "^5.1",
         "drupal/bootstrap_library": "^1.14",
+        "drupal/colorbox": "^1.6",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
