@@ -55,8 +55,10 @@
   (b4_footer_schema != 'none' ? (b4_footer_schema == 'dark' ? ' text-light' : ' text-dark' ) : ' ') ~
   (b4_footer_bg_schema != 'none' ? " bg-#{b4_footer_bg_schema}" : ' ')
 %}
-
-<header>
+<div class="global-wrap">
+<main role="main">
+<div class="wrap">
+<header class="header">
   {{ page.header }}
 
   {% if page.nav_branding or page.nav_main or page.nav_additional %}
@@ -84,7 +86,6 @@
 
 </header>
 
-<main role="main">
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
   {%
@@ -120,38 +121,51 @@
       {% endif %}
     </div>
   </div>
-
-</main>
-
-{% if page.footer %}
-  <footer class="footer terms ">
+</div>
+  <section class="social">
     <div class="wrap">
-      <div class="footer-row">
-        <div class="copyright">©2020 Company</div>
-        <a href="">ПРАВОВАЯ ИНФОРМАЦИЯ </a>
+      <h3 class="bold-ro">{{ 'Оставайтесь на связи'|t }}</h3>
+      <p class="regular-ro">
+        {{ 'Присоединяйтесь к нашим группам в социальных сетях.'|t }}<br />
+        {{ 'Следите за новостями и первыми узнавайте об акциях!'|t }}
+      </p>
+      <div class="share-container">
+        <a class="icon" href="https://www.facebook.com/NescafeMoldova" title="Facebook" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/facebook.svg" alt="facebook" /> </a>
+        <a class="icon" href="https://www.instagram.com/nescafemoldova/?hl=en" title="Instagram" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/instagram.svg" alt="instagram" /> </a>
+        <a class="icon" href="https://www.youtube.com/channel/UCCg8u6DBVu6oGcTdQPZ9IRQ" title="YouTube" target="_blank" rel="noopener nofollow"> <img src="/themes/custom/romania_subtheme/img/svg-icons/youtube.svg" alt="youtube" /> </a>
       </div>
     </div>
-  </footer>
+  </section>
 
-
+  {% if page.footer %}
+    <footer class="footer mt-auto {{ footer_classes }}">
+      <div class="{{ b4_top_container }}">
+        {#    {{ page.footer }}#}
+        <div class="wrap">
+          <div class="footer-row">
+            <div class="copyright">{{ '©2020 NESTLÉ'|t }}</div>
+            <a href="/terms-and-conditions">{{ 'ПРАВОВАЯ ИНФОРМАЦИЯ'|t }}</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  {% endif %}
   <div class="cookies hidden">
     <div class="wrap">
       <div class="text-container">
         <div class="bold-ru">О файлах cookie на этом веб-сайте</div>
         <p class="regular-ru">
           Мы используем cookies, чтобы постоянно улучшать ваше пребывание на нашем сайте.
-          <a href="#" target="_blank">Узнайте больше о нашей Cookie политике.</a>
+          <a href="https://www.nestle.com/info/cookies" target="_blank">Узнайте больше о нашей Cookie политике.</a>
         </p>
       </div>
       <button class="regular-ru" id="accept-cookies">Принять</button>
     </div>
   </div>
-
-
-  </div>
+</main>
+</div>
 
   <!--scripts-->
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.contains,Array.prototype.find,Array.prototype.findIndex,Array.prototype.Array.prototype.entries,Array.prototype.includes,Object.entries,String.prototype.contains,fetch,String.prototype.repeat"></script>
   <script src="js/main.js"></script>
   <!--END scripts-->
-{% endif %}

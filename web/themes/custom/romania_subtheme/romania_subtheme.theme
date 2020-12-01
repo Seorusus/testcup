@@ -4,3 +4,11 @@
  * @file
  * SUBTHEME theme file.
  */
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function romania_subtheme_preprocess_html(&$variables) {
+
+  $variables['attributes']['class'][] = 'language_' . \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+}

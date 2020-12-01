@@ -149,16 +149,16 @@ set footer_classes = ' ' ~
     </div>
   </footer>
 {% endif %}
-    <div class="cookies hidden">
+    <div class="cookies">
       <div class="wrap">
         <div class="text-container">
-          <div class="bold-ru">О файлах cookie на этом веб-сайте</div>
+          <div class="bold-ru">{{ 'О файлах cookie на этом веб-сайте'|t }}</div>
           <p class="regular-ru">
-            Мы используем cookies, чтобы постоянно улучшать ваше пребывание на нашем сайте.
-            <a href="https://www.nestle.com/info/cookies" target="_blank">Узнайте больше о нашей Cookie политике.</a>
+           {{ 'Мы используем cookies, чтобы постоянно улучшать ваше пребывание на нашем сайте.'|t}}
+            <a href="https://www.nestle.com/info/cookies" target="_blank">{{ 'Узнайте больше о нашей Cookie политике.'|t }}</a>
           </p>
         </div>
-        <button class="regular-ru" id="accept-cookies">Принять</button>
+        <button class="regular-ru" id="accept-cookies">{{ 'Принять'|t }}</button>
       </div>
     </div>
   </main>
