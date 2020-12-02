@@ -143,23 +143,27 @@ set footer_classes = ' ' ~
       <div class="wrap">
         <div class="footer-row">
           <div class="copyright">{{ '©2020 NESTLÉ'|t }}</div>
-          <a href="/terms-and-conditions">{{ 'ПРАВОВАЯ ИНФОРМАЦИЯ'|t }}</a>
+          <div class="footer-right">
+            <span><a href="/terms-and-conditions">{{ 'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ И ПРАВОВАЯ ИНФОРМАЦИЯ'|t }}</a></span>
+            <span class="_email">{{ 'Тел.: (022) 211-175'|t }}</span><br>
+            <span class="_email" ><a href="mailto:nescafemoldova@ua.nestle.com">E-mail:nescafemoldova@ua.nestle.com</a></span>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 {% endif %}
-    <div class="cookies">
-      <div class="wrap">
-        <div class="text-container">
-          <div class="bold-ru">{{ 'О файлах cookie на этом веб-сайте'|t }}</div>
-          <p class="regular-ru">
-           {{ 'Мы используем cookies, чтобы постоянно улучшать ваше пребывание на нашем сайте.'|t}}
-            <a href="https://www.nestle.com/info/cookies" target="_blank">{{ 'Узнайте больше о нашей Cookie политике.'|t }}</a>
-          </p>
-        </div>
-        <button class="regular-ru" id="accept-cookies">{{ 'Принять'|t }}</button>
-      </div>
-    </div>
+{#    <div class="cookies">#}
+{#      <div class="wrap">#}
+{#        <div class="text-container">#}
+{#          <div class="bold-ru">{{ 'О файлах cookie на этом веб-сайте'|t }}</div>#}
+{#          <p class="regular-ru">#}
+{#           {{ 'Мы используем cookies, чтобы постоянно улучшать ваше пребывание на нашем сайте.'|t}}#}
+{#            <a href="https://www.nestle.com/info/cookies" target="_blank">{{ 'Узнайте больше о нашей Cookie политике.'|t }}</a>#}
+{#          </p>#}
+{#        </div>#}
+{#        <button class="regular-ru" id="accept-cookies">{{ 'Принять'|t }}</button>#}
+{#      </div>#}
+{#    </div>#}
   </main>
 </div>

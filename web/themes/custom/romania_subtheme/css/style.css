@@ -2177,7 +2177,7 @@ a {
   padding: 48px;
   margin: 0 20px;
   min-width: 340px;
-  text-align: center;
+  text-align: left;
   max-width: 350px;
 }
 
@@ -2207,7 +2207,7 @@ a {
   line-height: 150%;
   color: #b49860;
   margin: 0 0 8px 0;
-  font-family: HelveticaNeueLTPro-Roman;
+  font-family: "HelveticaNeueCyr-Roman";
 }
 
 @media only screen and (max-width:767px) {
@@ -2641,6 +2641,10 @@ li.slide__grid.grid.grid--rendered.grid--0 {
 .field__item:nth-child(2n) .media--background {
   background-image: url(../img/first-section-video.png)!important;
   padding-bottom: 60%!important;
+}
+
+.language_ro .field__item:nth-child(2n) .media--background {
+  background-image: url(../img/first-section-video-ro.png)!important;
 }
 
 .field__item:nth-child(3n) .media--background {
@@ -3267,5 +3271,47 @@ div#cboxWrapper {
 }
 
 .colorbox-on--media #colorbox, .colorbox-on--media #colorbox * {
-  max-width: 110%;
+  max-width: 100%;
 }
+
+.slick--skin--boxed .slide__content:hover {
+  -webkit-transition-delay: inherit;
+  transition-delay: inherit;
+  border: none;
+  box-shadow: none;
+}
+
+.slick--skin--boxed .slide__content {
+  border: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.product-list .slide__grid {
+  min-width: 100%;
+}
+
+.language_ru .regular-ro {
+  font-family: "HelveticaNeueCyr-Roman";
+}
+
+.copyright {
+  font-family: cape-Light;
+  padding-left: 16px;
+
+}
+
+.copyright:before {
+  content: "";
+  background: url(../img/favicon.ico) no-repeat;
+  background-size: 16% auto;
+  position: absolute;
+  width: 6%;
+  height: 26px;
+  left: 3px;
+}
+
+.footer-right ._email {
+  text-transform: lowercase;
+}
+
