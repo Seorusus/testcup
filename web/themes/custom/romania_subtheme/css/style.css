@@ -2178,7 +2178,7 @@ a {
   margin: 0 20px;
   min-width: 340px;
   text-align: left;
-  max-width: 400px;
+  max-width: 383px;
 }
 
 @media only screen and (max-width:1620px) {
@@ -2199,7 +2199,7 @@ a {
 }
 
 .product-list .slide__content .views-field-field-media img {
-  width: 100%;
+  width: auto;
 }
 
 .product-list .slide__content .views-field-title {
@@ -2207,6 +2207,10 @@ a {
   line-height: 150%;
   color: #b49860;
   margin: 0 0 8px 0;
+  font-family: "HelveticaNeueLTPro-Roman";
+}
+
+.language_ru .product-list .slide__content .views-field-title {
   font-family: "HelveticaNeueCyr-Roman";
 }
 
@@ -2669,6 +2673,7 @@ li.slide__grid.grid.grid--rendered.grid--0 {
 
 #slick-node-banner-media-default-1-1-slider .slick-list .slick-slide:nth-child(3n) {
   top: 109px!important;
+  left: -749px!important;
 }
 
 /*@media only screen and (max-width: 767px) {*/
@@ -3313,13 +3318,20 @@ div#cboxWrapper {
 
 .footer-left ._email {
   text-transform: none;
+  font-family: HelveticaNeueCyr-Roman;
+
 }
 
 
 span._email {
   font-size: 14px;
+  font-family: HelveticaNeueCyr-Roman;
+
 }
 
+._email._right {
+  line-height: 20px;
+}
 
 @media only screen and (max-width: 1024px) {
   .footer {
@@ -3343,7 +3355,7 @@ span._email {
 
 @media only screen and (max-width: 768px) {
   .block-cape-foundation-content {
-    height: 813px !important;
+    height: 784px !important;
   }
 }
 
@@ -3355,4 +3367,8 @@ span._email {
 
 .cboxIframe .html5-video-container .video-stream {
   top: 0 !important;
+}
+
+.alert-error {
+  display: none;
 }

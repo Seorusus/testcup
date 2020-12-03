@@ -30,9 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--node--9.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--node--9.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +226,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/themes/custom/romania_subtheme/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/themes/custom/romania_subtheme/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -237,9 +235,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/themes/custom/romania_subtheme/fonts" />
       <recent name="$PROJECT_DIR$/web/themes/custom/romania_subtheme/img" />
       <recent name="$PROJECT_DIR$/web/libraries" />
-      <recent name="$PROJECT_DIR$/web/themes/custom/romania_subtheme/fonts" />
       <recent name="$PROJECT_DIR$/web/themes/custom/romania_subtheme" />
       <recent name="$PROJECT_DIR$/web" />
     </key>
@@ -260,7 +258,7 @@
       <workItem from="1606427991456" duration="5916000" />
       <workItem from="1606509416058" duration="9624000" />
       <workItem from="1606659374045" duration="43420000" />
-      <workItem from="1607002192918" duration="3198000" />
+      <workItem from="1607002192918" duration="10913000" />
     </task>
     <servers />
   </component>
