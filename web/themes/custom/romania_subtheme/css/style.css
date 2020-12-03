@@ -3045,9 +3045,9 @@ span.media__icon.media__icon--close {
 
 @media only screen and (max-width:767px) {
   .block-cape-foundation-content .slick-dots--thumbnail-grid {
-    width: 36%;
+    width: 70%;
     /* margin: 0 auto; */
-    margin-left: 30%!important;
+    margin-left: 12%!important;
   }
 }
 
@@ -3311,7 +3311,47 @@ div#cboxWrapper {
   left: 3px;
 }
 
-.footer-right ._email {
+.footer-left ._email {
   text-transform: lowercase;
 }
 
+
+span._email {
+  font-size: 14px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    min-height: 150px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .copyright:before {
+    background-size: 13% auto;
+    width: 31%;
+    height: 26px;
+    left: 24px;
+  }
+}
+
+.footer-left {
+  min-width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .block-cape-foundation-content {
+    height: 813px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-left {
+    margin-bottom: 12px;
+  }
+}
+
+.cboxIframe .html5-video-container .video-stream {
+  top: 0 !important;
+}

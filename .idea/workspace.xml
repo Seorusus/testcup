@@ -30,9 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d84e29-f51d-4da6-b7fb-5705e314334d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--node--9.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page--node--9.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/templates/page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/romania_subtheme/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
