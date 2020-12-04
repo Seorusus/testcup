@@ -240,6 +240,8 @@ Package Control.*
 oscrypto-ca-bundle.crt
 bh_unicode_properties.cache
 
+#deploy.tar
+/Lightnest/Drop/deploy.tar
 
 # ------------
 # - Vim
